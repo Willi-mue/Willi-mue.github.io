@@ -1,0 +1,86 @@
+[
+  {
+    "name": "3D-Engine",
+    "description": "A lightweight 3D rendering engine developed in Python using PyQt5. It enables loading and displaying PLY mesh files in an interactive 3D environment with basic camera controls and transformations.",
+    "translation": "Ein leichter gewichtige 3D-Rendering-Engine, entwickelt in Python mit PyQt5. Ermöglicht das Laden und Anzeigen von PLY-Mesh-Dateien in einer interaktiven 3D-Umgebung mit grundlegenden Kamerasteuerungen und Transformationen.",
+    "url": "https://github.com/Willi-mue/3D-Engine",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/3D-Engine/master/screenshots/picture1.png",
+    "languages": {
+      "Python": 12653
+    }
+  },
+  {
+    "name": "Conways-Game-of-Life",
+    "description": "This repository contains a Python implementation of Conway's Game of Life with two visualization options: one using PyQt and one using PyOpenGL.",
+    "translation": "Dieses Repository enthält eine Python-Implementierung von Conways Spiel des Lebens mit zwei Visualisierungsoptionen: eine mit PyQt und eine mit PyOpenGL.",
+    "url": "https://github.com/Willi-mue/Conways-Game-of-Life",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Conways-Game-of-Life/master/pics/GL_Screenshot_4K.png",
+    "languages": {
+      "Python": 9700
+    }
+  },
+  {
+    "name": "Cristal-Simulation",
+    "description": "This project simulates crystal growth based on the Diffusion-Limited Aggregation (DLA) model implemented in C++. The simulation generates crystal structures by modeling particle aggregation through random walks.  Visualization and video creation of the simulation results are handled via Python scripts, enabling easy generation of graphical outputs",
+    "translation": "Simulation des Kristallwachstums basierend auf dem Diffusions-begrenzten Aggregationsmodell (DLA) in C++. Visualisierung und Videoproduktion erfolgen über Python-Skripte.",
+    "url": "https://github.com/Willi-mue/Cristal-Simulation",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Cristal-Simulation/master/results/result_dla.png",
+    "languages": {
+      "C++": 5923,
+      "Python": 885,
+      "Makefile": 174,
+      "Batchfile": 63
+    }
+  },
+  {
+    "name": "Minecraft-Server-GUI",
+    "description": "A simple graphical interface to manage a Minecraft server. Start, stop, restart, and backup the server easily. Monitor player activity and system resources in real time. Send server commands directly from the app.",
+    "translation": "Eine einfache grafische Oberfläche zur Verwaltung eines Minecraft-Servers. Starte, stoppe, starte neu und sichere den Server bequem. Überwache Spieleraktivitäten und Systemressourcen in Echtzeit. Sende Serverbefehle direkt aus der App.",
+    "url": "https://github.com/Willi-mue/Minecraft-Server-GUI",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Minecraft-Server-GUI/master/screenshots/picture1.png",
+    "languages": {
+      "Python": 16888
+    }
+  },
+  {
+    "name": "Pacman-Clone",
+    "description": "A fully playable Pacman clone developed in Python with PyQt5. The game includes level progression, ghost AI, power-ups, and a persistent high score system.",
+    "translation": "Ein vollständig spielbarer Pacman-Klon, entwickelt in Python mit PyQt5. Das Spiel bietet Level-Fortschritt, Geister-KI, Power-Ups und ein dauerhaftes Highscore-System.",
+    "url": "https://github.com/Willi-mue/Pacman-Clone",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Pacman-Clone/master/pacman.jpg",
+    "languages": {
+      "Python": 31044
+    }
+  },
+  {
+    "name": "Randomizer-Wheel",
+    "description": "A colorful spinning wheel built with PyQt6. Load items from a file, spin the wheel, and randomly select a winner with visual effects.",
+    "translation": "Ein buntes Glücksrad, erstellt mit PyQt6. Lade Elemente aus einer Datei, drehe das Rad und wähle zufällig einen Gewinner mit visuellen Effekten aus.",
+    "url": "https://github.com/Willi-mue/Randomizer-Wheel",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Randomizer-Wheel/master/images/picture1.png",
+    "languages": {
+      "Python": 7729,
+      "Batchfile": 37
+    }
+  },
+  {
+    "name": "Solarsystem-Simulation",
+    "description": " A real-time solar system simulation using PyQt5. It visually represents planetary orbits, allows zooming in/out with the mouse wheel, and resets the view with the `R` key.",
+    "translation": "Eine Echtzeit-Simulation des Sonnensystems mit PyQt5. Sie stellt die Umlaufbahnen der Planeten visuell dar, ermöglicht das Zoomen mit dem Mausrad und setzt die Ansicht mit der R-Taste zurück.",
+    "url": "https://github.com/Willi-mue/Solarsystem-Simulation",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Solarsystem-Simulation/master/images/picture1.png",
+    "languages": {
+      "Python": 6425
+    }
+  },
+  {
+    "name": "Traffic-Simulation",
+    "description": "This is a traffic simulation written in Python that can run on any map, as long as the map is defined using the required parameters (e.g., roads, intersections, traffic rules). The simulation models vehicle movement and interactions.",
+    "translation": "Eine Verkehrssimulation in Python, die auf jeder Karte läuft, sofern die Karte mit den erforderlichen Parametern definiert ist (z. B. Straßen, Kreuzungen, Verkehrsregeln). Die Simulation modelliert Fahrzeugbewegungen und Interaktionen.",
+    "url": "https://github.com/Willi-mue/Traffic-Simulation",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Traffic-Simulation/master/pics/verkehrs_sim.jpg",
+    "languages": {
+      "Python": 17217
+    }
+  }
+]

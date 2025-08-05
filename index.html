@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title data-i18n="main-page.title" data-i18n-html>Willi Müller - Softwareentwickler</title>
+    <meta name="description" content="Portfolio von Willi Müller, Softwareentwickler für moderne, effiziente und nachhaltige Softwarelösungen." data-i18n="main-page.meta-description" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styling/theme.css" />
+    <link rel="stylesheet" href="styling/main_page.css" />
+    <link rel="stylesheet" href="styling/components/top-controls.css" />
+    <link rel="stylesheet" href="styling/components/card.css" />
+    <link rel="stylesheet" href="styling/components/blog-card.css" />
+    <link rel="stylesheet" href="styling/components/contact.css" />
+    <link rel="stylesheet" href="styling/components/badge.css" />
+</head>
+
+<body data-theme="light" lang="de">
+
+    <header>
+        <h1 id="title" data-i18n="main-page.header-title" data-i18n-html>Willi Müller</h1>
+        <p id="subtitle" data-i18n="main-page.header-subtitle" data-i18n-html>Als angehender Entwickler liegt mein Fokus auf klarer, lösungsorientierter Software.</p>
+    </header>
+
+    <div id="top-controls">
+        <button id="toggle-theme" title="" data-i18n="main-page.toggle-theme" data-i18n-html>🌙</button>
+        <button id="toggle-lang" title="" data-i18n="main-page.toggle-lang" data-i18n-html>EN</button>
+    </div>
+
+    <main>
+        <h2 id="projects-title" data-i18n="main-page.projects-title" data-i18n-html>Meine öffentlichen Projekte</h2>
+        <section id="projects" class="projects"></section>
+
+        <h2 id="tech-title" data-i18n="main-page.tech-title" data-i18n-html>IT-Kenntnisse</h2>
+        <section id="tech-stack">
+
+            <div class="skill-section">
+                <div class="skill-div">
+                    <h3 id="prog-title" data-i18n="main-page.prog-title" data-i18n-html>Programmiersprachen</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">🐍 Python</span>
+                            <div class="skill-bar" style="--level:90%"></div>
+                        </li>
+                        <li><span class="skill-name">🎨 CSS & ✨ JavaScript</span>
+                            <div class="skill-bar" style="--level:75%"></div>
+                        </li>
+                        <li><span class="skill-name">💠 C++</span>
+                            <div class="skill-bar" style="--level:55%"></div>
+                        </li>
+                        <li><span class="skill-name">☕ Java</span>
+                            <div class="skill-bar" style="--level:50%"></div>
+                        </li>
+                        <li><span class="skill-name">🔷 Scala</span>
+                            <div class="skill-bar" style="--level:30%"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-div">
+                    <h3 id="tools-title" data-i18n="main-page.tools-title" data-i18n-html>Tools & Plattformen</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">🐙 Git (GitHub & GitLab)</span>
+                            <div class="skill-bar" style="--level:90%"></div>
+                        </li>
+                        <li><span class="skill-name">🐳 Docker</span>
+                            <div class="skill-bar" style="--level:75%"></div>
+                        </li>
+                        <li><span class="skill-name">🐧 Linux</span>
+                            <div class="skill-bar" style="--level:75%"></div>
+                        </li>
+                        <li><span class="skill-name">🐬 MySQL & MariaDB</span>
+                            <div class="skill-bar" style="--level:65%"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-section">
+                <section id="about-me" class="about-me">
+                    <h2 data-i18n="main-page.about-me-title" data-i18n-html>Über mich</h2>
+                    <p data-i18n="main-page.about-me-p1" data-i18n-html>
+                        IT und Technik faszinieren mich seit jeher.
+                        Privat baue ich eigene Server auf und experimentiere mit modernen Technologien, um mein
+                        Verständnis von IT-Infrastrukturen stetig zu vertiefen.
+                        Neben der Infrastrukturentwicklung programmiere ich auch Software - so wie in meinen Projekten
+                        gezeigt - und finde großen Spaß daran, technische Herausforderungen praxisnah und kreativ zu lösen.
+                    </p>
+                    <p data-i18n="main-page.about-me-p2" data-i18n-html>
+                        In meiner Ausbildung liegt mein Fokus auf Softwareentwicklung, wobei ich meine
+                        Programmierkenntnisse täglich erweitere.
+                        DevOps, Systemadministration und weitere IT-Bereiche wende ich durch eigene Projekte und
+                        praktische Erfahrungen in meinem Home-Lab an und vertiefe so mein Verständnis.
+                        Zusätzlich unterstütze ich Freunde und Familie bei IT-Fragen, was mir hilft, mein Wissen
+                        praxisnah einzusetzen und weiter auszubauen.
+                    </p>
+                    <p data-i18n="main-page.about-me-p3" data-i18n-html>
+                        Teamarbeit und eigenverantwortliches Lernen sind für mich selbstverständlich, weil ich weiß,
+                        dass gerade der Austausch im Team und das selbstständige Erarbeiten neuer Inhalte der Schlüssel
+                        zu erfolgreicher und nachhaltiger Softwareentwicklung sind. Ich freue mich darauf, mein Know-how
+                        in spannenden Projekten weiter auszubauen und nachhaltige Softwarelösungen zu schaffen.
+                    </p>
+                </section>
+            </div>
+        </section>
+
+        <h2 data-i18n="main-page.blog-title" data-i18n-html>Wissensbereich</h2>
+        <section id="blog">
+            <div class="blog-grid">
+
+                <article class="blog-post">
+                    <h3 data-i18n="main-page.blog-post-1-title" data-i18n-html>🎮 Minecraft-Server auf dem eigenen Homeserver</h3>
+                    <p data-i18n="main-page.blog-post-1-desc" data-i18n-html>Einblicke in den jährlichen Aufbau meines privaten Minecraft-Servers.</p>
+                    <div class="badge-wrapper">
+                        <span class="badge">Docker</span>
+                        <span class="badge">Java</span>
+                    </div>
+                    <a href="posts/minecraft-server.html" data-i18n="main-page.blog-post-1-link" data-i18n-html>Weiterlesen</a>
+                </article>
+
+                <article class="blog-post">
+                    <h3 data-i18n="main-page.blog-post-2-title" data-i18n-html>🤖 Eigener Discord-Bot für Community-Management</h3>
+                    <p data-i18n="main-page.blog-post-2-desc" data-i18n-html>Entwicklung eines vielseitigen Bots zur Moderation, Automatisierung und Unterstützung eines mehrsprachigen Discord-Servers.</p>
+                    <div class="badge-wrapper">
+                        <span class="badge">Python</span>
+                        <span class="badge">Docker</span>
+                    </div>
+                    <a href="posts/discord-management-bot.html" data-i18n="main-page.blog-post-2-link" data-i18n-html>Weiterlesen</a>
+                </article>
+                
+                <article class="blog-post">
+                    <h3 data-i18n="main-page.blog-post-3-title" data-i18n-html>🌐 Webseite für einen<br> MMO Community Discord-Server</h3>
+                    <p data-i18n="main-page.blog-post-3-desc" data-i18n-html>Eine Webseite mit Guides, Tools und Informationen, die den Discord-Server unterstützt und das Community-Management erleichtert.</p>
+                    <div class="badge-wrapper">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Python</span>
+                    </div>
+                    <a href="posts/discord-server-webseite.html" data-i18n="main-page.blog-post-3-link" data-i18n-html>Weiterlesen</a>
+                </article>
+
+                <article class="blog-post">
+                    <h3 data-i18n="main-page.blog-post-5-title" data-i18n-html>🏆 Meine erste Game Jam</h3>
+                    <p data-i18n="main-page.blog-post-5-desc" data-i18n-html>Ein Erfahrungsbericht - von der Idee über die Umsetzung bis zum finalen Spiel.</p>
+                    <div class="badge-wrapper">
+                        <span class="badge">GDScript</span>
+                        <span class="badge">C++</span>
+                        <span class="badge">C#</span>
+                    </div>
+                    <a href="posts/game-jam.html" data-i18n="main-page.blog-post-5-link" data-i18n-html>Weiterlesen</a>
+                </article>
+
+            </div>
+        </section>
+
+        <h2 id="contact-title" data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
+        <section id="contact">
+            <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
+                Sie möchten gerne mit mir in Kontakt treten?<br>
+                Falls ich Ihr Interesse geweckt habe, erreichen Sie mich hier:
+            </p>
+
+            <ul class="contact-list">
+                <li>📧 <a id="contact-email" href="mailto:willimuellerbremberg@gmail.com" data-i18n="main-page.contact-email" data-i18n-html>E-Mail</a></li>
+                <li>🐙 <a id="contact-github" href="https://github.com/Willi-mue" target="_blank" rel="noopener noreferrer" data-i18n="main-page.contact-github" data-i18n-html>GitHub</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="js/setup.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/translation.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/badgeColors.js"></script>
+    <script src="js/animate-skills.js"></script>
+
+</body>
+
+</html>

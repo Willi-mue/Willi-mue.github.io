@@ -1,0 +1,26 @@
+{
+  "blog-game-jam-title": "🏆 Meine erste Game Jam",
+  "blog-game-jam-meta-description": "Eine professionelle Webseite zur Unterstützung eines MMO Discord-Servers mit Guides, News und Partnern.",
+  "blog-game-jam-heading": "🏆 Meine erste Game Jam",
+  "blog-game-jam-published": "Veröffentlicht am: 03. August 2025",
+
+  "gamejam-section-intro-title": "Motivation & Vorbereitung 🎯",
+  "gamejam-section-intro-text": "Die Teilnahme an meiner ersten Game Jam - der <a href=\"https://itch.io/jam/wowie-jam-4\"><strong>Wowie Jam 4.0</strong></a> - war ein spannendes Experiment. Unter dem Thema <em>\"Collaborate With AI\"</em> und einem Zeitrahmen von nur 72 Stunden war die kreative wie technische Herausforderung klar definiert: Ein Spiel zu entwickeln, bei dem die Zusammenarbeit mit einer künstlichen Intelligenz im Mittelpunkt des Gameplays steht.",
+
+  "gamejam-section-team-title": "Unser Team 🔷",
+  "gamejam-section-team-text": "Das Projekt wurde von einem kleinen, engagierten Team umgesetzt - bestehend aus <strong>zwei Programmierern</strong>, <strong>einem Musiker</strong> und <strong>einer Künstlerin</strong>. Jede:r von uns brachte seine individuellen Stärken ein, um innerhalb der kurzen Entwicklungszeit ein funktionierendes und atmosphärisches Spielerlebnis zu schaffen.",
+
+  "gamejam-section-theme-title": "Die Spielidee 🌲",
+  "gamejam-section-theme-text": "In unserem Spiel <a href=\"https://todes-ritter.itch.io/jack-markus\"><strong>„Jack and Markus“</strong></a> verirrt sich ein kleiner Junge in einem geheimnisvollen Wald und muss dem Zorn der Waldgeister entkommen. Glücklicherweise begegnet er einem mysteriösen Waldwesen, das ihm hilft, den Weg in die Freiheit zu finden.<br><br>Dieses Wesen ist jedoch kein statischer Begleiter - es entwickelt sich dynamisch weiter, abhängig von den Entscheidungen und dem Verhalten des Spielers. Ob als Nahkämpfer oder Fernkämpfer - die individuelle Evolution basiert auf der Art der Interaktion.<br> Dieser Aspekt bildet den zentralen <strong>KI-Kernmechanismus</strong> unseres Spiels.",
+
+  "gamejam-section-tech-title": "Technischer Aufbau ⚙️",
+  "gamejam-section-tech-text": "Das Spiel wurde mit der <strong>Godot Engine</strong> realisiert. Die Hauptlogik entstand in <code>GDScript</code>, ergänzt durch gezielte Komponenten in <code>C#</code>. Für die KI wurde ein zustandsbasiertes System konzipiert, das Verhalten und Entwicklung des Begleiters dynamisch an das Spielverhalten anpasst - etwa durch Abstand zum Spieler, Reaktion auf Bedrohungen und direkte Interaktionen.",
+
+  "gamejam-section-challenges-title": "Herausforderungen 🚧",
+  "gamejam-section-challenges-text": "Die größte Herausforderung bestand in der Kommunikation und Koordination innerhalb des Teams - insbesondere unter Zeitdruck. Da keine Tutorials vorgesehen waren, musste das Leveldesign besonders intuitiv gestaltet werden. Gleichzeitig ein funktionierendes Gameplay, ein reduziertes UI und ein stimmiges Spielerlebnis zu schaffen, erforderte viele schnelle Entscheidungen und pragmatische Lösungen.",
+
+  "gamejam-section-outro-title": "Fazit & Ausblick 🚀",
+  "gamejam-section-outro-text": "Die Teilnahme an der Game Jam war ein intensives und lehrreiches Erlebnis. Besonders beeindruckend war, wie sich ein zuvor kaum eingespieltes Team in kürzester Zeit organisieren konnte, um innerhalb von nur drei Tagen eine funktionierende Spiel-Demo zu entwickeln.<br><br>Rückblickend war das Projekt eine wertvolle Erfahrung darin, auch unter Zeitdruck und hoher Belastung fokussierte Entscheidungen zu treffen und kreative Lösungen zu finden - mit einem greifbaren Ergebnis. Diese Erfahrung nehme ich mit in zukünftige Projekte, insbesondere im Hinblick auf effiziente Zusammenarbeit und agile Entwicklung unter realistischen Bedingungen.",
+
+  "back-button": "Zurück zur Hauptseite"
+}

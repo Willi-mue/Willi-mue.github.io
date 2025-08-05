@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="blog-discord-bot-title" data-i18n-html>🤖 Eigener Discord-Bot für Community-Management</title>
+  <meta name="description" content="Ein mehrsprachiger Discord-Bot für Moderation, Automatisierung und Community-Tools."
+    data-i18n="blog-discord-bot-meta-description" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styling/theme.css" />
+  <link rel="stylesheet" href="../styling/main_page.css" />
+  <link rel="stylesheet" href="../styling/components/top-controls.css" />
+  <link rel="stylesheet" href="../styling/components/article.css" />
+  <link rel="stylesheet" href="../styling/components/badge.css" />
+</head>
+
+<body data-theme="light" lang="de">
+
+  <header>
+    <h1 data-i18n="blog-discord-bot-heading" data-i18n-html>🤖 Eigener Discord-Bot für Community-Management</h1>
+    <p class="meta" data-i18n="blog-discord-bot-published" data-i18n-html>Veröffentlicht am: 02. August 2025</p>
+  </header>
+
+  <div id="top-controls">
+    <button id="toggle-theme" title="" data-i18n="toggle-theme" data-i18n-html>🌙</button>
+    <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>EN</button>
+  </div>
+
+  <main>
+
+    <article>
+      <div class="showcase-badges">
+        <span class="badge">Python</span>
+        <span class="badge">Docker</span>
+      </div>
+
+      <section>
+        <h2 data-i18n="section-core-features-title">Kernfunktionen 🧩</h2>
+        <p data-i18n="section-core-features-text" data-i18n-html>
+          Der <strong>Discord-Chat-Bot</strong> ist der zentrale Assistent im Discord-Server - speziell entwickelt für
+          Event-Organisation, mehrsprachige Kommunikation und die Verwaltung von Community-Strukturen. Zu den
+          Kernfunktionen zählen:
+        </p>
+        <ul>
+          <li data-i18n="section-core-features-list-1"><code>/signup</code> – Anmeldesystem für Events inkl. eigener
+            Threads, Multiaccount-Unterstützung & Status-Optionen</li>
+          <li data-i18n="section-core-features-list-2"><code>/ping_role</code> – Direkter Ping an spezifische Rollen
+          </li>
+          <li data-i18n="section-core-features-list-3"><code>/translate</code> – Übersetzung einzelner Nachrichten oder
+            ganzer Konversationsabschnitte</li>
+          <li data-i18n="section-core-features-list-4"><code>🇬🇧 🇪🇸 🇩🇪 🇫🇷 🇨🇿 🇹🇷 🇮🇹 🇵🇱</code> – Sprachwahl
+            via Emoji-Reaktion für automatische Übersetzungen</li>
+          <li data-i18n="section-core-features-list-5"><code>/clear_dm_history</code> – Aufräumen der Direktnachrichten
+          </li>
+          <li data-i18n="section-core-features-list-6"><code>/list_members</code> – Übersicht aller Servermitglieder
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 data-i18n="section-technical-architecture-title">Technischer Aufbau ⚙️</h2>
+        <p data-i18n="section-technical-architecture-text" data-i18n-html>
+          Der Bot basiert auf <strong>Python</strong> für die Discord-Integration. Die Bereitstellung erfolgt in einem
+          Docker-Container auf einem Linux-Server. Die Interaktionen sind größtenteils über
+          <strong>Slash-Commands</strong> und <strong>Button-Komponenten</strong> gelöst. Eine einfache Template-Logik
+          steuert wiederkehrende Event-Anmeldungen. Sprachverarbeitung und Übersetzung basieren auf externen APIs.
+        </p>
+      </section>
+
+      <section>
+        <h2 data-i18n="section-challenges-title">Herausforderungen 🧠</h2>
+        <p data-i18n="section-challenges-text" data-i18n-html>
+          Der Aufbau eines flexiblen Anmeldesystems mit Threads und Multiaccount-Handling stellte hohe Anforderungen an
+          die Datenstruktur. Auch das Einbinden von Mehrsprachigkeit - sowohl über UI-Reaktionen als auch
+          API-Übersetzungen - erforderte ein genaues Event-Management.
+        </p>
+      </section>
+
+      <section>
+        <h2 data-i18n="section-conclusion-outlook-title">Fazit & Ausblick 🔮</h2>
+        <p data-i18n="section-conclusion-outlook-text" data-i18n-html>
+          Bereits in der aktuellen Beta-Phase erweist sich der Bot als zuverlässiges Werkzeug für das tägliche
+          Community-Management.<br><br> Geplante Erweiterungen umfassen:
+        </p>
+
+        <ul>
+          <li data-i18n="section-conclusion-outlook-list-1">Erweiterung des <code>/signup</code>-Systems mit Vorlagen,
+            Wiederholungen & Editierfunktionen</li>
+          <li data-i18n="section-conclusion-outlook-list-2">Übersichtliches <code>/signup log</code> für Admins/Mods
+          </li>
+          <li data-i18n="section-conclusion-outlook-list-3"><code>/command help</code> für eine eingebaute Hilfe pro
+            Befehl</li>
+        </ul>
+        <p data-i18n="section-conclusion-outlook-text2" data-i18n-html>
+          Ziel ist ein vollständig modularer, konfigurierbarer Bot - ideal für mittelgroße bis große Discord-Communities
+          mit internationalen Mitgliedern.
+        </p>
+      </section>
+
+      <button class="back-button" onclick="location.href='../index.html'" data-i18n="back-button">Zurück zur
+        Hauptseite</button>
+    </article>
+  </main>
+
+
+  <script src="../js/setup.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/badgeColors.js"></script>
+  <script src="../js/translation.js"></script>
+</body>
+
+</html>

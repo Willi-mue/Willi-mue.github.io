@@ -1,0 +1,139 @@
+/* Projekt-Grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6rem 2rem;
+  padding: 0 2rem;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flip Card Container */
+.flip-card {
+  width: 100%;
+  max-width: 320px;
+  min-height: 360px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    max-width: 90%;
+  }
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Vorder- und Rückseite */
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--text);
+}
+
+/* Vorderseite */
+.card-front {
+  align-items: center;
+  text-align: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 180px;
+  object-fit: fill;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  transition: transform 0.4s ease;
+}
+
+.flip-card:hover .card-front img {
+  transform: scale(1.05);
+}
+
+.card-front h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  color: var(--heading-color);
+}
+
+/* Rückseite */
+.card-back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back h3 {
+  font-size: 1.2rem;
+  color: var(--heading-color);
+}
+
+.card-back p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 90%;
+  line-height: 1.4;
+}
+
+.card-back a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--button-border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.card-back a:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

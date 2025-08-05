@@ -1,0 +1,205 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0 1rem;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+header {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--heading-color);
+}
+
+h2 {
+  padding: 40px 0;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: var(--heading-color);
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  animation: fadeIn 2s ease forwards;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.skill-section {
+  flex: 1 1 0;
+  max-width: 500px;
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.skill-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.skill-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--heading-color);
+}
+
+.skill-div{
+  margin-bottom: 80px;
+}
+
+.skill-div:last-child{
+  margin-bottom: 0;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.skill-name {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: var(--skill-name);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 14px;
+  background: var(--bar-bg, #eee);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.skill-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0;
+  /* start at 0% */
+  background: var(--bar-fill);
+  border-radius: 7px 0 0 7px;
+  transition: width 1.2s ease;
+}
+
+.skill-bar.visible::after {
+  width: var(--level);
+}
+
+.office-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+  flex-wrap: wrap;
+}
+
+.office-app {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 100px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office-app:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+#load-more-btn {
+  display: inline-block;
+  margin: 4rem auto;
+  padding: 0.6rem 1.4rem;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--button-border);
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  /* zentrieren */
+  display: block;
+  max-width: 200px;
+  text-align: center;
+}
+
+#load-more-btn:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  transform: translateY(-2px);
+}
+
+#load-more-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

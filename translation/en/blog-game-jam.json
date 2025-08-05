@@ -1,0 +1,26 @@
+{
+  "blog-game-jam-title": "🏆 My First Game Jam",
+  "blog-game-jam-meta-description": "A professional website supporting an MMO Discord server with guides, news, and partners.",
+  "blog-game-jam-heading": "🏆 My First Game Jam",
+  "blog-game-jam-published": "Published on: August 3, 2025",
+
+  "gamejam-section-intro-title": "Motivation & Preparation 🎯",
+  "gamejam-section-intro-text": "Participating in my first Game Jam - the <a href=\"https://itch.io/jam/wowie-jam-4\"><strong>Wowie Jam 4.0</strong></a> - was an exciting experiment. With the theme <em>\"Collaborate With AI\"</em> and only 72 hours of time, the creative and technical challenge was clear: to develop a game where collaboration with artificial intelligence is at the core of the gameplay.",
+
+  "gamejam-section-team-title": "Our Team 🔷",
+  "gamejam-section-team-text": "The project was brought to life by a small but dedicated team - consisting of <strong>two programmers</strong>,<br><strong>one musician</strong>, and <strong>one artist</strong>. Each of us contributed our individual strengths to create a functional and atmospheric game experience within the limited time frame.",
+
+  "gamejam-section-theme-title": "The Game Idea 🌲",
+  "gamejam-section-theme-text": "In our game <a href=\"https://todes-ritter.itch.io/jack-markus\"><strong>“Jack and Markus”</strong></a>, a young boy gets lost in a mysterious forest and must escape the wrath of the forest spirits. Fortunately, he encounters a strange forest creature that helps him find his way to safety.<br><br>This companion is not static - it evolves dynamically based on the player's decisions and behavior. Whether as a melee or ranged fighter, its evolution depends on the way the player interacts with it.<br>This forms the core <strong>AI mechanic</strong> of our game.",
+
+  "gamejam-section-tech-title": "Technical Setup ⚙️",
+  "gamejam-section-tech-text": "The game was developed using the <strong>Godot Engine</strong>. The main logic was written in <code>GDScript</code>, with some components implemented in <code>C#</code>. We created a state-based AI system that dynamically adapts the companion's behavior and evolution to the player's actions - for example, by measuring distance, reacting to threats, or responding to interactions.",
+
+  "gamejam-section-challenges-title": "Challenges 🚧",
+  "gamejam-section-challenges-text": "The biggest challenge was team communication and coordination - especially under time pressure. Since no tutorials were planned, the level design had to be intuitive. At the same time, we had to deliver working mechanics, a minimalist UI, and a cohesive experience - all of which required quick decisions and pragmatic solutions.",
+
+  "gamejam-section-outro-title": "Conclusion & Outlook 🚀",
+  "gamejam-section-outro-text": "Participating in the Game Jam was an intense and insightful experience. What impressed me most was how a team with little prior collaboration was able to self-organize and deliver a working game demo in just three days.<br><br>Looking back, the project was a valuable experience in making focused decisions and finding creative solutions under pressure - and seeing them result in a tangible outcome. I will carry these lessons into future projects, especially regarding efficient teamwork and agile development under realistic constraints.",
+
+  "back-button": "Back to Main Page"
+}

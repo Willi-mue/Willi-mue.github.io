@@ -1,0 +1,72 @@
+#blog {
+    animation: fadeInUp 0.8s ease forwards;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.blog-post {
+    flex: 1 1 330px;
+    max-width: 330px;
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--bar-fill);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeInUp 0.8s ease forwards;
+    justify-self: center;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+    flex-grow: 1;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+
+.blog-post a {
+    align-self: center;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid var(--button-border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.blog-post a:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    transform: translateY(-2px);
+}
+

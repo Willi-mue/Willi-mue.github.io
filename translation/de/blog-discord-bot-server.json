@@ -1,0 +1,33 @@
+{
+  "blog-discord-bot-title": "🤖 Eigener Discord-Bot für Community-Management",
+  "blog-discord-bot-meta-description": "Ein mehrsprachiger Discord-Bot für Moderation, Automatisierung und Community-Tools.",
+  "blog-discord-bot-heading": "🤖 Eigener Discord-Bot für Community-Management",
+  "blog-discord-bot-published": "Veröffentlicht am: 02. August 2025",
+  
+  "toggle-theme": "🌙",
+  "toggle-lang": "EN",
+  
+  "section-core-features-title": "Kernfunktionen 🧩",
+  "section-core-features-text": "Der <strong>Discord-Chat-Bot</strong> ist der zentrale Assistent im Discord-Server - speziell entwickelt für Event-Organisation, mehrsprachige Kommunikation und die Verwaltung von Community-Strukturen. Zu den Kernfunktionen zählen:",
+  "section-core-features-list-1": "/signup - Anmeldesystem für Events inkl. eigener Threads, Multiaccount-Unterstützung & Status-Optionen",
+  "section-core-features-list-2": "/ping_role - Direkter Ping an spezifische Rollen",
+  "section-core-features-list-3": "/translate - Übersetzung einzelner Nachrichten oder ganzer Konversationsabschnitte",
+  "section-core-features-list-4": "🇬🇧 🇪🇸 🇩🇪 🇫🇷 🇨🇿 🇹🇷 🇮🇹 🇵🇱 - Sprachwahl via Emoji-Reaktion für automatische Übersetzungen",
+  "section-core-features-list-5": "/clear_dm_history - Aufräumen der Direktnachrichten",
+  "section-core-features-list-6": "/list_members - Übersicht aller Servermitglieder",
+  
+  "section-technical-architecture-title": "Technischer Aufbau ⚙️",
+  "section-technical-architecture-text": "Der Bot basiert auf <strong>Python</strong> für die Discord-Integration. Die Bereitstellung erfolgt in einem Docker-Container auf einem Linux-Server. Die Interaktionen sind größtenteils über <strong>Slash-Commands</strong> und <strong>Button-Komponenten</strong> gelöst. Eine einfache Template-Logik steuert wiederkehrende Event-Anmeldungen. Sprachverarbeitung und Übersetzung basieren auf externen APIs.",
+  
+  "section-challenges-title": "Herausforderungen 🧠",
+  "section-challenges-text": "Der Aufbau eines flexiblen Anmeldesystems mit Threads und Multiaccount-Handling stellte hohe Anforderungen an die Datenstruktur. Auch das Einbinden von Mehrsprachigkeit - sowohl über UI-Reaktionen als auch API-Übersetzungen - erforderte ein genaues Event-Management.",
+  
+  "section-conclusion-outlook-title": "Fazit & Ausblick 🔮",
+  "section-conclusion-outlook-text": "Bereits in der aktuellen Beta-Phase erweist sich der Bot als zuverlässiges Werkzeug für das tägliche Community-Management.<br><br> Geplante Erweiterungen umfassen:",
+  "section-conclusion-outlook-list-1": "Erweiterung des /signup-Systems mit Vorlagen, Wiederholungen & Editierfunktionen",
+  "section-conclusion-outlook-list-2": "Übersichtliches /signup log für Admins/Mods",
+  "section-conclusion-outlook-list-3": "/command help für eine eingebaute Hilfe pro Befehl",
+  "section-conclusion-outlook-text2": "Ziel ist ein vollständig modularer, konfigurierbarer Bot - ideal für mittelgroße bis große Discord-Communities mit internationalen Mitgliedern.",
+  
+  "back-button": "Zurück zur Hauptseite"
+}
