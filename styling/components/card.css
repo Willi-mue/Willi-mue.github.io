@@ -85,15 +85,14 @@
 }
 
 .card-front h2 {
+  padding: 0;
   font-size: 1.4rem;
   margin: 0.5rem 0;
   color: var(--heading-color);
 }
 
-/* Rückseite */
 .card-back {
   transform: rotateY(180deg);
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -108,11 +107,12 @@
   color: var(--text-secondary);
   max-width: 90%;
   line-height: 1.4;
+  margin-bottom: auto;
 }
 
 .card-back a {
   display: inline-block;
-  margin-top: 1rem;
+  margin: 1rem 0 2rem 0;
   padding: 0.6rem 1.4rem;
   color: var(--button-text);
   background-color: var(--button-bg);

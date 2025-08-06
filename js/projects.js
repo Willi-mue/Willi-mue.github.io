@@ -49,6 +49,10 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
         front.appendChild(img);
       }
 
+      const title = document.createElement('h2');
+      title.textContent = project.name;
+      front.appendChild(title);
+
       const badgeWrapper = document.createElement('div');
       badgeWrapper.className = 'badge-wrapper';
 
@@ -66,10 +70,6 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
       }
 
       front.appendChild(badgeWrapper);
-
-      const title = document.createElement('h2');
-      title.textContent = project.name;
-      front.appendChild(title);
 
       const back = document.createElement('div');
       back.className = 'card-back';
@@ -104,7 +104,6 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
 
     loadedProjectsCount += nextProjects.length;
 
-    // "Mehr laden"-Button einfügen oder entfernen
     if (loadedProjectsCount < allProjects.length) {
       let loadMoreBtn = document.getElementById(loadMoreBtnId);
       if (!loadMoreBtn) {
