@@ -26,6 +26,7 @@
   min-height: 360px;
   opacity: 0;
   animation: fadeInUp 1s forwards;
+  user-select: none;
 }
 
 @media (max-width: 480px) {
@@ -80,10 +81,6 @@
   transition: transform 0.4s ease;
 }
 
-.flip-card:hover .card-front img {
-  transform: scale(1.05);
-}
-
 .card-front h2 {
   padding: 0;
   font-size: 1.4rem;
@@ -110,24 +107,9 @@
   margin-bottom: auto;
 }
 
-.card-back a {
-  display: inline-block;
-  margin: 1rem 0 2rem 0;
-  padding: 0.6rem 1.4rem;
-  color: var(--button-text);
-  background-color: var(--button-bg);
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid var(--button-border);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.card-back a:hover {
-  background-color: var(--button-hover-bg);
-  color: var(--button-hover-text);
-  transform: translateY(-2px);
+.card-back a{
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 /* Animation */

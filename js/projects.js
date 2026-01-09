@@ -94,6 +94,7 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
       link.textContent = translations['project-github-link'];
+      link.classList.add('button');
       back.appendChild(link);
 
       inner.appendChild(front);
@@ -109,6 +110,7 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
       if (!loadMoreBtn) {
         loadMoreBtn = document.createElement('button');
         loadMoreBtn.id = loadMoreBtnId;
+        loadMoreBtn.classList.add('button');
         loadMoreBtn.textContent = currentLang === 'de' ? 'Mehr laden' : 'Load more';
         loadMoreBtn.addEventListener('click', () => loadProjects(currentLang, true, translations));
         container.after(loadMoreBtn);

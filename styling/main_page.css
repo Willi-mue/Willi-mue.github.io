@@ -1,16 +1,24 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  padding: 0 1rem;
-  transition: background 0.5s ease, color 0.5s ease;
+  font-weight: 500;
 }
 
 header {
   text-align: center;
-  margin: 4rem 0 2rem;
-  animation: fadeInDown 1s ease forwards;
+  
+  background: var(--hd-fo-bg);
+  padding: 20px 0;
+
+  #title{
+    animation: fadeInDown 1s ease forwards;
+    margin: 0;
+  }
+  p{
+    animation: fadeInDown 1s ease forwards;
+  }
 }
 
 h1 {
@@ -84,7 +92,7 @@ p {
   gap: 4rem;
   background: var(--card-bg, #fff);
   border-radius: 16px;
-  padding: 4rem;
+  padding: 1rem 4rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
@@ -92,17 +100,16 @@ p {
 
 .skill-section.grid-1{
   grid-template-columns: repeat(1, 1fr);
-  padding: 2rem 4rem;
-}
-
-.skill-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  padding: 1rem 4rem;
 }
 
 .skill-section h3 {
   font-size: 1.5rem;
   color: var(--heading-color);
+}
+
+.skill-div{
+  user-select: none;
 }
 
 .skill-div:last-child{
@@ -149,57 +156,38 @@ p {
   width: var(--level);
 }
 
-.office-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0 2.5rem;
-  flex-wrap: wrap;
-}
-
-.office-app {
-  background: var(--card-bg);
-  box-shadow: var(--card-shadow);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
-  color: var(--text);
-  min-width: 100px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.office-app:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--card-shadow-hover);
-}
-
 #load-more-btn {
-  display: inline-block;
-  margin: 4rem auto;
-  padding: 0.6rem 1.4rem;
-  color: var(--button-text);
+  border: none;
+  align-self: center;
+  justify-self: center;
+  margin-top: 30px;
+}
+
+.button{
+  display: flex;
+  align-self: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
   background-color: var(--button-bg);
+  color: var(--button-text);
   font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid var(--button-border);
+  font-size: 14px;
   border-radius: 8px;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  /* zentrieren */
-  display: block;
-  max-width: 200px;
+  transition: .3s;
+}
+
+.button:active {
+    transform: scale(.95);
+}
+
+footer{
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-}
-
-#load-more-btn:hover {
-  background-color: var(--button-hover-bg);
-  color: var(--button-hover-text);
-  transform: translateY(-2px);
-}
-
-#load-more-btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  background: var(--hd-fo-bg);
 }

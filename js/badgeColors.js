@@ -68,7 +68,7 @@ window.BadgeUtils = (() => {
 
       badge.textContent = `${icon} ${label}`;
       badge.style.backgroundColor = bgColor;
-      badge.style.color = baseColor;
+      badge.style.color = '#1a1a1a';
     });
   }
 

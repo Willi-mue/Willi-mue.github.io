@@ -9,10 +9,6 @@ article {
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-article:hover {
-  box-shadow: var(--card-shadow-hover);
-}
-
 article section {
   margin-bottom: 2rem;
 }
@@ -57,12 +53,6 @@ article ul li {
   transition: color 0.3s ease;
 }
 
-.back-link:hover,
-.back-link:focus {
-  color: var(--link-hover);
-  text-decoration: underline;
-}
-
 .back-button {
   display: inline-block;
   margin-top: 3rem;
@@ -77,15 +67,6 @@ article ul li {
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   font-family: 'Inter', sans-serif;
 }
-
-.back-button:hover,
-.back-button:focus {
-  background-color: var(--button-hover-bg);
-  color: var(--button-hover-text);
-  outline: none;
-  transform: translateY(-2px);
-}
-
 
 article pre {
   background-color: var(--section-bg);     
