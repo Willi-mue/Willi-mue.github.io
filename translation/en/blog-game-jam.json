@@ -13,7 +13,7 @@
   "gamejam-section-theme-title": "The Game Idea 🌲",
   "gamejam-section-theme-text": "In our game <a href=\"https://todes-ritter.itch.io/jack-markus\"><strong>“Jack and Markus”</strong></a>, a young boy gets lost in a mysterious forest and must escape the wrath of the forest spirits. Fortunately, he encounters a strange forest creature that helps him find his way to safety.<br><br>This companion is not static - it evolves dynamically based on the player's decisions and behavior. Whether as a melee or ranged fighter, its evolution depends on the way the player interacts with it.<br>This forms the core <strong>AI mechanic</strong> of our game.",
 
-  "gamejam-section-tech-title": "Technical Setup ⚙️",
+  "gamejam-section-tech-title": "Technical Setup ",
   "gamejam-section-tech-text": "The game was developed using the <strong>Godot Engine</strong>. The main logic was written in <code>GDScript</code>, with some components implemented in <code>C#</code>. We created a state-based AI system that dynamically adapts the companion's behavior and evolution to the player's actions - for example, by measuring distance, reacting to threats, or responding to interactions.",
 
   "gamejam-section-challenges-title": "Challenges 🚧",

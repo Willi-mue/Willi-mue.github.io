@@ -1,33 +1,33 @@
 {
   "blog-minecraft-server-title": "Minecraft-Server im HomeLab - Willi Müller",
   "blog-minecraft-server-meta-description": "Jährlicher Aufbau eines Minecraft-Servers im privaten HomeLab von Willi Müller.",
-  "blog-minecraft-server-heading": "🎮 Minecraft-Server auf dem eigenen Homeserver",
+  "blog-minecraft-server-heading": "Minecraft-Server auf dem eigenen Homeserver",
   "blog-minecraft-server-published": "Veröffentlicht am: 31. Juli 2025",
   
-  "blog-minecraft-server-section-1-title": "Warum ein eigener Minecraft-Server? 🎮",
+  "blog-minecraft-server-section-1-title": "Warum ein eigener Minecraft-Server? ",
   "blog-minecraft-server-section-1-text": "Mindestens zweimal im Jahr richte ich für meinen Freundeskreis eigene Minecraft-Server ein:<br><br> Einmal als modded Version mit verschiedenen Erweiterungen und einmal als optimierten Vanilla-Server.<br><br> Dabei geht es nicht nur um den Spielspaß, sondern auch um die volle Kontrolle über Mods, Plugins, Performance und Serverregeln. Gleichzeitig nutze ich das Projekt, um meine Kenntnisse in Netzwerken, Servermanagement und Docker weiter auszubauen.",
 
-  "blog-minecraft-server-section-2-title": "Systemarchitektur 🏗️",
-  "blog-minecraft-server-section-2-text": "Der Server basiert auf Ubuntu 24.04.2 LTS 🐧 und wird mit Docker 🐳 und docker-compose betrieben.<br> Zur Verwaltung der Container-Umgebung nutze ich zusätzlich Portainer 🖥️, das eine benutzerfreundliche Oberfläche für das Container-Management bietet.",
+  "blog-minecraft-server-section-2-title": "Systemarchitektur ",
+  "blog-minecraft-server-section-2-text": "Der Server basiert auf Ubuntu 24.04.2 LTS  und wird mit Docker  und docker-compose betrieben.<br> Zur Verwaltung der Container-Umgebung nutze ich zusätzlich Portainer , das eine benutzerfreundliche Oberfläche für das Container-Management bietet.",
 
-  "blog-minecraft-server-section-3-title": "Setup mit Docker 🛠️",
-  "blog-minecraft-server-section-3-text": "Ich betreibe den Server in einem Docker-Container mithilfe von docker-compose.<br> So kann ich verschiedene Setups (Vanilla oder Modded) einfach verwalten, konfigurieren und bei Bedarf neustarten 🔄<br><br> Besonders praktisch ist das itzg/minecraft-server Image, das viele Varianten wie Fabric, Forge, oder Paper unterstützt. Für modded Server nutze ich meist Fabric.<br><br> Ein typisches Setup sieht so aus:",
+  "blog-minecraft-server-section-3-title": "Setup mit Docker ",
+  "blog-minecraft-server-section-3-text": "Ich betreibe den Server in einem Docker-Container mithilfe von docker-compose.<br> So kann ich verschiedene Setups (Vanilla oder Modded) einfach verwalten, konfigurieren und bei Bedarf neustarten <br><br> Besonders praktisch ist das itzg/minecraft-server Image, das viele Varianten wie Fabric, Forge, oder Paper unterstützt. Für modded Server nutze ich meist Fabric.<br><br> Ein typisches Setup sieht so aus:",
   "blog-minecraft-server-section-3-code": "services:\n  minecraft:\n    image: itzg/minecraft-server\n    container_name: NAME-server\n    ports:\n      - \"25565:25565\"\n    environment:\n      EULA: \"TRUE\"\n      TYPE: FABRIC\n      VERSION: x.xx.x\n      FABRIC_LOADER_VERSION: \"x.xx.xx\"\n      MEMORY: 4G\n    volumes:\n      - ./NAME:/data\n    restart: unless-stopped",
-  "blog-minecraft-server-section-3-text2": "Die Mods werden einfach im Ordner ./NAME/mods abgelegt und beim Start automatisch geladen 📦<br> So bleibt die Installation portabel und leicht wartbar, ideal für spontane Spielrunden mit neuen Modpacks.",
+  "blog-minecraft-server-section-3-text2": "Die Mods werden einfach im Ordner ./NAME/mods abgelegt und beim Start automatisch geladen <br> So bleibt die Installation portabel und leicht wartbar, ideal für spontane Spielrunden mit neuen Modpacks.",
 
-  "blog-minecraft-server-section-4-title": "Zugriff von außen: Portfreigabe oder Tunnel 🌐",
+  "blog-minecraft-server-section-4-title": "Zugriff von außen: Portfreigabe oder Tunnel ",
   "blog-minecraft-server-section-4-text": "Damit meine Freunde von außerhalb auf den Server zugreifen können, setze ich je nach Situation unterschiedliche Methoden ein:",
   "blog-minecraft-server-section-4-list-1": "Manuelle Portfreigabe im Router, aber nicht auf dem Standard-Port 25565 - aus Sicherheitsgründen wähle ich bewusst alternative Ports.",
   "blog-minecraft-server-section-4-list-2": "Alternativ verzichte ich ganz auf Portfreigaben und verwende ein sicheres Tunnelsystem (wie z. B. playit, SSH-Tunnel oder Cloudflare Tunnel), über das sich meine Freunde verbinden können.",
-  "blog-minecraft-server-section-4-text2": "🔐 Diese Vorgehensweise bietet deutlich mehr Kontrolle und Sicherheit als typische Minecraft-Setups, bei denen einfach der Standard-Port geöffnet wird.",
+  "blog-minecraft-server-section-4-text2": " Diese Vorgehensweise bietet deutlich mehr Kontrolle und Sicherheit als typische Minecraft-Setups, bei denen einfach der Standard-Port geöffnet wird.",
 
-  "blog-minecraft-server-section-5-title": "Was ich dabei gelernt habe 💡",
-  "blog-minecraft-server-section-5-list-1": "Praxis mit Docker 🐳: Effizientes Einsetzen und Verwalten von Containern.",
-  "blog-minecraft-server-section-5-list-2": "Netzwerksicherheit 🔐: Einsatz sicherer Ports, Firewalls und Tunnel.",
-  "blog-minecraft-server-section-5-list-3": "Monitoring & Uptime 🖥️: Systemressourcen live via SSH mit <code>btop</code> oder Containerstatus mit Portainer überwachen.",
+  "blog-minecraft-server-section-5-title": "Was ich dabei gelernt habe ",
+  "blog-minecraft-server-section-5-list-1": "Praxis mit Docker : Effizientes Einsetzen und Verwalten von Containern.",
+  "blog-minecraft-server-section-5-list-2": "Netzwerksicherheit : Einsatz sicherer Ports, Firewalls und Tunnel.",
+  "blog-minecraft-server-section-5-list-3": "Monitoring & Uptime : Systemressourcen live via SSH mit <code>btop</code> oder Containerstatus mit Portainer überwachen.",
 
-  "blog-minecraft-server-section-6-title": "Fazit ✅",
-  "blog-minecraft-server-section-6-text": "Der eigene Minecraft-Server im HomeLab verbindet technisches Lernen mit echtem Spielspaß. Durch das Projekt habe ich nicht nur meine Skills in Docker, Netzwerken und Sicherheit verbessert, sondern auch eine private und sichere Spielwelt für Freunde geschaffen 🛡️🌍.",
+  "blog-minecraft-server-section-6-title": "Fazit ",
+  "blog-minecraft-server-section-6-text": "Der eigene Minecraft-Server im HomeLab verbindet technisches Lernen mit echtem Spielspaß. Durch das Projekt habe ich nicht nur meine Skills in Docker, Netzwerken und Sicherheit verbessert, sondern auch eine private und sichere Spielwelt für Freunde geschaffen .",
 
   "blog-minecraft-server-back-button": "Zurück zur Hauptseite"
 }

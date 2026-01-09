@@ -31,53 +31,100 @@
     </div>
 
     <main>
-        <h2 id="projects-title" data-i18n="main-page.projects-title" data-i18n-html>Meine öffentlichen Projekte</h2>
+        <h2 class="main-sections" data-i18n="main-page.projects-title" data-i18n-html>Meine öffentlichen Projekte</h2>
         <section id="projects" class="projects"></section>
 
-        <h2 id="tech-title" data-i18n="main-page.tech-title" data-i18n-html>IT-Kenntnisse</h2>
+        <h2 class="main-sections" data-i18n="main-page.tech-title" data-i18n-html>IT-Kenntnisse</h2>
         <section id="tech-stack">
 
             <div class="skill-section">
+
                 <div class="skill-div">
-                    <h3 id="prog-title" data-i18n="main-page.prog-title" data-i18n-html>Programmiersprachen</h3>
+                    <h3 id="prog-title" data-i18n="main-page.prog-title" data-i18n-html>
+                        Programmiersprachen
+                    </h3>
                     <ul class="skill-list">
-                        <li><span class="skill-name">🐍 Python</span>
-                            <div class="skill-bar" style="--level:90%"></div>
+                        <li>
+                            <span class="skill-name">🐍 Python</span>
+                            <div class="skill-bar" style="--level:95%"></div>
                         </li>
-                        <li><span class="skill-name">🎨 CSS & ✨ JavaScript</span>
-                            <div class="skill-bar" style="--level:75%"></div>
+                        <li>
+                            <span class="skill-name">☕ Java</span>
+                            <div class="skill-bar" style="--level:85%"></div>
                         </li>
-                        <li><span class="skill-name">💠 C++</span>
-                            <div class="skill-bar" style="--level:55%"></div>
+                        <li>
+                            <span class="skill-name">✨ JavaScript</span>
+                            <div class="skill-bar" style="--level:60%"></div>
                         </li>
-                        <li><span class="skill-name">☕ Java</span>
+                        <li>
+                            <span class="skill-name">💠 C++</span>
                             <div class="skill-bar" style="--level:50%"></div>
-                        </li>
-                        <li><span class="skill-name">🔷 Scala</span>
-                            <div class="skill-bar" style="--level:30%"></div>
                         </li>
                     </ul>
                 </div>
+
                 <div class="skill-div">
-                    <h3 id="tools-title" data-i18n="main-page.tools-title" data-i18n-html>Tools & Plattformen</h3>
+                    <h3 id="tools-title" data-i18n="main-page.tools-title" data-i18n-html>
+                        Tools & Plattformen
+                    </h3>
                     <ul class="skill-list">
-                        <li><span class="skill-name">🐙 Git (GitHub & GitLab)</span>
+                        <li>
+                            <span class="skill-name">🐙 Git (GitHub & GitLab)</span>
                             <div class="skill-bar" style="--level:90%"></div>
                         </li>
-                        <li><span class="skill-name">🐳 Docker</span>
+                        <li>
+                            <span class="skill-name">🐳 Docker</span>
                             <div class="skill-bar" style="--level:75%"></div>
                         </li>
-                        <li><span class="skill-name">🐧 Linux</span>
+                        <li>
+                            <span class="skill-name">🐧 Linux</span>
                             <div class="skill-bar" style="--level:75%"></div>
                         </li>
-                        <li><span class="skill-name">🐬 MySQL & MariaDB</span>
+                        <li>
+                            <span class="skill-name">🐬 MySQL & MariaDB</span>
+                            <div class="skill-bar" style="--level:65%"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-div">
+                    <h3 id="frontend-title" data-i18n="main-page.frontend-title" data-i18n-html>
+                        Frontend & Web
+                    </h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-name">🌐 HTML5 </span>
+                            <div class="skill-bar" style="--level:95%"></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">🎨 SCSS</span>
+                            <div class="skill-bar" style="--level:95%"></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">🟢 Vue.js</span>
+                            <div class="skill-bar" style="--level:75%"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-div">
+                    <h3 id="infra-title" data-i18n="main-page.infra-title" data-i18n-html>
+                        Server, Networking & Security
+                    </h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-name">🔐 OpenVPN (Self-hosted Server)</span>
+                            <div class="skill-bar" style="--level:90%"></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">🔥 Firewall & Network Configuration</span>
                             <div class="skill-bar" style="--level:65%"></div>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="skill-section">
+            <div class="skill-section grid-1">
                 <section id="about-me" class="about-me">
                     <h2 data-i18n="main-page.about-me-title" data-i18n-html>Über mich</h2>
                     <p data-i18n="main-page.about-me-p1" data-i18n-html>
@@ -105,12 +152,12 @@
             </div>
         </section>
 
-        <h2 data-i18n="main-page.blog-title" data-i18n-html>Wissensbereich</h2>
+        <h2 class="main-sections" data-i18n="main-page.blog-title" data-i18n-html>Wissensbereich</h2>
         <section id="blog">
             <div class="blog-grid">
 
                 <article class="blog-post">
-                    <h3 data-i18n="main-page.blog-post-1-title" data-i18n-html>🎮 Minecraft-Server auf dem eigenen Homeserver</h3>
+                    <h3 data-i18n="main-page.blog-post-1-title" data-i18n-html>Minecraft-Server auf dem eigenen Homeserver</h3>
                     <p data-i18n="main-page.blog-post-1-desc" data-i18n-html>Einblicke in den jährlichen Aufbau meines privaten Minecraft-Servers.</p>
                     <div class="badge-wrapper">
                         <span class="badge">Docker</span>
@@ -130,7 +177,7 @@
                 </article>
                 
                 <article class="blog-post">
-                    <h3 data-i18n="main-page.blog-post-3-title" data-i18n-html>🌐 Webseite für einen<br> MMO Community Discord-Server</h3>
+                    <h3 data-i18n="main-page.blog-post-3-title" data-i18n-html> Webseite für einen<br> MMO Community Discord-Server</h3>
                     <p data-i18n="main-page.blog-post-3-desc" data-i18n-html>Eine Webseite mit Guides, Tools und Informationen, die den Discord-Server unterstützt und das Community-Management erleichtert.</p>
                     <div class="badge-wrapper">
                         <span class="badge">HTML</span>
@@ -142,7 +189,7 @@
                 </article>
 
                 <article class="blog-post">
-                    <h3 data-i18n="main-page.blog-post-5-title" data-i18n-html>🏆 Meine erste Game Jam</h3>
+                    <h3 data-i18n="main-page.blog-post-5-title" data-i18n-html>Meine erste Game Jam</h3>
                     <p data-i18n="main-page.blog-post-5-desc" data-i18n-html>Ein Erfahrungsbericht - von der Idee über die Umsetzung bis zum finalen Spiel.</p>
                     <div class="badge-wrapper">
                         <span class="badge">GDScript</span>
@@ -155,7 +202,7 @@
             </div>
         </section>
 
-        <h2 id="contact-title" data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
+        <h2 class="main-sections" data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
         <section id="contact">
             <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
                 Sie möchten gerne mit mir in Kontakt treten?<br>

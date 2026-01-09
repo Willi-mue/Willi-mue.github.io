@@ -20,14 +20,14 @@ h1 {
   color: var(--heading-color);
 }
 
-h2 {
-  padding: 40px 0;
-}
-
 h2,
 h3 {
   text-align: center;
   color: var(--heading-color);
+}
+
+.main-sections{
+  margin-top: 80px;
 }
 
 p {
@@ -73,21 +73,26 @@ p {
 
 #tech-stack {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 calc((100% / 3) / 2);
+  gap: 40px;
+  flex-direction: column;
 }
 
 .skill-section {
-  flex: 1 1 0;
-  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
   background: var(--card-bg, #fff);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 4rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
+}
+
+.skill-section.grid-1{
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2rem 4rem;
 }
 
 .skill-section:hover {
@@ -96,13 +101,8 @@ p {
 }
 
 .skill-section h3 {
-  margin-bottom: 1rem;
   font-size: 1.5rem;
   color: var(--heading-color);
-}
-
-.skill-div{
-  margin-bottom: 80px;
 }
 
 .skill-div:last-child{

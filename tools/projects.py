@@ -39,7 +39,7 @@ def fetch_all_repos(owner):
         url = f"https://api.github.com/users/{owner}/repos?per_page=100&page={page}"
         r = requests.get(url)
         if r.status_code != 200:
-            print("❌ Fehler beim Abrufen der Repositories.")
+            print("Fehler beim Abrufen der Repositories.")
             break
         page_repos = r.json()
         if not page_repos:
@@ -64,16 +64,16 @@ def fetch_projects(owner, existing_dict):
         if repo["private"]:
             continue
         if name.lower() in BLACKLIST:
-            print(f"⏭️  Übersprungen (blacklist): {name}")
+            print(f"Übersprungen (blacklist): {name}")
             continue
 
         # Hier prüfen, ob das Projekt bereits existiert
         if name in existing_dict:
-            print(f"⏭️  Übersprungen (bereits vorhanden): {name}")
+            print(f"Übersprungen (bereits vorhanden): {name}")
             projects.append(existing_dict[name])  # Bestehendes Projekt übernehmen
             continue
 
-        print(f"🔍 Lade: {name}")
+        print(f"Lade: {name}")
         image = get_readme_image(owner, name)
         languages = fetch_languages(owner, name)
         description = repo.get("description", "")
@@ -116,4 +116,4 @@ if __name__ == "__main__":
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(updated_projects, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ {len(updated_projects)} Projekte aktualisiert und gespeichert unter: {output_path}")
+    print(f"\n {len(updated_projects)} Projekte aktualisiert und gespeichert unter: {output_path}")

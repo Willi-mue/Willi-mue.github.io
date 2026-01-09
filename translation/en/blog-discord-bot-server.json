@@ -7,7 +7,7 @@
   "toggle-theme": "🌙",
   "toggle-lang": "DE",
   
-  "section-core-features-title": "Core Features 🧩",
+  "section-core-features-title": "Core Features ",
   "section-core-features-text": "The <strong>Discord chat bot</strong> is the central assistant on the Discord server - specially designed for event organization, multilingual communication, and management of community structures. Core features include:",
   "section-core-features-list-1": "/signup - Event registration system including dedicated threads, multi-account support & status options",
   "section-core-features-list-2": "/ping_role - Direct ping to specific roles",
@@ -16,13 +16,13 @@
   "section-core-features-list-5": "/clear_dm_history - Clean up direct messages",
   "section-core-features-list-6": "/list_members - Overview of all server members",
   
-  "section-technical-architecture-title": "Technical Architecture ⚙️",
+  "section-technical-architecture-title": "Technical Architecture ",
   "section-technical-architecture-text": "The bot is based on <strong>Python</strong> for Discord integration. Deployment runs in a Docker container on a Linux server. Interactions mostly use <strong>slash commands</strong> and <strong>button components</strong>. A simple template logic controls recurring event registrations. Language processing and translation rely on external APIs.",
   
-  "section-challenges-title": "Challenges 🧠",
+  "section-challenges-title": "Challenges ",
   "section-challenges-text": "Building a flexible registration system with threads and multi-account handling posed high demands on the data structure. Integrating multilingualism - both via UI reactions and API translations - required precise event management.",
   
-  "section-conclusion-outlook-title": "Conclusion & Outlook 🔮",
+  "section-conclusion-outlook-title": "Conclusion & Outlook ",
   "section-conclusion-outlook-text": "Already in the current beta phase, the bot proves to be a reliable tool for daily community management.<br><br> Planned expansions include:",
   "section-conclusion-outlook-list-1": "Expansion of the /signup system with templates, repetitions & edit functions",
   "section-conclusion-outlook-list-2": "Clear /signup log for admins/mods",

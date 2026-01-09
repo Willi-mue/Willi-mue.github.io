@@ -1,33 +1,33 @@
 {
   "blog-minecraft-server-title": "Minecraft Server in the HomeLab - Willi Müller",
   "blog-minecraft-server-meta-description": "Annual setup of a Minecraft server in Willi Müller's private HomeLab.",
-  "blog-minecraft-server-heading": "🎮 Minecraft Server on my Own Home Server",
+  "blog-minecraft-server-heading": "Minecraft Server on my Own Home Server",
   "blog-minecraft-server-published": "Published on: July 31, 2025",
 
-  "blog-minecraft-server-section-1-title": "Why my Own Minecraft Server? 🎮",
+  "blog-minecraft-server-section-1-title": "Why my Own Minecraft Server? ",
   "blog-minecraft-server-section-1-text": "At least twice a year, I set up my own Minecraft servers for my group of friends:<br><br> Once as a modded version with various expansions and once as an optimized vanilla server.<br><br> It’s not just about fun, but also about full control over mods, plugins, performance, and server rules. At the same time, I use the project to expand my knowledge of networking, server management, and Docker.",
 
-  "blog-minecraft-server-section-2-title": "System Architecture 🏗️",
-  "blog-minecraft-server-section-2-text": "The server is based on Ubuntu 24.04.2 LTS 🐧 and runs with Docker 🐳 and docker-compose.<br> For container environment management, I also use Portainer 🖥️, which provides a user-friendly interface for container management.",
+  "blog-minecraft-server-section-2-title": "System Architecture ",
+  "blog-minecraft-server-section-2-text": "The server is based on Ubuntu 24.04.2 LTS  and runs with Docker  and docker-compose.<br> For container environment management, I also use Portainer , which provides a user-friendly interface for container management.",
 
-  "blog-minecraft-server-section-3-title": "Setup with Docker 🛠️",
-  "blog-minecraft-server-section-3-text": "I run the server inside a Docker container using docker-compose.<br> This way, I can easily manage, configure, and restart different setups (vanilla or modded) 🔄<br><br> The itzg/minecraft-server image is especially handy as it supports many variants like Fabric, Forge, or Paper. For modded servers, I usually use Fabric.<br><br> A typical setup looks like this:",
+  "blog-minecraft-server-section-3-title": "Setup with Docker ",
+  "blog-minecraft-server-section-3-text": "I run the server inside a Docker container using docker-compose.<br> This way, I can easily manage, configure, and restart different setups (vanilla or modded) <br><br> The itzg/minecraft-server image is especially handy as it supports many variants like Fabric, Forge, or Paper. For modded servers, I usually use Fabric.<br><br> A typical setup looks like this:",
   "blog-minecraft-server-section-3-code": "services:\n  minecraft:\n    image: itzg/minecraft-server\n    container_name: NAME-server\n    ports:\n      - \"25565:25565\"\n    environment:\n      EULA: \"TRUE\"\n      TYPE: FABRIC\n      VERSION: x.xx.x\n      FABRIC_LOADER_VERSION: \"x.xx.xx\"\n      MEMORY: 4G\n    volumes:\n      - ./NAME:/data\n    restart: unless-stopped",
-  "blog-minecraft-server-section-3-text2": "Mods are simply placed in the ./NAME/mods folder and loaded automatically at startup 📦<br> This keeps the installation portable and easy to maintain, ideal for spontaneous gaming sessions with new modpacks.",
+  "blog-minecraft-server-section-3-text2": "Mods are simply placed in the ./NAME/mods folder and loaded automatically at startup <br> This keeps the installation portable and easy to maintain, ideal for spontaneous gaming sessions with new modpacks.",
 
-  "blog-minecraft-server-section-4-title": "External Access: Port Forwarding or Tunnel 🌐",
+  "blog-minecraft-server-section-4-title": "External Access: Port Forwarding or Tunnel ",
   "blog-minecraft-server-section-4-text": "To allow my friends to access the server from outside, I use different methods depending on the situation:",
   "blog-minecraft-server-section-4-list-1": "Manual port forwarding on the router, but not on the default port 25565 - for security reasons, I consciously choose alternative ports.",
   "blog-minecraft-server-section-4-list-2": "Alternatively, I avoid port forwarding altogether and use a secure tunneling system (such as playit, SSH tunnel, or Cloudflare Tunnel) through which my friends can connect.",
-  "blog-minecraft-server-section-4-text2": "🔐 This approach offers much more control and security than typical Minecraft setups that just open the default port.",
+  "blog-minecraft-server-section-4-text2": " This approach offers much more control and security than typical Minecraft setups that just open the default port.",
 
-  "blog-minecraft-server-section-5-title": "What I Learned 💡",
-  "blog-minecraft-server-section-5-list-1": "Hands-on with Docker 🐳: Efficient use and management of containers.",
-  "blog-minecraft-server-section-5-list-2": "Network Security 🔐: Use of secure ports, firewalls, and tunnels.",
-  "blog-minecraft-server-section-5-list-3": "Monitoring & Uptime 🖥️: Live system resources via SSH using <code>btop</code> or container status with Portainer.",
+  "blog-minecraft-server-section-5-title": "What I Learned ",
+  "blog-minecraft-server-section-5-list-1": "Hands-on with Docker : Efficient use and management of containers.",
+  "blog-minecraft-server-section-5-list-2": "Network Security : Use of secure ports, firewalls, and tunnels.",
+  "blog-minecraft-server-section-5-list-3": "Monitoring & Uptime : Live system resources via SSH using <code>btop</code> or container status with Portainer.",
 
-  "blog-minecraft-server-section-6-title": "Conclusion ✅",
-  "blog-minecraft-server-section-6-text": "Running my own Minecraft server in the HomeLab combines technical learning with real fun. Through this project, I have not only improved my skills in Docker, networking, and security but also created a private and secure gaming world for friends 🛡️🌍.",
+  "blog-minecraft-server-section-6-title": "Conclusion ",
+  "blog-minecraft-server-section-6-text": "Running my own Minecraft server in the HomeLab combines technical learning with real fun. Through this project, I have not only improved my skills in Docker, networking, and security but also created a private and secure gaming world for friends .",
 
   "blog-minecraft-server-back-button": "Back to Main Page"
 }

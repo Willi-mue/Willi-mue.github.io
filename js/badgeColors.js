@@ -61,7 +61,6 @@ window.BadgeUtils = (() => {
     const badges = root.querySelectorAll('.badge');
     badges.forEach(badge => {
       const text = badge.textContent.trim();
-      // Falls das Icon schon da ist, entfernen, nur Sprache behalten
       const label = text.replace(/^.*? /, ''); 
       const icon = languageIcons[label] || '💻';
       const baseColor = languageColors[label] || '#888888';
@@ -73,7 +72,6 @@ window.BadgeUtils = (() => {
     });
   }
 
-  // Direkt beim Laden die statischen Badges stylen
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => applyBadgeStyles());
   } else {
