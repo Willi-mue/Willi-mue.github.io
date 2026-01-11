@@ -31,3 +31,10 @@
   color: var(--button-text);         
   box-shadow: var(--card-shadow-hover);
 }
+
+
+@media (max-width: 490px) {
+  #top-controls{
+    flex-direction: column;
+  }
+}
