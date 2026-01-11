@@ -227,3 +227,58 @@ footer{
   text-align: center;
   background: var(--hd-fo-bg);
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem; /* Basisfont für Mobilgeräte */
+  }
+
+  h1 {
+    font-size: 2rem; /* kleiner als Desktop */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 15px 10px; /* Weniger Padding auf Mobil */
+  }
+
+  #subtitle {
+    max-width: 90%;
+    flex-direction: column; /* Untereinander statt nebeneinander */
+    text-align: center;
+  }
+
+  #tech-stack {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .skill-section {
+    padding: 1rem 2rem;
+  }
+
+  .skill-bar {
+    height: 10px;
+  }
+
+  .button {
+    font-size: 13px;
+    padding: 0.4rem 1rem;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+}

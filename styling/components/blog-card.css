@@ -1,22 +1,17 @@
 #blog {
     user-select: none;
     animation: fadeInUp 0.8s ease forwards;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 calc((100% / 3) / 2);
 }
 
 .blog-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 1.5rem;
+  justify-items: center; 
 }
 
 .blog-post {
-    flex: 1 1 330px;
-    max-width: 330px;
     background-color: var(--card-bg);
     border-left: 4px solid var(--bar-fill);
     border-radius: 12px;
