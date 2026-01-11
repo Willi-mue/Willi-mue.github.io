@@ -89,7 +89,7 @@ p {
 .skill-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  gap: 2rem 4rem;
   background: var(--card-bg, #fff);
   border-radius: 16px;
   padding: 1rem 4rem;
@@ -176,6 +176,7 @@ p {
   border-radius: 8px;
   text-decoration: none;
   transition: .3s;
+  cursor: pointer;
 }
 
 .button:active {
