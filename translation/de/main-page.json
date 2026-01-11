@@ -3,7 +3,7 @@
   "main-page.meta-description": "Portfolio von Willi Müller, Softwareentwickler für moderne, effiziente und nachhaltige Softwarelösungen.",
 
   "main-page.header-title": "Willi Müller",
-  "main-page.header-subtitle": "Als angehender Entwickler liegt mein Fokus auf klarer, lösungsorientierter Software.",
+  "main-page.header-subtitle": "Softwareentwickler mit Fokus auf Frontend- und Backend-Entwicklung sowie <br> praktische Erfahrung im Aufbau und Betrieb eigener Server-Infrastrukturen.",
 
   "main-page.projects-title": "Meine öffentlichen Projekte",
   "main-page.tech-title": "IT-Kenntnisse",
@@ -11,11 +11,11 @@
   "main-page.tools-title": "Tools & Plattformen",
 
   "main-page.about-me-title": "Über mich",
-  "main-page.about-me-p1": "IT und Technik faszinieren mich seit jeher. Privat baue ich eigene Server auf und experimentiere mit modernen Technologien, um mein Verständnis von IT-Infrastrukturen stetig zu vertiefen. Neben der Infrastrukturentwicklung programmiere ich auch Software - so wie in meinen Projekten gezeigt - und finde großen Spaß daran, technische Herausforderungen praxisnah und kreativ zu lösen.",
-  "main-page.about-me-p2": "In meiner Ausbildung liegt mein Fokus auf Softwareentwicklung, wobei ich meine Programmierkenntnisse täglich erweitere. DevOps, Systemadministration und weitere IT-Bereiche wende ich durch eigene Projekte und praktische Erfahrungen in meinem Home-Lab an und vertiefe so mein Verständnis. Zusätzlich unterstütze ich Freunde und Familie bei IT-Fragen, was mir hilft, mein Wissen praxisnah einzusetzen und weiter auszubauen.",
-  "main-page.about-me-p3": "Teamarbeit und eigenverantwortliches Lernen sind für mich selbstverständlich, weil ich weiß, dass gerade der Austausch im Team und das selbstständige Erarbeiten neuer Inhalte der Schlüssel zu erfolgreicher und nachhaltiger Softwareentwicklung sind. Ich freue mich darauf, mein Know-how in spannenden Projekten weiter auszubauen und nachhaltige Softwarelösungen zu schaffen.",
+  "main-page.about-me-p1": "IT und Softwareentwicklung faszinieren mich seit vielen Jahren. Während meiner Ausbildung arbeite ich sowohl an Frontend- als auch an Backend-Anwendungen. Besonders spannend finde ich das Zusammenspiel von Software, Infrastruktur und stabilen Systemen, das es erlaubt, komplexe Lösungen praxisnah umzusetzen.",
+  "main-page.about-me-p2": "Neben meiner Ausbildung realisiere ich eigene Projekte - von Webanwendungen und Bots bis hin zum Aufbau und Betrieb eigener Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und automatisiere ich Serverdienste, unter anderem mit eigenen VPN-Lösungen, Docker-Setups und Spielservern. Diese Projekte helfen mir, theoretisches Wissen praxisnah anzuwenden und zu vertiefen.",
+  "main-page.about-me-p3": "Ich arbeite strukturiert, eigenverantwortlich und lege Wert auf sauberen, wartbaren Code. Teamarbeit und der Austausch über technische Lösungen sind für mich selbstverständlich. Für meine berufliche Zukunft suche ich eine feste Stelle, in der ich mich fachlich weiterentwickeln und aktiv an der Umsetzung moderner Softwarelösungen mitwirken kann.",
 
-  "main-page.blog-title": "Wissensbereich",
+  "main-page.blog-title": "Weitere Projekte & Erfahrungen",
 
   "main-page.blog-post-1-title": "Minecraft-Server auf dem eigenen Homeserver",
   "main-page.blog-post-1-desc": "Einblicke in den jährlichen Aufbau meines privaten Minecraft-Servers.",
@@ -41,6 +41,30 @@
 
   "main-page.contact-email": "E-Mail",
   "main-page.contact-github": "GitHub",
-  "project-github-link": "Zu GitHub"
+  "project-github-link": "Zu GitHub",
+
+  "skill-category-software": "Softwareentwicklung",
+  "skill-category-frontend": "Frontend & Web",
+  "skill-category-backend": "Backend & Datenbanken",
+  "skill-category-devops": "DevOps & Infrastruktur",
+  "skill-category-versioning": "Versionierung",
+
+  "skill-python": "🐍 Python",
+  "skill-java": "☕ Java",
+  "skill-cpp": "💠 C++",
+  "skill-js": "✨ JavaScript",
+  "skill-html": "🌐 HTML5",
+  "skill-scss": "🎨 SCSS",
+  "skill-vue": "🟢 Vue.js",
+  "skill-mysql": "🐬 MySQL & MariaDB",
+  "skill-docker": "🐳 Docker",
+  "skill-linux": "🐧 Linux",
+  "skill-openvpn": "🔐 OpenVPN (Self-hosted Server)",
+  "skill-firewall": "🔥 Firewall & Network Configuration",
+  "skill-git": "🐙 Git (GitHub & GitLab)",
+
+  "skill-level-beginner": "Grundkenntnisse",
+  "skill-level-intermediate": "Mittel",
+  "skill-level-advanced": "Fortgeschritten"
 
 }

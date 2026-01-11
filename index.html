@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styling/theme.css" />
     <link rel="stylesheet" href="styling/main_page.css" />
     <link rel="stylesheet" href="styling/components/top-controls.css" />
+    <link rel="stylesheet" href="styling/components/scroll-to-top.css" />
     <link rel="stylesheet" href="styling/components/card.css" />
     <link rel="stylesheet" href="styling/components/blog-card.css" />
     <link rel="stylesheet" href="styling/components/contact.css" />
@@ -32,8 +33,10 @@
         Willi Müller
       </h1>
       <p id="subtitle" data-i18n="main-page.header-subtitle" data-i18n-html>
-        Als angehender Entwickler liegt mein Fokus auf klarer,
-        lösungsorientierter Software.
+        Softwareentwickler mit Fokus auf Frontend- und Backend-Entwicklung sowie
+        <br />
+        praktische Erfahrung im Aufbau und Betrieb eigener
+        Server-Infrastrukturen.
       </p>
     </header>
 
@@ -56,6 +59,8 @@
       </button>
     </div>
 
+    <button id="scroll-to-top" title="Nach oben">⬆️</button>
+
     <main>
       <h2
         class="main-sections"
@@ -71,100 +76,254 @@
       </h2>
       <section id="tech-stack">
         <div class="skill-section">
+          <!-- Softwareentwicklung -->
           <div class="skill-div">
-            <h3 id="prog-title" data-i18n="main-page.prog-title" data-i18n-html>
-              Programmiersprachen
-            </h3>
+            <h3 data-i18n="skill-category-software">Softwareentwicklung</h3>
             <ul class="skill-list">
               <li>
-                <span class="skill-name">🐍 Python</span>
-                <div class="skill-bar" style="--level: 95%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-python"
+                    >🐍 Python</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 95%"
+                  data-category="backend"
+                ></div>
               </li>
               <li>
-                <span class="skill-name">☕ Java</span>
-                <div class="skill-bar" style="--level: 85%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-java">☕ Java</span>
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 85%"
+                  data-category="backend"
+                ></div>
               </li>
               <li>
-                <span class="skill-name">✨ JavaScript</span>
-                <div class="skill-bar" style="--level: 60%"></div>
-              </li>
-              <li>
-                <span class="skill-name">💠 C++</span>
-                <div class="skill-bar" style="--level: 50%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-cpp">💠 C++</span>
+                  <span class="skill-level" data-i18n="skill-level-beginner"
+                    >Grundkenntnisse</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 50%"
+                  data-category="backend"
+                ></div>
               </li>
             </ul>
           </div>
 
+          <!-- Backend & Datenbanken -->
           <div class="skill-div">
-            <h3
-              id="tools-title"
-              data-i18n="main-page.tools-title"
-              data-i18n-html
-            >
-              Tools & Plattformen
-            </h3>
+            <h3 data-i18n="skill-category-backend">Backend & Datenbanken</h3>
             <ul class="skill-list">
               <li>
-                <span class="skill-name">🐙 Git (GitHub & GitLab)</span>
-                <div class="skill-bar" style="--level: 90%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-python"
+                    >🐍 Python</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 95%"
+                  data-category="backend"
+                ></div>
               </li>
               <li>
-                <span class="skill-name">🐳 Docker</span>
-                <div class="skill-bar" style="--level: 75%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-java">☕ Java</span>
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 85%"
+                  data-category="backend"
+                ></div>
               </li>
               <li>
-                <span class="skill-name">🐧 Linux</span>
-                <div class="skill-bar" style="--level: 75%"></div>
-              </li>
-              <li>
-                <span class="skill-name">🐬 MySQL & MariaDB</span>
-                <div class="skill-bar" style="--level: 65%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-mysql"
+                    >🐬 MySQL & MariaDB</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-intermediate"
+                    >Mittel</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 65%"
+                  data-category="backend"
+                ></div>
               </li>
             </ul>
           </div>
 
+          <!-- Frontend & Web -->
           <div class="skill-div">
-            <h3
-              id="frontend-title"
-              data-i18n="main-page.frontend-title"
-              data-i18n-html
-            >
-              Frontend & Web
-            </h3>
+            <h3 data-i18n="skill-category-frontend">Frontend & Web</h3>
             <ul class="skill-list">
               <li>
-                <span class="skill-name">🌐 HTML5 </span>
-                <div class="skill-bar" style="--level: 95%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-html"
+                    >🌐 HTML5</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 95%"
+                  data-category="frontend"
+                ></div>
               </li>
               <li>
-                <span class="skill-name">🎨 SCSS</span>
-                <div class="skill-bar" style="--level: 95%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-scss">🎨 SCSS</span>
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 95%"
+                  data-category="frontend"
+                ></div>
               </li>
               <li>
-                <span class="skill-name">🟢 Vue.js</span>
-                <div class="skill-bar" style="--level: 75%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-vue"
+                    >🟢 Vue.js</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-intermediate"
+                    >Mittel</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 75%"
+                  data-category="frontend"
+                ></div>
+              </li>
+              <li>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-js"
+                    >✨ JavaScript</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-intermediate"
+                    >Mittel</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 60%"
+                  data-category="frontend"
+                ></div>
               </li>
             </ul>
           </div>
 
+          <!-- DevOps & Infrastruktur -->
           <div class="skill-div">
-            <h3
-              id="infra-title"
-              data-i18n="main-page.infra-title"
-              data-i18n-html
-            >
-              Server, Networking & Security
-            </h3>
+            <h3 data-i18n="skill-category-devops">DevOps & Infrastruktur</h3>
             <ul class="skill-list">
               <li>
-                <span class="skill-name">🔐 OpenVPN (Self-hosted Server)</span>
-                <div class="skill-bar" style="--level: 90%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-openvpn"
+                    >🔐 OpenVPN (Self-hosted Server)</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 90%"
+                  data-category="infra"
+                ></div>
               </li>
               <li>
-                <span class="skill-name"
-                  >🔥 Firewall & Network Configuration</span
-                >
-                <div class="skill-bar" style="--level: 65%"></div>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-docker"
+                    >🐳 Docker</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-intermediate"
+                    >Mittel</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 75%"
+                  data-category="infra"
+                ></div>
+              </li>
+              <li>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-linux"
+                    >🐧 Linux</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-intermediate"
+                    >Mittel</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 75%"
+                  data-category="infra"
+                ></div>
+              </li>
+              <li>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-firewall"
+                    >🔥 Firewall & Network Configuration</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-intermediate"
+                    >Mittel</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 65%"
+                  data-category="infra"
+                ></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Versionierung -->
+          <div class="skill-div">
+            <h3 data-i18n="skill-category-versioning">Versionierung</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-header">
+                  <span class="skill-name" data-i18n="skill-git"
+                    >🐙 Git (GitHub & GitLab)</span
+                  >
+                  <span class="skill-level" data-i18n="skill-level-advanced"
+                    >Fortgeschritten</span
+                  >
+                </div>
+                <div
+                  class="skill-bar"
+                  style="--level: 90%"
+                  data-category="tools"
+                ></div>
               </li>
             </ul>
           </div>
@@ -176,36 +335,36 @@
               Über mich
             </h2>
             <p data-i18n="main-page.about-me-p1" data-i18n-html>
-              IT und Technik faszinieren mich seit jeher. Privat baue ich eigene
-              Server auf und experimentiere mit modernen Technologien, um mein
-              Verständnis von IT-Infrastrukturen stetig zu vertiefen. Neben der
-              Infrastrukturentwicklung programmiere ich auch Software - so wie
-              in meinen Projekten gezeigt - und finde großen Spaß daran,
-              technische Herausforderungen praxisnah und kreativ zu lösen.
+              IT und Softwareentwicklung faszinieren mich seit vielen Jahren.
+              Während meiner Ausbildung arbeite ich sowohl an Frontend als auch
+              an Backend-Anwendungen. Besonders spannend finde ich das
+              Zusammenspiel von Software, Infrastruktur und stabilen Systemen,
+              das es erlaubt, komplexe Lösungen praxisnah umzusetzen.
             </p>
+
             <p data-i18n="main-page.about-me-p2" data-i18n-html>
-              In meiner Ausbildung liegt mein Fokus auf Softwareentwicklung,
-              wobei ich meine Programmierkenntnisse täglich erweitere. DevOps,
-              Systemadministration und weitere IT-Bereiche wende ich durch
-              eigene Projekte und praktische Erfahrungen in meinem Home-Lab an
-              und vertiefe so mein Verständnis. Zusätzlich unterstütze ich
-              Freunde und Familie bei IT-Fragen, was mir hilft, mein Wissen
-              praxisnah einzusetzen und weiter auszubauen.
+              Neben meiner Ausbildung realisiere ich eigene Projekte - von
+              Webanwendungen und Bots bis hin zum Aufbau und Betrieb eigener
+              Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und
+              automatisiere ich Serverdienste, unter anderem mit eigenen
+              VPN-Lösungen, Docker-Setups und Spielservern. Diese Projekte
+              helfen mir, theoretisches Wissen praxisnah anzuwenden und zu
+              vertiefen.
             </p>
             <p data-i18n="main-page.about-me-p3" data-i18n-html>
-              Teamarbeit und eigenverantwortliches Lernen sind für mich
-              selbstverständlich, weil ich weiß, dass gerade der Austausch im
-              Team und das selbstständige Erarbeiten neuer Inhalte der Schlüssel
-              zu erfolgreicher und nachhaltiger Softwareentwicklung sind. Ich
-              freue mich darauf, mein Know-how in spannenden Projekten weiter
-              auszubauen und nachhaltige Softwarelösungen zu schaffen.
+              Ich arbeite strukturiert, eigenverantwortlich und lege Wert auf
+              sauberen, wartbaren Code. Teamarbeit und der Austausch über
+              technische Lösungen sind für mich selbstverständlich. Für meine
+              berufliche Zukunft suche ich eine feste Stelle, in der ich mich
+              fachlich weiterentwickeln und aktiv an der Umsetzung moderner
+              Softwarelösungen mitwirken kann.
             </p>
           </section>
         </div>
       </section>
 
       <h2 class="main-sections" data-i18n="main-page.blog-title" data-i18n-html>
-        Wissensbereich
+        Weitere Projekte & Erfahrungen
       </h2>
       <section id="blog">
         <div class="blog-grid">
@@ -337,6 +496,7 @@
     <script src="js/setup.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/translation.js"></script>
+    <script src="js/scroll-to-top.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/badgeColors.js"></script>
     <script src="js/animate-skills.js"></script>

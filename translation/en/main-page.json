@@ -3,43 +3,67 @@
   "main-page.meta-description": "Portfolio of Willi Müller, software developer for modern, efficient, and sustainable software solutions.",
 
   "main-page.header-title": "Willi Müller",
-  "main-page.header-subtitle": "As an aspiring developer, my focus is on clear, solution-oriented software.",
+  "main-page.header-subtitle": "Software developer with a focus on frontend and backend development as well as <br> practical experience in setting up and operating own server infrastructures.",
 
-  "main-page.projects-title": "My public Projects",
+  "main-page.projects-title": "My Public Projects",
   "main-page.tech-title": "IT Skills",
   "main-page.prog-title": "Programming Languages",
   "main-page.tools-title": "Tools & Platforms",
 
   "main-page.about-me-title": "About Me",
-  "main-page.about-me-p1": "I have been fascinated by IT and technology for as long as I can remember. Privately, I build my own servers and experiment with modern technologies to continuously deepen my understanding of IT infrastructures. Besides infrastructure development, I also program software - as shown in My public Projects - and greatly enjoy solving technical challenges practically and creatively.",
-  "main-page.about-me-p2": "My training focuses on software development, where I expand my programming skills daily. I apply DevOps, system administration, and other IT fields through personal projects and practical experience in my HomeLab, thereby deepening my understanding. Additionally, I support friends and family with IT questions, which helps me apply and expand my knowledge practically.",
-  "main-page.about-me-p3": "Teamwork and self-directed learning are natural to me because I know that collaboration and independently acquiring new knowledge are the keys to successful and sustainable software development. I look forward to further expanding my expertise in exciting projects and creating sustainable software solutions.",
+  "main-page.about-me-p1": "I have been fascinated by IT and software development for many years. During my training, I work on both frontend and backend applications. I am particularly interested in the interaction of software, infrastructure, and stable systems, which allows complex solutions to be implemented in a practical way.",
+  "main-page.about-me-p2": "In addition to my training, I implement my own projects - from web applications and bots to the setup and operation of my own server infrastructures. In my home lab, I plan, operate, and automate server services, including my own VPN solutions, Docker setups, and game servers. These projects help me apply and deepen theoretical knowledge in practice.",
+  "main-page.about-me-p3": "I work in a structured and independent manner and value clean, maintainable code. Teamwork and exchanging technical solutions are natural to me. For my professional future, I am looking for a permanent position where I can further develop professionally and actively contribute to the implementation of modern software solutions.",
 
-  "main-page.blog-title": "Knowledge Area",
+  "main-page.blog-title": "More Projects & Experience",
 
   "main-page.blog-post-1-title": "Minecraft Server on My Own Home Server",
   "main-page.blog-post-1-desc": "Insights into the annual setup of my private Minecraft server.",
   "main-page.blog-post-1-link": "Read More",
 
-  "main-page.blog-post-2-title": "🤖 Custom Discord Bot for Community Management",
+  "main-page.blog-post-2-title": "Own Discord Bot for Community Management",
   "main-page.blog-post-2-desc": "Development of a versatile bot for moderation, automation, and support of a multilingual Discord server.",
   "main-page.blog-post-2-link": "Read More",
 
-  "main-page.blog-post-3-title": " Website for an<br> MMO Community Discord Server",
+  "main-page.blog-post-3-title": "Website for an MMO Community Discord Server",
   "main-page.blog-post-3-desc": "A website with guides, tools, and information that supports the Discord server and facilitates community management.",
   "main-page.blog-post-3-link": "Read More",
 
-  "main-page.blog-post-4-title": " Custom PC Consulting",
-  "main-page.blog-post-4-desc": "Experiences in assembling and setting up tailor-made PCs.",
+  "main-page.blog-post-4-title": "Custom PC Consulting",
+  "main-page.blog-post-4-desc": "Experiences in assembling and setting up customized PCs.",
   "main-page.blog-post-4-link": "Read More",
 
-  "main-page.blog-post-5-title": "🏆 My First Game Jam",
-  "main-page.blog-post-5-desc": "A report from idea to implementation to the final game.",
+  "main-page.blog-post-5-title": "My First Game Jam",
+  "main-page.blog-post-5-desc": "An experience report - from the idea through implementation to the final game.",
   "main-page.blog-post-5-link": "Read More",
 
-  "main-page.contact-intro": "Would you like to get in touch with me?<br>If I have sparked your interest, you can reach me here:",
+  "main-page.contact-intro": "Would you like to get in touch with me? <br>If I have piqued your interest, you can reach me here:",
 
   "main-page.contact-email": "E-Mail",
   "main-page.contact-github": "GitHub",
-  "project-github-link": "View on GitHub"
+  "project-github-link": "To GitHub",
+
+  "skill-category-software": "Software Development",
+  "skill-category-frontend": "Frontend & Web",
+  "skill-category-backend": "Backend & Databases",
+  "skill-category-devops": "DevOps & Infrastructure",
+  "skill-category-versioning": "Version Control",
+
+  "skill-python": "🐍 Python",
+  "skill-java": "☕ Java",
+  "skill-cpp": "💠 C++",
+  "skill-js": "✨ JavaScript",
+  "skill-html": "🌐 HTML5",
+  "skill-scss": "🎨 SCSS",
+  "skill-vue": "🟢 Vue.js",
+  "skill-mysql": "🐬 MySQL & MariaDB",
+  "skill-docker": "🐳 Docker",
+  "skill-linux": "🐧 Linux",
+  "skill-openvpn": "🔐 OpenVPN (Self-hosted Server)",
+  "skill-firewall": "🔥 Firewall & Network Configuration",
+  "skill-git": "🐙 Git (GitHub & GitLab)",
+
+  "skill-level-beginner": "Beginner",
+  "skill-level-intermediate": "Intermediate",
+  "skill-level-advanced": "Advanced"
 }

@@ -8,9 +8,8 @@ body {
 
 header {
   text-align: center;
-  
+  padding: 20px calc((100% / 3) / 2);
   background: var(--hd-fo-bg);
-  padding: 20px 0;
 
   #title{
     animation: fadeInDown 1s ease forwards;
@@ -124,21 +123,40 @@ p {
 
 .skill-list li {
   margin-bottom: 1.5rem;
-  font-weight: 600;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
 }
 
 .skill-name {
-  display: inline-block;
-  margin-bottom: 0.4rem;
+  font-weight: 600;
   color: var(--skill-name);
 }
 
+.skill-level {
+  font-size: 0.75rem;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+}
+
+/* Level Farben */
+.skill-level[data-i18n="skill-level-beginner"] { background-color: #999; }
+.skill-level[data-i18n="skill-level-intermediate"] { background-color: #2196f3; }
+.skill-level[data-i18n="skill-level-advanced"] { background-color: #4caf50; }
+
+/* Skill Bar */
 .skill-bar {
   width: 100%;
   height: 14px;
   background: var(--bar-bg, #eee);
   border-radius: 7px;
   overflow: hidden;
+  margin-top: 0.2rem;
 }
 
 .skill-bar::after {
@@ -146,7 +164,6 @@ p {
   display: block;
   height: 100%;
   width: 0;
-  /* start at 0% */
   background: var(--bar-fill);
   border-radius: 7px 0 0 7px;
   transition: width 1.2s ease;
@@ -155,6 +172,13 @@ p {
 .skill-bar.visible::after {
   width: var(--level);
 }
+
+/* Kategorien Farben */
+.skill-bar[data-category="frontend"]::after { background: #4CAF50; }
+.skill-bar[data-category="backend"]::after { background: #2196F3; }
+.skill-bar[data-category="infra"]::after { background: #FF9800; }
+.skill-bar[data-category="tools"]::after { background: #9C27B0; }
+
 
 #load-more-btn {
   border: none;

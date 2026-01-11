@@ -58,19 +58,24 @@ window.BadgeUtils = (() => {
   }
 
   function applyBadgeStyles(root = document) {
-    const badges = root.querySelectorAll('.badge');
-    badges.forEach(badge => {
-      const text = badge.textContent.trim();
-      const label = text.replace(/^.*? /, ''); 
-      const icon = languageIcons[label] || '💻';
-      const baseColor = languageColors[label] || '#888888';
-      const bgColor = lightenColor(baseColor, 0.8);
+  const badges = root.querySelectorAll('.badge');
+  badges.forEach(badge => {
+    const text = badge.textContent.trim();
+    const label = text.replace(/^.*? /, ''); 
+    const icon = languageIcons[label] || '💻';
+    const baseColor = languageColors[label] || '#888888';
+    const bgColor = lightenColor(baseColor, 0.8);
 
-      badge.textContent = `${icon} ${label}`;
-      badge.style.backgroundColor = bgColor;
-      badge.style.color = '#1a1a1a';
-    });
-  }
+    badge.innerHTML = `
+      <span class="icon">${icon}</span>
+      <span class="label">${label}</span>
+    `;
+
+    badge.style.backgroundColor = bgColor;
+    badge.style.color = '#1a1a1a';
+  });
+}
+
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => applyBadgeStyles());
