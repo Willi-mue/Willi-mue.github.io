@@ -15,7 +15,11 @@ header {
     animation: fadeInDown 1s ease forwards;
     margin: 0;
   }
-  p{
+
+  #subtitle{
+    display: flex;
+    max-width: 66%;
+    justify-self: center;
     animation: fadeInDown 1s ease forwards;
   }
 }
@@ -96,6 +100,14 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
 }
+
+@media (max-width: 1070px) {
+  .skill-section {
+    grid-template-columns: 1fr; 
+  }
+
+}
+
 
 .skill-section.grid-1{
   grid-template-columns: repeat(1, 1fr);

@@ -7,13 +7,13 @@
   justify-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .projects {
     grid-template-columns: 1fr;
   }
@@ -75,7 +75,7 @@
 .card-front img {
   width: 100%;
   height: 180px;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 0.75rem;
   transition: transform 0.4s ease;
