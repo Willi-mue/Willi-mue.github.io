@@ -39,3 +39,10 @@
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    #blog {
+        padding: 0 40px;
+        gap: 20px;
+    }
+
+}

@@ -261,7 +261,7 @@ footer{
   }
 
   #tech-stack {
-    padding: 0 10px;
+    padding: 0 40px;
     gap: 20px;
   }
 
@@ -279,6 +279,6 @@ footer{
   }
 
   footer {
-    padding: 20px 10px;
+    padding: 20px 40px;
   }
 }

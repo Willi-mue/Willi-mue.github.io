@@ -19,6 +19,14 @@
   }
 }
 
+@media (max-width: 768px) {
+    .projects {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+}
+
 /* Flip Card Container */
 .flip-card {
   width: 100%;
