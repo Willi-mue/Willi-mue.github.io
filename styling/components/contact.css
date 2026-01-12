@@ -19,7 +19,6 @@
 #contact p {
     text-align: center;
     color: var(--text-secondary);
-    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .contact-list li {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     color: var(--text);
 }
 

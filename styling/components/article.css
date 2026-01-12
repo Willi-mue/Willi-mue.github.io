@@ -14,7 +14,6 @@ article section {
 }
 
 article h2 {
-  font-size: 2rem;
   color: var(--heading-color);
   border-bottom: 3px solid var(--bar-fill);
   padding-bottom: 0.5rem;
@@ -24,7 +23,6 @@ article h2 {
 }
 
 article p {
-  font-size: 1.15rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -49,7 +47,6 @@ article ul li {
   color: var(--link);
   font-weight: 600;
   text-decoration: none;
-  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -57,7 +54,6 @@ article ul li {
   display: inline-block;
   margin-top: 3rem;
   padding: 0.6rem 1.2rem;
-  font-size: 1rem;
   font-weight: 600;
   color: var(--button-text);
   background-color: var(--button-bg);
@@ -74,7 +70,6 @@ article pre {
   padding: 1rem 1.2rem;
   border-radius: 10px;
   font-family: 'Fira Mono', monospace;
-  font-size: 0.95rem;
   margin-bottom: 1.5rem;
   border: 1.5px solid var(--bar-bg);
   line-height: 1.4;
@@ -85,7 +80,6 @@ article code {
   color: var(--text);                  
   padding: 0.25em 0.5em;
   border-radius: 5px;
-  font-family: 'Fira Mono', monospace;
-  font-size: 0.9em;                   
+  font-family: 'Fira Mono', monospace;             
 }
 

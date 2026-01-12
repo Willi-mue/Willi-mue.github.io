@@ -31,18 +31,23 @@ h1 {
   color: var(--heading-color);
 }
 
+h2{
+  font-size: 1.5rem;
+}
+
 h2,
 h3 {
   text-align: center;
   color: var(--heading-color);
+  margin-top: 0;
 }
 
 .main-sections{
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   animation: fadeIn 2s ease forwards;
 }
@@ -95,26 +100,19 @@ p {
   gap: 2rem 4rem;
   background: var(--card-bg, #fff);
   border-radius: 16px;
-  padding: 1rem 4rem;
+  padding: 2rem 4rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
 }
 
-@media (max-width: 1070px) {
-  .skill-section {
-    grid-template-columns: 1fr; 
-  }
-}
-
-
 .skill-section.grid-1{
   grid-template-columns: repeat(1, 1fr);
-  padding: 1rem 4rem;
+  padding: 2rem 4rem;
 }
 
 .skill-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--heading-color);
 }
 
@@ -186,7 +184,8 @@ p {
 
 /* Kategorien Farben */
 .skill-bar[data-category="frontend"]::after { background: #4CAF50; }
-.skill-bar[data-category="backend"]::after { background: #2196F3; }
+.skill-bar[data-category="proglang"]::after { background: #2196F3; }
+.skill-bar[data-category="backend"]::after {background: #009688;}
 .skill-bar[data-category="infra"]::after { background: #FF9800; }
 .skill-bar[data-category="tools"]::after { background: #9C27B0; }
 
@@ -207,7 +206,7 @@ p {
   background-color: var(--button-bg);
   color: var(--button-text);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.8rem;
   border-radius: 8px;
   text-decoration: none;
   transition: .3s;
@@ -226,59 +225,20 @@ footer{
   flex-direction: column;
   text-align: center;
   background: var(--hd-fo-bg);
+      padding: 0 calc((100% / 3) / 2);
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  body {
-    font-size: 0.95rem; /* Basisfont für Mobilgeräte */
-  }
+#about-me{
+  text-align: justify;
+}
 
-  h1 {
-    font-size: 2rem; /* kleiner als Desktop */
-  }
+#contact-intro{
+  max-width: 50%;
+}
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  header {
-    padding: 15px 10px; /* Weniger Padding auf Mobil */
-  }
-
-  #subtitle {
-    max-width: 90%;
-    flex-direction: column; /* Untereinander statt nebeneinander */
-    text-align: center;
-  }
-
-  #tech-stack {
-    padding: 0 40px;
-    gap: 20px;
-  }
-
+@media (max-width: 1070px) {
   .skill-section {
-    padding: 1rem 2rem;
-  }
-
-  .skill-bar {
-    height: 10px;
-  }
-
-  .button {
-    font-size: 13px;
-    padding: 0.4rem 1rem;
-  }
-
-  footer {
-    padding: 20px 40px;
+    grid-template-columns: 1fr; 
   }
 }
+
