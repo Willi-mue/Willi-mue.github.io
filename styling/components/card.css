@@ -79,7 +79,6 @@
   margin: 20px;
 }
 
-/* Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
