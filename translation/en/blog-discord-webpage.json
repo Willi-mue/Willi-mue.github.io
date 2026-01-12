@@ -1,0 +1,19 @@
+{
+  "blog-discord-webpage-title": "Website for an MMO Community",
+  "blog-discord-webpage-meta-description": "Professional web platform to support an MMO Discord server with guides, tools, and up-to-date news.",
+  "blog-discord-webpage-intro": "Development of a professional web platform to support a large Discord community for a <strong>MMO</strong> (<em>Massively Multiplayer Online Game</em>). The website bundles useful guides, tools, and current news, serving both new and experienced members as a central hub.",
+  "highlight-1": "Multilingual platform with integrated search for quick access to content",
+  "highlight-2": "Seamless Discord integration for efficient community management",
+  "highlight-3": "Reactive frontend with Vue.js, SCSS, and JavaScript for modern user interfaces",
+  "highlight-4": "Backend in Python with SQLite for lightweight, high-performance data management",
+  "highlight-5": "Deployment via Docker containers and Nginx for flexible, stable delivery",
+  "section-goals-title": "Goals & Motivation",
+  "section-goals-text": "The goal of the project is to create a central platform where community members can find all relevant information, tools, and tutorials without searching through the Discord server. Even users without experience in <strong>MMOs</strong> can easily use the site. Technical terms such as 'Discord server' are explained as needed, allowing everyone to get started immediately.",
+  "section-tech-title": "Technical Implementation",
+  "section-tech-text": "The frontend is based on <strong>Vue.js</strong> for a reactive and modern user interface, complemented by <strong>SCSS</strong> for consistent and maintainable styling. The backend logic runs in <strong>Python</strong>, while <strong>SQLite</strong> serves as a lightweight database to store articles, news, and user information. Hosting uses <strong>Docker</strong> (containerization) and <strong>Nginx</strong> (web server) to provide a scalable, stable, and maintainable infrastructure.",
+  "section-features-title": "Features",
+  "section-features-text": "Core features include a powerful search function, structured guides and tutorials for players, up-to-date community news, and a central overview of essential tools. This allows even users without MMO experience to get started immediately and navigate the platform quickly.",
+  "section-outro-title": "Outlook",
+  "section-outro-text": "The project is still under development. Future versions will further improve user guidance, integrate new features, and make the overall user experience even more convenient. The goal is a professional platform that provides real value for both experienced community members and newcomers.",
+  "back-button": "Back to main page"
+}

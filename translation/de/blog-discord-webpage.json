@@ -1,0 +1,19 @@
+{
+  "blog-discord-webpage-title": "Webseite für einen MMO Community",
+  "blog-discord-webpage-meta-description": "Professionelle Webplattform zur Unterstützung eines MMO Discord-Servers mit Guides, Tools und aktuellen News.",
+  "blog-discord-webpage-intro": "Aufbau einer professionellen Webplattform zur Unterstützung einer großen Discord-Community für ein <strong>MMO</strong> (<em>Massively Multiplayer Online Game</em>). Die Webseite bündelt nützliche Guides, Tools und aktuelle News und dient sowohl neuen als auch erfahrenen Mitgliedern als zentrale Anlaufstelle.",
+  "highlight-1": "Mehrsprachige Plattform mit integrierter Suchfunktion für schnellen Zugriff auf Inhalte",
+  "highlight-2": "Nahtlose Integration mit Discord für effizientes Community-Management",
+  "highlight-3": "Reaktives Frontend mit Vue.js, SCSS und JavaScript für moderne Benutzeroberflächen",
+  "highlight-4": "Backend in Python mit SQLite für schlanke, performante Datenhaltung",
+  "highlight-5": "Deployment über Docker-Container und Nginx für flexible, stabile Bereitstellung",
+  "section-goals-title": "Ziele & Motivation",
+  "section-goals-text": "Ziel des Projekts ist es, eine zentrale Plattform zu schaffen, auf der Community-Mitglieder alle relevanten Informationen, Tools und Anleitungen finden, ohne lange im Discord-Server suchen zu müssen. Selbst Nutzer ohne Erfahrung mit <strong>MMOs</strong> sollen die Seite problemlos nutzen können. Fachbegriffe wie „Discord-Server“ werden bei Bedarf erklärt, sodass jeder sofort starten kann.",
+  "section-tech-title": "Technische Umsetzung",
+  "section-tech-text": "Das Frontend basiert auf <strong>Vue.js</strong> für eine reaktive und moderne Benutzeroberfläche, ergänzt durch <strong>SCSS</strong> für konsistentes und wartbares Styling. Die Backend-Logik läuft in <strong>Python</strong>, während <strong>SQLite</strong> als leichtgewichtige Datenbank Artikel, News und Nutzerinformationen speichert. Für das Hosting kommen <strong>Docker</strong> (Containerisierung) und <strong>Nginx</strong> (Webserver) zum Einsatz, um eine skalierbare, stabile und wartbare Infrastruktur bereitzustellen.",
+  "section-features-title": "Funktionen",
+  "section-features-text": "Zu den Kernfunktionen gehören: eine leistungsfähige Suchfunktion, strukturierte Guides und Tutorials für Spieler, aktuelle Community-News und eine zentrale Übersicht wichtiger Tools. Damit können selbst Nutzer ohne MMO-Erfahrung direkt loslegen und sich schnell in der Plattform zurechtfinden.",
+  "section-outro-title": "Ausblick",
+  "section-outro-text": "Das Projekt befindet sich weiterhin im Aufbau. Zukünftige Versionen werden die Benutzerführung weiter optimieren, neue Funktionen integrieren und das Nutzererlebnis insgesamt noch komfortabler gestalten. Ziel ist eine professionelle Plattform, die sowohl für erfahrene Community-Mitglieder als auch für Neueinsteiger einen echten Mehrwert bietet.",
+  "back-button": "Zurück zur Hauptseite"
+}

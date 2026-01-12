@@ -10,6 +10,7 @@ window.BadgeUtils = (() => {
     Rust: "⚙️",
     HTML: "🌐",
     CSS: "🎨",
+    SCSS: "🎨",
     Shell: "🖥️",
     Bash: "🖥️",
     PHP: "🐘",
@@ -26,6 +27,9 @@ window.BadgeUtils = (() => {
     Batchfile: "📄",
     "Event Management": "📅",
     Automation: "🤖",
+    Vue: "🖼️",
+    SQLite: "🗄️",
+    Nginx: "🌐",
   };
 
   const languageColors = {
@@ -39,6 +43,7 @@ window.BadgeUtils = (() => {
     Rust: "#e7864e",
     HTML: "#e34c26",
     CSS: "#563d7c",
+    SCSS: "#c69",
     Shell: "#5fc022",
     Bash: "#5fc022",
     PHP: "#4F5D95",
@@ -55,6 +60,9 @@ window.BadgeUtils = (() => {
     Batchfile: "#45a306ff",
     "Event Management": "#FFAA33",
     Automation: "#66CCFF",
+    Vue: "#42b883",
+    SQLite: "#003B57",
+    Nginx: "#009639",
   };
 
   function lightenColor(color, luminosity = 0.8) {

@@ -33,9 +33,8 @@
         Willi Müller
       </h1>
       <p id="subtitle" data-i18n="main-page.header-subtitle" data-i18n-html>
-        Softwareentwickler mit Fokus auf Fullstack-Entwicklung sowie
-        praktische Erfahrung im Aufbau und Betrieb eigener
-        Server-Infrastrukturen.
+        Softwareentwickler mit Fokus auf Fullstack-Entwicklung sowie praktische
+        Erfahrung im Aufbau und Betrieb eigener Server-Infrastrukturen.
       </p>
     </header>
 
@@ -420,19 +419,23 @@
 
           <article class="blog-post">
             <h3 data-i18n="main-page.blog-post-3-title" data-i18n-html>
-              --WIP-- Webseite für einen<br />
-              MMO Community Discord-Server 
+              Webseite für einen MMO Community
             </h3>
             <p data-i18n="main-page.blog-post-3-desc" data-i18n-html>
-              Eine Webseite mit Guides, Tools und Informationen, die den
-              Discord-Server unterstützt und das Community-Management
-              erleichtert.
+              Entwicklung einer professionellen Webseite zur Unterstützung eines
+              MMO Discord-Servers. Die Plattform bietet Guides, Tools und
+              Echtzeit-Informationen, um das Community-Management zu erleichtern
+              und die Interaktion zu verbessern. Das Projekt befindet sich
+              aktuell noch im Aufbau.
             </p>
             <div class="badge-wrapper">
-              <span class="badge">HTML</span>
-              <span class="badge">CSS</span>
-              <span class="badge">JavaScript</span>
               <span class="badge">Python</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Vue</span>
+              <span class="badge">SCSS</span>
+              <span class="badge">SQLite</span>
+              <span class="badge">Nginx</span>
+              <span class="badge">Docker</span>
             </div>
             <a
               class="button"
@@ -448,7 +451,8 @@
               Erste Game Jam Erfahrung
             </h3>
             <p data-i18n="main-page.blog-post-4-desc" data-i18n-html>
-              Ein praxisnaher Erfahrungsbericht: Von der ersten Idee über die Umsetzung bis hin zum fertigen Spiel.
+              Ein praxisnaher Erfahrungsbericht: Von der ersten Idee über die
+              Umsetzung bis hin zum fertigen Spiel.
             </p>
             <div class="badge-wrapper">
               <span class="badge">GDScript</span>
@@ -506,5 +510,19 @@
     <script src="js/projects.js"></script>
     <script src="js/badgeColors.js"></script>
     <script src="js/animate-skills.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hash = window.location.hash;
+        if (hash) {
+          const target = document.querySelector(hash);
+          if (target) {
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: "smooth" });
+            }, 50);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
