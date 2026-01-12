@@ -8,7 +8,7 @@
     </title>
     <meta
       name="description"
-      content="Eine professionelle Webseite zur Unterstützung eines MMO Discord-Servers mit Guides, News und Partnern."
+      content="Portfolio-Beitrag: Entwicklung eines KI-getriebenen Spiels während einer Game Jam in nur 72 Stunden."
       data-i18n="blog-game-jam-meta-description"
     />
 
@@ -28,9 +28,6 @@
       <h1 data-i18n="blog-game-jam-heading" data-i18n-html>
         Meine erste Game Jam
       </h1>
-      <p class="meta" data-i18n="blog-game-jam-published" data-i18n-html>
-        Veröffentlicht am: 03. August 2025
-      </p>
     </header>
 
     <div id="top-controls">
@@ -45,57 +42,51 @@
           <span class="badge">C++</span>
           <span class="badge">C#</span>
         </div>
+
+        <ul class="highlights">
+  <li data-i18n="gamejam-highlight-1" data-i18n-html></li>
+  <li data-i18n="gamejam-highlight-2" data-i18n-html></li>
+  <li data-i18n="gamejam-highlight-3" data-i18n-html></li>
+  <li data-i18n="gamejam-highlight-4" data-i18n-html></li>
+  <li data-i18n="gamejam-highlight-5" data-i18n-html></li>
+</ul>
+
+
+        <div class="screenshot-gallery" style="align-items: center">
+          <div class="left">
+            <img src="../images/Game1.png" alt="Game1" />
+          </div>
+          <div class="right">
+            <img src="../images/Game2.png" alt="Game2" />
+          </div>
+        </div>
+
         <section>
           <h2 data-i18n="gamejam-section-intro-title" data-i18n-html>
-            Motivation & Vorbereitung 🎯
+            Motivation & Vorbereitung
           </h2>
           <p data-i18n="gamejam-section-intro-text" data-i18n-html>
-            Die Teilnahme an meiner ersten Game Jam - der
-            <a href="https://itch.io/jam/wowie-jam-4"
-              ><strong>Wowie Jam 4.0</strong></a
-            >
-            - war ein spannendes Experiment. Unter dem Thema
-            <em>"Collaborate With AI"</em> und einem Zeitrahmen von nur 72
-            Stunden war die kreative wie technische Herausforderung klar
-            definiert: Ein Spiel zu entwickeln, bei dem die Zusammenarbeit mit
-            einer künstlichen Intelligenz im Mittelpunkt des Gameplays steht.
+            Teilnahme an der
+            <a href="https://itch.io/jam/wowie-jam-4"><strong>Wowie Jam 4.0</strong></a>
+            unter dem Thema <em>"Collaborate With AI"</em>. Ziel war die Entwicklung eines Spiels in nur 72 Stunden, bei dem die Zusammenarbeit mit einer künstlichen Intelligenz das zentrale Gameplay-Element bildet. Das Projekt bot eine spannende Kombination aus kreativen und technischen Herausforderungen.
           </p>
         </section>
 
         <section>
           <h2 data-i18n="gamejam-section-team-title" data-i18n-html>
-            Unser Team 🔷
+            Unser Team
           </h2>
           <p data-i18n="gamejam-section-team-text" data-i18n-html>
-            Das Projekt wurde von einem kleinen, engagierten Team umgesetzt -
-            bestehend aus <strong>zwei Programmierern</strong>,
-            <strong>einem Musiker</strong> und
-            <strong>einer Künstlerin</strong>. Jede:r von uns brachte seine
-            individuellen Stärken ein, um innerhalb der kurzen Entwicklungszeit
-            ein funktionierendes und atmosphärisches Spielerlebnis zu schaffen.
+            Ein engagiertes Team bestehend aus <strong>zwei Programmierern</strong>, <strong>einem Musiker</strong> und <strong>einer Künstlerin</strong> arbeitete Hand in Hand, um innerhalb von drei Tagen eine funktionierende, atmosphärische Spiel-Demo zu entwickeln.
           </p>
         </section>
 
         <section>
           <h2 data-i18n="gamejam-section-theme-title" data-i18n-html>
-            Die Spielidee 🌲
+            Die Spielidee
           </h2>
           <p data-i18n="gamejam-section-theme-text" data-i18n-html>
-            In unserem Spiel
-            <a href="https://todes-ritter.itch.io/jack-markus"
-              ><strong>„Jack and Markus“</strong></a
-            >
-            verirrt sich ein kleiner Junge in einem geheimnisvollen Wald und
-            muss dem Zorn der Waldgeister entkommen. Glücklicherweise begegnet
-            er einem mysteriösen Waldwesen, das ihm hilft, den Weg in die
-            Freiheit zu finden.
-            <br /><br />
-            Dieses Wesen ist jedoch kein statischer Begleiter - es entwickelt
-            sich dynamisch weiter, abhängig von den Entscheidungen und dem
-            Verhalten des Spielers. Ob als Nahkämpfer oder Fernkämpfer - die
-            individuelle Evolution basiert auf der Art der Interaktion.<br />
-            Dieser Aspekt bildet den zentralen
-            <strong>KI-Kernmechanismus</strong> unseres Spiels.
+            In <a href="https://todes-ritter.itch.io/jack-markus"><strong>„Jack and Markus“</strong></a> verirrt sich ein kleiner Junge in einem geheimnisvollen Wald. Ein dynamisches Waldwesen hilft ihm, den Weg in die Freiheit zu finden. Je nach Spielerentscheidungen entwickelt sich das Wesen individuell weiter - Nah- oder Fernkämpfer. Diese Mechanik bildet den zentralen <strong>KI-Kern</strong> des Spiels.
           </p>
         </section>
 
@@ -104,48 +95,25 @@
             Technischer Aufbau
           </h2>
           <p data-i18n="gamejam-section-tech-text" data-i18n-html>
-            Das Spiel wurde mit der <strong>Godot Engine</strong> realisiert.
-            Die Hauptlogik entstand in <code>GDScript</code>, ergänzt durch
-            gezielte Komponenten in <code>C#</code>. Für die KI wurde ein
-            zustandsbasiertes System konzipiert, das Verhalten und Entwicklung
-            des Begleiters dynamisch an das Spielverhalten anpasst - etwa durch
-            Abstand zum Spieler, Reaktion auf Bedrohungen und direkte
-            Interaktionen.
+            Entwickelt mit der <strong>Godot Engine</strong>. Hauptlogik in <strong>GDScript</strong>, unterstützt durch <strong>C#</strong>-Komponenten für KI. Das zustandsbasierte System passt Verhalten und Entwicklung des Begleiters dynamisch an Spielerinteraktionen an (Abstand, Bedrohungen, direkte Aktionen).
           </p>
         </section>
 
         <section>
           <h2 data-i18n="gamejam-section-challenges-title" data-i18n-html>
-            Herausforderungen 🚧
+            Herausforderungen
           </h2>
           <p data-i18n="gamejam-section-challenges-text" data-i18n-html>
-            Die größte Herausforderung bestand in der Kommunikation und
-            Koordination innerhalb des Teams - insbesondere unter Zeitdruck. Da
-            keine Tutorials vorgesehen waren, musste das Leveldesign besonders
-            intuitiv gestaltet werden. Gleichzeitig ein funktionierendes
-            Gameplay, ein reduziertes UI und ein stimmiges Spielerlebnis zu
-            schaffen, erforderte viele schnelle Entscheidungen und pragmatische
-            Lösungen.
+            Hauptschwierigkeit: <strong>Teamkoordination unter hohem Zeitdruck</strong>. Leveldesign musste intuitiv sein, Gameplay, UI und Atmosphäre gleichzeitig funktionieren - schnelle Entscheidungen und pragmatische Lösungen waren essenziell.
           </p>
         </section>
 
         <section>
           <h2 data-i18n="gamejam-section-outro-title" data-i18n-html>
-            Fazit & Ausblick 🚀
+            Fazit & Ausblick
           </h2>
           <p data-i18n="gamejam-section-outro-text" data-i18n-html>
-            Die Teilnahme an der Game Jam war ein intensives und lehrreiches
-            Erlebnis. Besonders beeindruckend war, wie sich ein zuvor kaum
-            eingespieltes Team in kürzester Zeit organisieren konnte, um
-            innerhalb von nur drei Tagen eine funktionierende Spiel-Demo zu
-            entwickeln.
-            <br /><br />
-            Rückblickend war das Projekt eine wertvolle Erfahrung darin, auch
-            unter Zeitdruck und hoher Belastung fokussierte Entscheidungen zu
-            treffen und kreative Lösungen zu finden - mit einem greifbaren
-            Ergebnis. Diese Erfahrung nehme ich mit in zukünftige Projekte,
-            insbesondere im Hinblick auf effiziente Zusammenarbeit und agile
-            Entwicklung unter realistischen Bedingungen.
+            Die Game Jam war intensiv und lehrreich. Unser Team lieferte in drei Tagen eine funktionierende Demo - wertvolle Erfahrung in <strong>agiler Entwicklung</strong>, <strong>Teamorganisation</strong> und <strong>schneller Entscheidungsfindung</strong>. Diese Learnings fließen direkt in zukünftige Projekte ein, besonders bei KI-Mechaniken und effizienter Teamarbeit.
           </p>
         </section>
 

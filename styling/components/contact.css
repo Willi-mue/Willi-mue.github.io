@@ -37,13 +37,3 @@
     color: var(--text);
 }
 
-.contact-list a {
-    color: var(--link);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-list a:hover {
-    color: var(--link-hover);
-    text-decoration: underline;
-}

@@ -6,6 +6,18 @@ body {
   font-weight: 500;
 }
 
+a:not(.button) {
+    color: var(--link);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:not(.button):hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+
 html {
   scroll-behavior: smooth;
 }

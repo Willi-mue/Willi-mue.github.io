@@ -1,26 +1,31 @@
 {
   "blog-game-jam-title": "Meine erste Game Jam",
-  "blog-game-jam-meta-description": "Eine professionelle Webseite zur Unterstützung eines MMO Discord-Servers mit Guides, News und Partnern.",
+  "blog-game-jam-meta-description": "Portfolio-Beitrag: Entwicklung eines KI-getriebenen Spiels während einer Game Jam in nur 72 Stunden.",
   "blog-game-jam-heading": "Meine erste Game Jam",
-  "blog-game-jam-published": "Veröffentlicht am: 03. August 2025",
 
   "gamejam-section-intro-title": "Motivation & Vorbereitung",
-  "gamejam-section-intro-text": "Die Teilnahme an meiner ersten Game Jam - der <a href=\"https://itch.io/jam/wowie-jam-4\"><strong>Wowie Jam 4.0</strong></a> - war ein spannendes Experiment. Unter dem Thema <em>\"Collaborate With AI\"</em> und einem Zeitrahmen von nur 72 Stunden war die kreative wie technische Herausforderung klar definiert: Ein Spiel zu entwickeln, bei dem die Zusammenarbeit mit einer künstlichen Intelligenz im Mittelpunkt des Gameplays steht.",
+  "gamejam-section-intro-text": "Teilnahme an der <a href='https://itch.io/jam/wowie-jam-4'><strong>Wowie Jam 4.0</strong></a> unter dem Thema <em>'Collaborate With AI'</em>. Ziel war die Entwicklung eines Spiels in nur 72 Stunden, bei dem die Zusammenarbeit mit einer künstlichen Intelligenz das zentrale Gameplay-Element bildet. Das Projekt bot eine spannende Kombination aus kreativen und technischen Herausforderungen.",
 
   "gamejam-section-team-title": "Unser Team",
-  "gamejam-section-team-text": "Das Projekt wurde von einem kleinen, engagierten Team umgesetzt - bestehend aus <strong>zwei Programmierern</strong>, <strong>einem Musiker</strong> und <strong>einer Künstlerin</strong>. Jede:r von uns brachte seine individuellen Stärken ein, um innerhalb der kurzen Entwicklungszeit ein funktionierendes und atmosphärisches Spielerlebnis zu schaffen.",
+  "gamejam-section-team-text": "Ein engagiertes Team bestehend aus <strong>zwei Programmierern</strong>, <strong>einem Musiker</strong> und <strong>einer Künstlerin</strong> arbeitete Hand in Hand, um innerhalb von drei Tagen eine funktionierende, atmosphärische Spiel-Demo zu entwickeln.",
 
   "gamejam-section-theme-title": "Die Spielidee",
-  "gamejam-section-theme-text": "In unserem Spiel <a href=\"https://todes-ritter.itch.io/jack-markus\"><strong>„Jack and Markus“</strong></a> verirrt sich ein kleiner Junge in einem geheimnisvollen Wald und muss dem Zorn der Waldgeister entkommen. Glücklicherweise begegnet er einem mysteriösen Waldwesen, das ihm hilft, den Weg in die Freiheit zu finden.<br><br>Dieses Wesen ist jedoch kein statischer Begleiter - es entwickelt sich dynamisch weiter, abhängig von den Entscheidungen und dem Verhalten des Spielers. Ob als Nahkämpfer oder Fernkämpfer - die individuelle Evolution basiert auf der Art der Interaktion.<br> Dieser Aspekt bildet den zentralen <strong>KI-Kernmechanismus</strong> unseres Spiels.",
+  "gamejam-section-theme-text": "In <a href='https://todes-ritter.itch.io/jack-markus'><strong>„Jack and Markus“</strong></a> verirrt sich ein kleiner Junge in einem geheimnisvollen Wald. Ein dynamisches Waldwesen hilft ihm, den Weg in die Freiheit zu finden. Je nach Spielerentscheidungen entwickelt sich das Wesen individuell weiter - Nah- oder Fernkämpfer. Diese Mechanik bildet den zentralen <strong>KI-Kern</strong> des Spiels.",
 
   "gamejam-section-tech-title": "Technischer Aufbau",
-  "gamejam-section-tech-text": "Das Spiel wurde mit der <strong>Godot Engine</strong> realisiert. Die Hauptlogik entstand in <code>GDScript</code>, ergänzt durch gezielte Komponenten in <code>C#</code>. Für die KI wurde ein zustandsbasiertes System konzipiert, das Verhalten und Entwicklung des Begleiters dynamisch an das Spielverhalten anpasst - etwa durch Abstand zum Spieler, Reaktion auf Bedrohungen und direkte Interaktionen.",
+  "gamejam-section-tech-text": "Entwickelt mit der <strong>Godot Engine</strong>. Hauptlogik in <strong>GDScript</strong>, unterstützt durch <strong>C#</strong>-Komponenten für KI. Das zustandsbasierte System passt Verhalten und Entwicklung des Begleiters dynamisch an Spielerinteraktionen an (Abstand, Bedrohungen, direkte Aktionen).",
 
   "gamejam-section-challenges-title": "Herausforderungen",
-  "gamejam-section-challenges-text": "Die größte Herausforderung bestand in der Kommunikation und Koordination innerhalb des Teams - insbesondere unter Zeitdruck. Da keine Tutorials vorgesehen waren, musste das Leveldesign besonders intuitiv gestaltet werden. Gleichzeitig ein funktionierendes Gameplay, ein reduziertes UI und ein stimmiges Spielerlebnis zu schaffen, erforderte viele schnelle Entscheidungen und pragmatische Lösungen.",
+  "gamejam-section-challenges-text": "Hauptschwierigkeit: <strong>Teamkoordination unter hohem Zeitdruck</strong>. Leveldesign musste intuitiv sein, Gameplay, UI und Atmosphäre gleichzeitig funktionieren - schnelle Entscheidungen und pragmatische Lösungen waren essenziell.",
 
   "gamejam-section-outro-title": "Fazit & Ausblick",
-  "gamejam-section-outro-text": "Die Teilnahme an der Game Jam war ein intensives und lehrreiches Erlebnis. Besonders beeindruckend war, wie sich ein zuvor kaum eingespieltes Team in kürzester Zeit organisieren konnte, um innerhalb von nur drei Tagen eine funktionierende Spiel-Demo zu entwickeln.<br><br>Rückblickend war das Projekt eine wertvolle Erfahrung darin, auch unter Zeitdruck und hoher Belastung fokussierte Entscheidungen zu treffen und kreative Lösungen zu finden - mit einem greifbaren Ergebnis. Diese Erfahrung nehme ich mit in zukünftige Projekte, insbesondere im Hinblick auf effiziente Zusammenarbeit und agile Entwicklung unter realistischen Bedingungen.",
+  "gamejam-section-outro-text": "Die Game Jam war intensiv und lehrreich. Unser Team lieferte in drei Tagen eine funktionierende Demo - wertvolle Erfahrung in <strong>agiler Entwicklung</strong>, <strong>Teamorganisation</strong> und <strong>schneller Entscheidungsfindung</strong>. Diese Learnings fließen direkt in zukünftige Projekte ein, besonders bei KI-Mechaniken und effizienter Teamarbeit.",
 
-  "back-button": "Zurück zur Hauptseite"
+  "back-button": "Zurück zur Hauptseite",
+
+  "gamejam-highlight-1": "72-Stunden Game Jam: Spielentwicklung unter hohem Zeitdruck",
+  "gamejam-highlight-2": "Dynamische KI-Mechanik: NPC entwickelt sich basierend auf Spielerentscheidungen",
+  "gamejam-highlight-3": "Godot Engine, GDScript & C# für Gameplay und KI",
+  "gamejam-highlight-4": "Effiziente Teamkoordination und agile Entwicklung",
+  "gamejam-highlight-5": "Fokus auf UX, Leveldesign und stimmige Spielatmosphäre"
 }

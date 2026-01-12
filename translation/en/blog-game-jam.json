@@ -1,26 +1,31 @@
 {
-  "blog-game-jam-title": "🏆 My First Game Jam",
-  "blog-game-jam-meta-description": "A professional website supporting an MMO Discord server with guides, news, and partners.",
-  "blog-game-jam-heading": "🏆 My First Game Jam",
-  "blog-game-jam-published": "Published on: August 3, 2025",
+  "blog-game-jam-title": "My First Game Jam",
+  "blog-game-jam-meta-description": "Portfolio entry: Developing an AI-driven game during a Game Jam in just 72 hours.",
+  "blog-game-jam-heading": "My First Game Jam",
 
-  "gamejam-section-intro-title": "Motivation & Preparation 🎯",
-  "gamejam-section-intro-text": "Participating in my first Game Jam - the <a href=\"https://itch.io/jam/wowie-jam-4\"><strong>Wowie Jam 4.0</strong></a> - was an exciting experiment. With the theme <em>\"Collaborate With AI\"</em> and only 72 hours of time, the creative and technical challenge was clear: to develop a game where collaboration with artificial intelligence is at the core of the gameplay.",
+  "gamejam-section-intro-title": "Motivation & Preparation",
+  "gamejam-section-intro-text": "Participated in the <a href='https://itch.io/jam/wowie-jam-4'><strong>Wowie Jam 4.0</strong></a> under the theme <em>'Collaborate With AI'</em>. The goal was to develop a game in only 72 hours, where collaboration with artificial intelligence is the core gameplay element. The project offered an exciting mix of creative and technical challenges.",
 
-  "gamejam-section-team-title": "Our Team 🔷",
-  "gamejam-section-team-text": "The project was brought to life by a small but dedicated team - consisting of <strong>two programmers</strong>,<br><strong>one musician</strong>, and <strong>one artist</strong>. Each of us contributed our individual strengths to create a functional and atmospheric game experience within the limited time frame.",
+  "gamejam-section-team-title": "Our Team",
+  "gamejam-section-team-text": "A dedicated team consisting of <strong>two programmers</strong>, <strong>a musician</strong>, and <strong>an artist</strong> worked hand in hand to develop a functioning, atmospheric game demo in just three days.",
 
-  "gamejam-section-theme-title": "The Game Idea 🌲",
-  "gamejam-section-theme-text": "In our game <a href=\"https://todes-ritter.itch.io/jack-markus\"><strong>“Jack and Markus”</strong></a>, a young boy gets lost in a mysterious forest and must escape the wrath of the forest spirits. Fortunately, he encounters a strange forest creature that helps him find his way to safety.<br><br>This companion is not static - it evolves dynamically based on the player's decisions and behavior. Whether as a melee or ranged fighter, its evolution depends on the way the player interacts with it.<br>This forms the core <strong>AI mechanic</strong> of our game.",
+  "gamejam-section-theme-title": "The Game Concept",
+  "gamejam-section-theme-text": "In <a href='https://todes-ritter.itch.io/jack-markus'><strong>'Jack and Markus'</strong></a>, a young boy gets lost in a mysterious forest. A dynamic forest creature helps him find his way to freedom. Depending on the player's choices, the creature evolves individually - melee or ranged fighter. This mechanic forms the central <strong>AI core</strong> of the game.",
 
-  "gamejam-section-tech-title": "Technical Setup ",
-  "gamejam-section-tech-text": "The game was developed using the <strong>Godot Engine</strong>. The main logic was written in <code>GDScript</code>, with some components implemented in <code>C#</code>. We created a state-based AI system that dynamically adapts the companion's behavior and evolution to the player's actions - for example, by measuring distance, reacting to threats, or responding to interactions.",
+  "gamejam-section-tech-title": "Technical Implementation",
+  "gamejam-section-tech-text": "Developed using the <strong>Godot Engine</strong>. Main logic in <strong>GDScript</strong>, supported by <strong>C#</strong> components for AI. The state-based system dynamically adjusts the companion's behavior and development based on player interactions (distance, threats, direct actions).",
 
-  "gamejam-section-challenges-title": "Challenges 🚧",
-  "gamejam-section-challenges-text": "The biggest challenge was team communication and coordination - especially under time pressure. Since no tutorials were planned, the level design had to be intuitive. At the same time, we had to deliver working mechanics, a minimalist UI, and a cohesive experience - all of which required quick decisions and pragmatic solutions.",
+  "gamejam-section-challenges-title": "Challenges",
+  "gamejam-section-challenges-text": "Main difficulty: <strong>team coordination under high time pressure</strong>. Level design had to be intuitive, while gameplay, UI, and atmosphere needed to function simultaneously - quick decisions and pragmatic solutions were essential.",
 
-  "gamejam-section-outro-title": "Conclusion & Outlook 🚀",
-  "gamejam-section-outro-text": "Participating in the Game Jam was an intense and insightful experience. What impressed me most was how a team with little prior collaboration was able to self-organize and deliver a working game demo in just three days.<br><br>Looking back, the project was a valuable experience in making focused decisions and finding creative solutions under pressure - and seeing them result in a tangible outcome. I will carry these lessons into future projects, especially regarding efficient teamwork and agile development under realistic constraints.",
+  "gamejam-section-outro-title": "Conclusion & Outlook",
+  "gamejam-section-outro-text": "The Game Jam was intense and educational. Our team delivered a working demo in three days - a valuable experience in <strong>agile development</strong>, <strong>team organization</strong>, and <strong>rapid decision-making</strong>. These learnings feed directly into future projects, especially regarding AI mechanics and efficient teamwork.",
 
-  "back-button": "Back to Main Page"
+  "back-button": "Back to main page",
+
+  "gamejam-highlight-1": "72-hour Game Jam: Game development under intense time pressure",
+  "gamejam-highlight-2": "Dynamic AI mechanic: NPC evolves based on player decisions",
+  "gamejam-highlight-3": "Godot Engine, GDScript & C# for gameplay and AI",
+  "gamejam-highlight-4": "Efficient team coordination and agile development",
+  "gamejam-highlight-5": "Focus on UX, level design, and cohesive game atmosphere"
 }
