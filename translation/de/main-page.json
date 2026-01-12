@@ -17,8 +17,8 @@
 
   "main-page.blog-title": "Weitere Projekte & Erfahrungen",
 
-  "main-page.blog-post-1-title": "Minecraft-Server auf dem eigenen Homeserver",
-  "main-page.blog-post-1-desc": "Einblicke in den jährlichen Aufbau meines privaten Minecraft-Servers.",
+  "main-page.blog-post-1-title": "Privater Minecraft-Server: VPN, Backup & Performance Optimierung",
+  "main-page.blog-post-1-desc": "Verwaltung und Optimierung eines privaten Minecraft Servers auf dem eigenen Homeserver. Mit OpenVPN Zugang, RAID Backup und ressourcenschonender Serverkonfiguration inklusive optimierter Server-JAR.",
   "main-page.blog-post-1-link": "Weiterlesen",
 
   "main-page.blog-post-2-title": "Eigener Discord-Bot für Community-Management",
