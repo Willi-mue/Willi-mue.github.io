@@ -8,6 +8,7 @@
 
 .flip-card {
   width: 100%;
+  max-width: 460px;
   opacity: 0;
   animation: fadeInUp 1s forwards;
   user-select: none;
