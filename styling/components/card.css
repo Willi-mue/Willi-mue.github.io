@@ -39,7 +39,6 @@
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   color: var(--text);
 }
 
@@ -65,13 +64,15 @@
 
 .card-back {
   transform: rotateY(180deg);
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card-back p {
   color: var(--text-secondary);
-  padding: 10px 20px;
+  padding: 0 40px;
   line-height: 1.2;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .card-back a {
