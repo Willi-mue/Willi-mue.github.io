@@ -4,21 +4,28 @@ window.BadgeUtils = (() => {
     JavaScript: "✨",
     TypeScript: "🔷",
     Java: "☕",
-    "C++": " ",
-    "C#": " ",
+    "C++": "💠",
+    "C#": "⚡",
     Go: "🐹",
     Rust: "⚙️",
     HTML: "🌐",
     CSS: "🎨",
     Shell: "🖥️",
+    Bash: "🖥️",
     PHP: "🐘",
     Ruby: "💎",
     Swift: "🕊️",
     Kotlin: "🧡",
     Docker: "🐳",
+    Linux: "🐧",
+    OpenVPN: "🔐",
+    RAID: "💾",
+    Performance: "🚀",
     GDScript: "🎮",
     Makefile: "🛠️",
     Batchfile: "📄",
+    "Event Management": "📅",
+    Automation: "🤖",
   };
 
   const languageColors = {
@@ -33,14 +40,21 @@ window.BadgeUtils = (() => {
     HTML: "#e34c26",
     CSS: "#563d7c",
     Shell: "#5fc022",
+    Bash: "#5fc022",
     PHP: "#4F5D95",
     Ruby: "#701516",
     Swift: "#ffac45",
     Kotlin: "#F18E33",
     Docker: "#2496ED",
+    Linux: "#FCC624",
+    OpenVPN: "#0066CC",
+    RAID: "#FF8800",
+    Performance: "#00CC66",
     GDScript: "#478CBF",
     Makefile: "#346e04ff",
     Batchfile: "#45a306ff",
+    "Event Management": "#FFAA33",
+    Automation: "#66CCFF",
   };
 
   function lightenColor(color, luminosity = 0.8) {
@@ -62,11 +76,10 @@ window.BadgeUtils = (() => {
   function applyBadgeStyles(root = document) {
     const badges = root.querySelectorAll(".badge");
     badges.forEach((badge) => {
-      // Bereits gestylte Badge überspringen
       if (badge.dataset.styled === "true") return;
 
       const text = badge.textContent.trim();
-      const label = text.replace(/^.*? /, "");
+      const label = text;
       const icon = languageIcons[label] || "💻";
       const baseColor = languageColors[label] || "#888888";
       const bgColor = lightenColor(baseColor, 0.8);
@@ -78,7 +91,6 @@ window.BadgeUtils = (() => {
       badge.style.backgroundColor = bgColor;
       badge.style.color = "#1a1a1a";
 
-      // Markieren, dass Badge gestylt wurde
       badge.dataset.styled = "true";
     });
   }

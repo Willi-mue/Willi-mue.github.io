@@ -6,6 +6,10 @@ body {
   font-weight: 500;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   text-align: center;
   padding: 20px calc((100% / 3) / 2);
@@ -236,9 +240,34 @@ footer{
   max-width: 50%;
 }
 
+
 @media (max-width: 1070px) {
   .skill-section {
     grid-template-columns: 1fr; 
   }
 }
+
+
+@media (max-width: 600px) {
+  .skill-section, .skill-section.grid-1{
+    padding: 1rem 2rem;
+  }
+  .skill-section h3{
+    font-size: 1rem;
+  }
+  .skill-header {
+    flex-direction: column;
+  }
+  .skill-name{
+    align-items: start;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .skill-section, .skill-section.grid-1{
+    padding: 0.5rem 1rem;
+  }
+}
+
 

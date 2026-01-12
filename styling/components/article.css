@@ -76,10 +76,26 @@ article pre {
   overflow-x: auto;
 }
 
-article code {
-  color: var(--text);                  
-  padding: 0.25em 0.5em;
-  border-radius: 5px;
-  font-family: 'Fira Mono', monospace;             
+.screenshot-gallery {
+  display: flex;
+  gap: 1rem;
+}
+
+.screenshot-gallery .left {
+  width: 50%;
+}
+
+.screenshot-gallery .right {
+  display: flex;
+  flex-direction: column;
+  width: 50%; 
+  gap: 1rem; 
+}
+
+.screenshot-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 

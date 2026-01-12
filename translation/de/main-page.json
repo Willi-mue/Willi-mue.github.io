@@ -21,17 +21,13 @@
   "main-page.blog-post-1-desc": "Verwaltung und Optimierung eines privaten Minecraft Servers auf dem eigenen Homeserver. Mit OpenVPN Zugang, RAID Backup und ressourcenschonender Serverkonfiguration inklusive optimierter Server-JAR.",
   "main-page.blog-post-1-link": "Weiterlesen",
 
-  "main-page.blog-post-2-title": "Eigener Discord-Bot für Community-Management",
-  "main-page.blog-post-2-desc": "Entwicklung eines vielseitigen Bots zur Moderation, Automatisierung und Unterstützung eines mehrsprachigen Discord-Servers.",
+  "main-page.blog-post-2-title": "Discord-Bot für Community-Management & Event-Organisation",
+  "main-page.blog-post-2-desc": "Vielseitiger Discord-Bot mit Event-Templates, Übersetzungen und Admin-Tools - vereinfacht die Verwaltung mehrsprachiger Community-Server.",
   "main-page.blog-post-2-link": "Weiterlesen",
 
   "main-page.blog-post-3-title": "Webseite für einen<br> MMO Community Discord-Server",
   "main-page.blog-post-3-desc": "Eine Webseite mit Guides, Tools und Informationen, die den Discord-Server unterstützt und das Community-Management erleichtert.",
   "main-page.blog-post-3-link": "Weiterlesen",
-
-  "main-page.blog-post-4-title": "Individuelle PC-Beratung",
-  "main-page.blog-post-4-desc": "Erfahrungen beim Zusammenstellen und Einrichten maßgeschneiderter PCs.",
-  "main-page.blog-post-4-link": "Weiterlesen",
 
   "main-page.blog-post-5-title": "Meine erste Game Jam",
   "main-page.blog-post-5-desc": "Ein Erfahrungsbericht - von der Idee über die Umsetzung bis zum finalen Spiel.",
