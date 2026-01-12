@@ -74,10 +74,6 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
       const back = document.createElement('div');
       back.className = 'card-back';
 
-      const backTitle = document.createElement('h3');
-      backTitle.textContent = translations['project-more-info'];
-      back.appendChild(backTitle);
-
       const desc = document.createElement('p');
       const descKey = `project-${project.name}-desc`;
       if (currentLang === 'de') {
