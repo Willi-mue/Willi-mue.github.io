@@ -259,6 +259,11 @@ footer{
   }
 }
 
+@media (max-width: 800px) {
+   #about-me{
+    text-align: start;
+  }
+}
 
 @media (max-width: 600px) {
   .skill-section, .skill-section.grid-1{
