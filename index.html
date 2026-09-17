@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title data-i18n="main-page.title" data-i18n-html>
-      Willi Müller - Softwareentwickler
-    </title>
+    <title data-i18n="main-page.title" data-i18n-html>Portfolio</title>
     <meta
       name="description"
       content="Portfolio von Willi Müller, Softwareentwickler für moderne, effiziente und nachhaltige Softwarelösungen."
       data-i18n="main-page.meta-description"
     />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styling/theme.css" />
@@ -28,25 +29,34 @@
   </head>
 
   <body data-theme="light" lang="de">
-    <header>
+    <header class="glow-surface">
       <h1 id="title" data-i18n="main-page.header-title" data-i18n-html>
         Willi Müller
       </h1>
       <p id="subtitle" data-i18n="main-page.header-subtitle" data-i18n-html>
-        Softwareentwickler mit Fokus auf Fullstack-Entwicklung sowie praktische
-        Erfahrung im Aufbau und Betrieb eigener Server-Infrastrukturen.
+        Tagsüber Code und Security, abends das eigene Home-Lab.
       </p>
+
+      <div class="hero-cta">
+        <a class="button" href="#projects" data-i18n="main-page.cta-projects" data-i18n-html>
+          Projekte ansehen
+        </a>
+        <a class="button button-ghost" href="#contact" data-i18n="main-page.cta-contact" data-i18n-html>
+          Kontakt aufnehmen
+        </a>
+      </div>
+
+      <nav class="hero-nav" aria-label="Seitennavigation">
+        <a href="#about" data-i18n="main-page.nav-about" data-i18n-html>Über mich</a>
+        <a href="#skills" data-i18n="main-page.nav-skills" data-i18n-html>Skills</a>
+        <a href="#projects" data-i18n="main-page.nav-projects" data-i18n-html>Projekte</a>
+        <a href="#other-projects" data-i18n="main-page.nav-blog" data-i18n-html>Blog</a>
+        <a href="#contact" data-i18n="main-page.nav-contact" data-i18n-html>Kontakt</a>
+      </nav>
     </header>
 
     <div id="top-controls">
-      <button
-        id="toggle-theme"
-        title=""
-        data-i18n="main-page.toggle-theme"
-        data-i18n-html
-      >
-        🌙
-      </button>
+      <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button
         id="toggle-lang"
         title=""
@@ -57,300 +67,253 @@
       </button>
     </div>
 
-    <button id="scroll-to-top" title="Nach oben">⬆️</button>
+    <button
+      id="scroll-to-top"
+      title="Nach oben"
+      aria-label="Nach oben scrollen"
+      data-icon="arrow-up"
+    ></button>
 
     <main>
       <h2
+        id="about"
+        class="main-sections"
+        data-i18n="main-page.about-me-title"
+        data-i18n-html
+      >
+        Über mich
+      </h2>
+      <section class="content-section">
+        <div class="about-layout">
+          <div class="about-panel">
+            <div class="about-panel-tab">
+              <span class="about-panel-dot"></span>
+              <span>about.py</span>
+            </div>
+            <pre class="about-panel-code"><code><span class="tok-var">willi</span> = {
+    <span class="tok-key">"role"</span>: <span class="tok-str" data-i18n="main-page.about-highlight-1">Software-Entwickler & IT-Security</span>,
+    <span class="tok-key">"focus"</span>: [
+        <span class="tok-str" data-i18n="main-page.about-focus-1">Kundenspezifische Lösungen</span>,
+        <span class="tok-str" data-i18n="main-page.about-focus-2">ISB-Unterstützung</span>,
+    ],
+    <span class="tok-key">"interests"</span>: [
+        <span class="tok-str" data-i18n="main-page.about-interest-1">Home-Lab & Server-Infrastruktur</span>,
+        <span class="tok-str" data-i18n="main-page.about-interest-2">Gaming</span>,
+        <span class="tok-str" data-i18n="main-page.about-interest-3">Community-Management</span>,
+    ],
+    <span class="tok-key">"languages"</span>: [<span class="tok-str">Python</span>, <span class="tok-str">Java</span>, <span class="tok-str">C++</span>],
+    <span class="tok-key">"spoken"</span>: [
+        <span class="tok-str" data-i18n="main-page.about-spoken-1">Deutsch</span>,
+        <span class="tok-str" data-i18n="main-page.about-spoken-2">Englisch</span>,
+        <span class="tok-str" data-i18n="main-page.about-spoken-3">Spanisch (Grundkenntnisse)</span>,
+    ],
+    <span class="tok-key">"based_in"</span>: <span class="tok-str" data-i18n="main-page.about-based-in">Deutschland</span>,
+}</code></pre>
+          </div>
+          <div class="about-me">
+            <p class="about-lead" data-i18n="main-page.about-me-p1" data-i18n-html>
+              IT und Softwareentwicklung faszinieren mich seit vielen Jahren.
+              Aktuell arbeite ich als Software-Entwickler mit Schwerpunkt
+              IT-Security und entwickle Custom Solutions, die individuell
+              auf die jeweiligen Anforderungen des Kunden zugeschnitten
+              sind – mit besonderem Blick auf das Zusammenspiel von
+              Software, Infrastruktur und Sicherheit.
+            </p>
+
+            <p data-i18n="main-page.about-me-p2" data-i18n-html>
+              Dabei unterstütze ich die Informationssicherheitsbeauftragten
+              (ISBs), koordiniere Dokumente und Formulare und
+              entwickle interne Tools, die die Zusammenarbeit zwischen Teams
+              erleichtern. Ich arbeite strukturiert und eigenverantwortlich
+              und möchte mich fachlich stetig weiterentwickeln.
+            </p>
+            <p data-i18n="main-page.about-me-p3" data-i18n-html>
+              Neben meinem Job realisiere ich eigene Projekte – von
+              Webanwendungen und Bots bis zum Aufbau und Betrieb eigener
+              Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und
+              automatisiere ich Serverdienste, unter anderem mit eigenen
+              VPN-Lösungen, Docker-Setups und Spielservern, und vertiefe so
+              mein Wissen praxisnah.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <h2
+        id="skills"
+        class="main-sections"
+        data-i18n="main-page.tech-title"
+        data-i18n-html
+      >
+        IT-Kenntnisse
+      </h2>
+      <p class="section-intro" data-i18n="main-page.skills-intro" data-i18n-html>
+        Vom Code bis zur Infrastruktur darunter – die Technologien, mit denen
+        ich täglich arbeite.
+      </p>
+      <section class="content-section">
+        <div class="skills-panel">
+          <div class="skill-group">
+            <h3 data-i18n="skill-category-software">Programmiersprachen</h3>
+            <div class="skill-ring-grid">
+              <div class="skill-ring-tile" style="--tag-color-light:#3572A5; --pct:94">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="code"></span><span class="skill-ring-pct">94%</span></div></div>
+                <div class="skill-ring-name">Python</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#ec8611; --pct:90">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="coffee"></span><span class="skill-ring-pct">90%</span></div></div>
+                <div class="skill-ring-name">Java</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#f34b7d; --pct:67">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="code-block"></span><span class="skill-ring-pct">67%</span></div></div>
+                <div class="skill-ring-name">C++</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#dea584; --pct:45">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="rust-logo"></span><span class="skill-ring-pct">45%</span></div></div>
+                <div class="skill-ring-name">Rust</div>
+                <div class="skill-ring-level" data-i18n="skill-level-beginner">grundkenntnisse</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skill-category-data">Datenanalyse</h3>
+            <div class="skill-ring-grid">
+              <div class="skill-ring-tile" style="--tag-color-light:#4dabcf; --pct:61">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="numpy"></span><span class="skill-ring-pct">61%</span></div></div>
+                <div class="skill-ring-name">NumPy</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#e05d44; --pct:39">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="chart-line"></span><span class="skill-ring-pct">39%</span></div></div>
+                <div class="skill-ring-name">Matplotlib</div>
+                <div class="skill-ring-level" data-i18n="skill-level-beginner">grundkenntnisse</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#150458; --tag-color-dark:#a78bfa; --pct:29">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="pandas"></span><span class="skill-ring-pct">29%</span></div></div>
+                <div class="skill-ring-name">Pandas</div>
+                <div class="skill-ring-level" data-i18n="skill-level-beginner">grundkenntnisse</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skill-category-backend">Backend & Datenbanken</h3>
+            <div class="skill-ring-grid">
+              <div class="skill-ring-tile" style="--tag-color-light:#6366f1; --pct:89">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="share-network"></span><span class="skill-ring-pct">89%</span></div></div>
+                <div class="skill-ring-name">APIs</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#00758F; --tag-color-dark:#38bdf8; --pct:66">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="database"></span><span class="skill-ring-pct">66%</span></div></div>
+                <div class="skill-ring-name">MySQL</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#003B57; --tag-color-dark:#60a5fa; --pct:59">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="database"></span><span class="skill-ring-pct">59%</span></div></div>
+                <div class="skill-ring-name">SQLite</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skill-category-frontend">Frontend & Web</h3>
+            <div class="skill-ring-grid">
+              <div class="skill-ring-tile" style="--tag-color-light:#e34c26; --pct:93">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="file-html"></span><span class="skill-ring-pct">93%</span></div></div>
+                <div class="skill-ring-name">HTML</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#cc6699; --pct:88">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="file-css"></span><span class="skill-ring-pct">88%</span></div></div>
+                <div class="skill-ring-name">SCSS</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#42b883; --pct:87">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="file-vue"></span><span class="skill-ring-pct">87%</span></div></div>
+                <div class="skill-ring-name">Vue</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#bea909; --pct:57">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="brackets-curly"></span><span class="skill-ring-pct">57%</span></div></div>
+                <div class="skill-ring-name">JavaScript</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skill-category-devops">DevOps & Infrastruktur</h3>
+            <div class="skill-ring-grid">
+              <div class="skill-ring-tile" style="--tag-color-light:#2496ED; --pct:96">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="cube"></span><span class="skill-ring-pct">96%</span></div></div>
+                <div class="skill-ring-name">Docker</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#0066CC; --pct:95">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="lock-key"></span><span class="skill-ring-pct">95%</span></div></div>
+                <div class="skill-ring-name">OpenVPN</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#a6820c; --pct:70">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="linux-logo"></span><span class="skill-ring-pct">70%</span></div></div>
+                <div class="skill-ring-name">Linux</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#e0521a; --pct:64">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="shield-check"></span><span class="skill-ring-pct">64%</span></div></div>
+                <div class="skill-ring-name">Firewall</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#009639; --pct:62">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="globe"></span><span class="skill-ring-pct">62%</span></div></div>
+                <div class="skill-ring-name">Nginx</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#5fc022; --pct:58">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="terminal-window"></span><span class="skill-ring-pct">58%</span></div></div>
+                <div class="skill-ring-name">Bash</div>
+                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skill-category-versioning">Tools & Workflow</h3>
+            <div class="skill-ring-grid">
+              <div class="skill-ring-tile" style="--tag-color-light:#F1502F; --pct:92">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="git-branch"></span><span class="skill-ring-pct">92%</span></div></div>
+                <div class="skill-ring-name">Git</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+              <div class="skill-ring-tile" style="--tag-color-light:#8b5cf6; --pct:91">
+                <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="robot"></span><span class="skill-ring-pct">91%</span></div></div>
+                <div class="skill-ring-name">Agentic Coding</div>
+                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2
+        id="projects"
         class="main-sections"
         data-i18n="main-page.projects-title"
         data-i18n-html
       >
         Meine öffentlichen Projekte
       </h2>
-      <section id="projects" class="projects"></section>
-
-      <h2 class="main-sections" data-i18n="main-page.tech-title" data-i18n-html>
-        IT-Kenntnisse
-      </h2>
-      <section id="tech-stack">
-        <div class="skill-section">
-          <!-- Softwareentwicklung -->
-          <div class="skill-div">
-            <h3 data-i18n="skill-category-software">Programmiersprachen</h3>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-python"
-                    >🐍 Python</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-advanced"
-                    >Fortgeschritten</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 95%"
-                  data-category="proglang"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-java">☕ Java</span>
-                  <span class="skill-level" data-i18n="skill-level-advanced"
-                    >Fortgeschritten</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 85%"
-                  data-category="proglang"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-cpp">💠 C++</span>
-                  <span class="skill-level" data-i18n="skill-level-beginner"
-                    >Grundkenntnisse</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 50%"
-                  data-category="proglang"
-                ></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Backend & Datenbanken -->
-          <div class="skill-div">
-            <h3 data-i18n="skill-category-backend">Backend & Datenbanken</h3>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-dev-prod">
-                    🌍 Getrennte Entwicklungs- und Produktivumgebungen
-                  </span>
-                  <span class="skill-level" data-i18n="skill-level-advanced">
-                    Fortgeschritten
-                  </span>
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 80%"
-                  data-category="backend"
-                ></div>
-              </li>
-
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-mysql">
-                    🐬 MySQL / MariaDB
-                  </span>
-                  <span
-                    class="skill-level"
-                    data-i18n="skill-level-intermediate"
-                  >
-                    Mittel
-                  </span>
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 65%"
-                  data-category="backend"
-                ></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Frontend & Web -->
-          <div class="skill-div">
-            <h3 data-i18n="skill-category-frontend">Frontend & Web</h3>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-html"
-                    >🌐 HTML5</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-advanced"
-                    >Fortgeschritten</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 95%"
-                  data-category="frontend"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-scss">🎨 SCSS</span>
-                  <span class="skill-level" data-i18n="skill-level-advanced"
-                    >Fortgeschritten</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 95%"
-                  data-category="frontend"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-vue"
-                    >🟢 Vue.js</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-intermediate"
-                    >Mittel</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 75%"
-                  data-category="frontend"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-js"
-                    >✨ JavaScript</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-intermediate"
-                    >Mittel</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 60%"
-                  data-category="frontend"
-                ></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- DevOps & Infrastruktur -->
-          <div class="skill-div">
-            <h3 data-i18n="skill-category-devops">DevOps & Infrastruktur</h3>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-openvpn"
-                    >🔐 OpenVPN (Self-hosted Server)</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-advanced"
-                    >Fortgeschritten</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 90%"
-                  data-category="infra"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-docker"
-                    >🐳 Docker</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-intermediate"
-                    >Mittel</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 75%"
-                  data-category="infra"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-linux"
-                    >🐧 Linux</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-intermediate"
-                    >Mittel</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 75%"
-                  data-category="infra"
-                ></div>
-              </li>
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-firewall"
-                    >🔥 Firewall & Network Configuration</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-intermediate"
-                    >Mittel</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 65%"
-                  data-category="infra"
-                ></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Versionierung -->
-          <div class="skill-div">
-            <h3 data-i18n="skill-category-versioning">Versionierung</h3>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-header">
-                  <span class="skill-name" data-i18n="skill-git"
-                    >🐙 Git (GitHub & GitLab)</span
-                  >
-                  <span class="skill-level" data-i18n="skill-level-advanced"
-                    >Fortgeschritten</span
-                  >
-                </div>
-                <div
-                  class="skill-bar"
-                  style="--level: 90%"
-                  data-category="tools"
-                ></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="skill-section grid-1">
-          <section id="about-me" class="about-me">
-            <h2 data-i18n="main-page.about-me-title" data-i18n-html>
-              Über mich
-            </h2>
-            <p data-i18n="main-page.about-me-p1" data-i18n-html>
-              IT und Softwareentwicklung faszinieren mich seit vielen Jahren.
-              Während meiner Ausbildung arbeite ich sowohl an Frontend als auch
-              an Backend-Anwendungen. Besonders spannend finde ich das
-              Zusammenspiel von Software, Infrastruktur und stabilen Systemen,
-              das es erlaubt, komplexe Lösungen praxisnah umzusetzen.
-            </p>
-
-            <p data-i18n="main-page.about-me-p2" data-i18n-html>
-              Neben meiner Ausbildung realisiere ich eigene Projekte - von
-              Webanwendungen und Bots bis hin zum Aufbau und Betrieb eigener
-              Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und
-              automatisiere ich Serverdienste, unter anderem mit eigenen
-              VPN-Lösungen, Docker-Setups und Spielservern. Diese Projekte
-              helfen mir, theoretisches Wissen praxisnah anzuwenden und zu
-              vertiefen.
-            </p>
-            <p data-i18n="main-page.about-me-p3" data-i18n-html>
-              Ich arbeite strukturiert, eigenverantwortlich und lege Wert auf
-              sauberen, wartbaren Code. Teamarbeit und der Austausch über
-              technische Lösungen sind für mich selbstverständlich. Für meine
-              berufliche Zukunft suche ich eine feste Stelle, in der ich mich
-              fachlich weiterentwickeln und aktiv an der Umsetzung moderner
-              Softwarelösungen mitwirken kann.
-            </p>
-          </section>
-        </div>
-      </section>
+      <p class="section-intro" data-i18n="main-page.projects-intro" data-i18n-html>
+        Automatisch von GitHub synchronisiert – eine Auswahl eigener Tools,
+        Simulationen und Spielereien.
+      </p>
+      <section id="projects-grid" class="projects"></section>
 
       <h2
         id="other-projects"
@@ -360,18 +323,22 @@
       >
         Weitere Projekte & Erfahrungen
       </h2>
+      <p class="section-intro" data-i18n="main-page.blog-intro" data-i18n-html>
+        Tiefere Einblicke in ausgewählte Projekte und Erfahrungen abseits von
+        GitHub.
+      </p>
 
       <section id="blog">
         <div class="blog-grid">
           <article class="blog-post">
+            <span class="blog-icon" data-icon="hard-drives"></span>
             <h3 data-i18n="main-page.blog-post-1-title" data-i18n-html>
-              Privater Minecraft-Server: VPN, Backup & Performance-Optimierung
+              Privater Minecraft-Server: VPN, Backup & Performance
             </h3>
             <p data-i18n="main-page.blog-post-1-desc" data-i18n-html>
               Verwaltung und Optimierung eines privaten Minecraft-Servers auf
-              dem eigenen Homeserver. Mit OpenVPN-Zugang, RAID-Backup und
-              ressourcenschonender Serverkonfiguration inklusive optimierter
-              Server-JAR.
+              dem eigenen Homeserver – mit OpenVPN-Zugang, RAID-Backup und
+              ressourcenschonender Serverkonfiguration.
             </p>
             <div class="badge-wrapper">
               <span class="badge">Docker</span>
@@ -393,13 +360,14 @@
           </article>
 
           <article class="blog-post">
+            <span class="blog-icon" data-icon="robot"></span>
             <h3 data-i18n="main-page.blog-post-2-title" data-i18n-html>
-              Discord-Bot für Community-Management & Event-Organisation
+              Discord-Bot für Community-Management & Events
             </h3>
             <p data-i18n="main-page.blog-post-2-desc" data-i18n-html>
               Vielseitiger Discord-Bot mit Event-Templates, Übersetzungen und
-              Admin-Tools - vereinfacht die Verwaltung mehrsprachiger
-              Community-Server.
+              Admin-Tools, der die Verwaltung mehrsprachiger Community-Server
+              spürbar vereinfacht.
             </p>
             <div class="badge-wrapper">
               <span class="badge">Python</span>
@@ -418,15 +386,15 @@
           </article>
 
           <article class="blog-post">
+            <span class="blog-icon" data-icon="globe"></span>
             <h3 data-i18n="main-page.blog-post-3-title" data-i18n-html>
-              Webseite für einen MMO Community
+              Webseite für eine MMO-Community
             </h3>
             <p data-i18n="main-page.blog-post-3-desc" data-i18n-html>
-              Entwicklung einer professionellen Webseite zur Unterstützung eines
-              MMO Discord-Servers. Die Plattform bietet Guides, Tools und
-              Echtzeit-Informationen, um das Community-Management zu erleichtern
-              und die Interaktion zu verbessern. Das Projekt befindet sich
-              aktuell noch im Aufbau.
+              Professionelle Webseite zur Unterstützung eines
+              MMO-Discord-Servers mit Guides, Tools und
+              Echtzeit-Informationen für einfacheres Community-Management.
+              Aktuell noch im Aufbau.
             </p>
             <div class="badge-wrapper">
               <span class="badge">Python</span>
@@ -447,12 +415,13 @@
           </article>
 
           <article class="blog-post">
+            <span class="blog-icon" data-icon="game-controller"></span>
             <h3 data-i18n="main-page.blog-post-4-title" data-i18n-html>
-              Erste Game Jam Erfahrung
+              Erste Game-Jam-Erfahrung
             </h3>
             <p data-i18n="main-page.blog-post-4-desc" data-i18n-html>
-              Ein praxisnaher Erfahrungsbericht: Von der ersten Idee über die
-              Umsetzung bis hin zum fertigen Spiel.
+              Ein praxisnaher Erfahrungsbericht: von der ersten Idee über die
+              Umsetzung in 72 Stunden bis zum fertigen Spiel.
             </p>
             <div class="badge-wrapper">
               <span class="badge">GDScript</span>
@@ -470,46 +439,62 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="contact" class="glow-surface">
+      <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
       <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
-        Sie möchten gerne mit mir in Kontakt treten?<br />
-        Falls ich Ihr Interesse geweckt habe, erreichen Sie mich hier:
+        Interesse an einer Zusammenarbeit?<br />
+        Über eine Nachricht freue ich mich:
       </p>
 
       <ul class="contact-list">
         <li>
-          📧
           <a
             id="contact-email"
             href="mailto:willimuellerbremberg@gmail.com"
-            data-i18n="main-page.contact-email"
-            data-i18n-html
-            >E-Mail</a
           >
+            <span class="icon" data-icon="envelope-simple"></span>
+            <span data-i18n="main-page.contact-email" data-i18n-html
+              >E-Mail</span
+            >
+          </a>
         </li>
         <li>
-          🐙
           <a
             id="contact-github"
             href="https://github.com/Willi-mue"
             target="_blank"
             rel="noopener noreferrer"
-            data-i18n="main-page.contact-github"
-            data-i18n-html
           >
-            GitHub
+            <span class="icon" data-icon="github-logo"></span>
+            <span data-i18n="main-page.contact-github" data-i18n-html
+              >GitHub</span
+            >
           </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            id="contact-discord"
+            class="contact-copy"
+            data-copy="todes_ritter"
+          >
+            <span class="icon" data-icon="discord-logo"></span>
+            <span data-i18n="main-page.contact-discord" data-i18n-html
+              >Discord</span
+            >
+          </button>
         </li>
       </ul>
     </footer>
 
     <script src="js/setup.js"></script>
+    <script src="js/icons.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/badgeColors.js"></script>
     <script src="js/translation.js"></script>
     <script src="js/scroll-to-top.js"></script>
     <script src="js/projects.js"></script>
-    <script src="js/badgeColors.js"></script>
-    <script src="js/animate-skills.js"></script>
+    <script src="js/contact.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {

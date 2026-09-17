@@ -1,5 +1,5 @@
 {
-  "blog-discord-bot-title": "Eigener Discord-Bot für Community-Management",
+  "blog-discord-bot-title": "Portfolio",
   "blog-discord-bot-meta-description": "Ein mehrsprachiger Discord-Bot für Moderation, Automatisierung und Community-Tools.",
   "blog-discord-bot-heading": "Eigener Discord-Bot für Community-Management",
   "section-discord-intro": "<strong>Discord</strong> ist eine beliebte Plattform für Communities, die Text-, Sprach- und Video-Chats unterstützt. Mein Bot automatisiert Aufgaben auf Discord-Servern, erleichtert die Organisation von Events und unterstützt mehrsprachige Kommunikation, sodass Community-Manager Zeit sparen und die Übersicht behalten.",
@@ -12,10 +12,8 @@
   "section-challenges-title": "Herausforderungen",
   "section-challenges-text": "Die Implementierung eines skalierbaren Event-Systems mit Test- und Live-Umgebung, Mehrsprachigkeit, Template-Logik und Admin-Funktionen stellte komplexe Anforderungen an Datenstrukturen und Kommando-Handling.",
   "section-conclusion-outlook-title": "Fazit & Ausblick",
-  "section-conclusion-outlook-text": "Der Bot ist bereits bei über 140+ Nutzern im Einsatz und erleichtert das tägliche Community-Management erheblich. Die Entwicklung ist aktiv, und folgende Funktionen stehen auf der Roadmap:",
+  "section-conclusion-outlook-text": "Der Bot ist bereits bei über 140 Nutzern im Einsatz und erleichtert das tägliche Community-Management erheblich. Die Entwicklung ist aktiv, und folgende Funktionen stehen auf der Roadmap:",
   "section-conclusion-outlook-text2": "Ziel ist es, den Bot ständig weiterzuentwickeln, neue Tools zu integrieren und ein leistungsfähiges, flexibles Werkzeug für mittelgroße bis große Discord-Server bereitzustellen.",
-  "back-button": "Zurück zur Hauptseite",
-  
   "cmd-signup": "<strong>/signup</strong> - Anmeldung für Events. Löst automatisch ein Event-Template aus, sodass vorgefertigte Events schnell erstellt werden können. Multiaccount-Support, eigene Threads und Statusoptionen inklusive.",
   "cmd-signup_custom": "<strong>/signup_custom</strong> - Eigene Event-Erstellung, unabhängig von Templates.",
   "cmd-ping_role": "<strong>/ping_role</strong> - Rollen direkt benachrichtigen.",

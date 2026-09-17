@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-i18n="blog-discord-bot-title" data-i18n-html>
-      Eigener Discord-Bot für Community-Management
-    </title>
+    <title data-i18n="blog-discord-bot-title" data-i18n-html>Portfolio</title>
     <meta
       name="description"
       content="Ein mehrsprachiger Discord-Bot für Moderation, Automatisierung und Community-Tools."
       data-i18n="blog-discord-bot-meta-description"
     />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styling/theme.css" />
@@ -23,22 +24,15 @@
     <link rel="stylesheet" href="../styling/components/badge.css" />
   </head>
 
-  <body data-theme="light" lang="de">
-    <header>
+  <body data-theme="light" lang="de" data-i18n-file="blog-discord-bot-server">
+    <header class="glow-surface">
       <h1 data-i18n="blog-discord-bot-heading" data-i18n-html>
         Eigener Discord-Bot für Community-Management
       </h1>
     </header>
 
     <div id="top-controls">
-      <button
-        id="toggle-theme"
-        title=""
-        data-i18n="toggle-theme"
-        data-i18n-html
-      >
-        🌙
-      </button>
+      <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>
         EN
       </button>
@@ -55,11 +49,7 @@
         </div>
 
         <section>
-          <p
-            data-i18n="section-discord-intro"
-            data-i18n-html
-            style="text-align: center"
-          >
+          <p data-i18n="section-discord-intro" data-i18n-html>
             <strong>Discord</strong> ist eine beliebte Plattform für
             Communities, die Text-, Sprach- und Video-Chats unterstützt. Mein
             Bot automatisiert Aufgaben auf Discord-Servern, erleichtert die
@@ -165,6 +155,7 @@
     </main>
 
     <script src="../js/setup.js"></script>
+    <script src="../js/icons.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/badgeColors.js"></script>
     <script src="../js/translation.js"></script>

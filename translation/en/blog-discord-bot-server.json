@@ -1,5 +1,5 @@
 {
-  "blog-discord-bot-title": "Custom Discord Bot for Community Management",
+  "blog-discord-bot-title": "Portfolio",
   "blog-discord-bot-meta-description": "A multilingual Discord bot for moderation, automation, and community tools.",
   "blog-discord-bot-heading": "Custom Discord Bot for Community Management",
   "section-discord-intro": "<strong>Discord</strong> is a popular platform for communities that supports text, voice, and video chats. My bot automates tasks on Discord servers, makes event organization easier, and supports multilingual communication, saving community managers time and keeping everything organized.",
@@ -14,8 +14,6 @@
   "section-conclusion-outlook-title": "Conclusion & Outlook",
   "section-conclusion-outlook-text": "The bot is already used by over 140 users and greatly simplifies daily community management. Development is active, and the following features are on the roadmap:",
   "section-conclusion-outlook-text2": "The goal is to continuously improve the bot, integrate new tools, and provide a powerful, flexible tool for medium to large Discord servers.",
-  "back-button": "Back to main page",
-  
   "cmd-signup": "<strong>/signup</strong> - Register for events. Automatically triggers an event template so pre-made events can be created quickly. Includes multi-account support, separate threads, and status options.",
   "cmd-signup_custom": "<strong>/signup_custom</strong> - Create custom events independent of templates.",
   "cmd-ping_role": "<strong>/ping_role</strong> - Notify roles directly.",

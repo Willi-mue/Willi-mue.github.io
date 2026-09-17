@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-i18n="blog-discord-webpage-title" data-i18n-html>
-      Webseite für einen MMO Community
-    </title>
+    <title data-i18n="blog-discord-webpage-title" data-i18n-html>Portfolio</title>
     <meta
       name="description"
       content="Professionelle Webplattform zur Unterstützung eines MMO Discord-Servers mit Guides, Tools und aktuellen News."
       data-i18n="blog-discord-webpage-meta-description"
     />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styling/theme.css" />
@@ -23,22 +24,15 @@
     <link rel="stylesheet" href="../styling/components/badge.css" />
   </head>
 
-  <body data-theme="light" lang="de">
-    <header>
+  <body data-theme="light" lang="de" data-i18n-file="blog-discord-webpage">
+    <header class="glow-surface">
       <h1 data-i18n="blog-discord-webpage-heading" data-i18n-html>
-        Webseite für einen MMO Community
+        Webseite für eine MMO-Community
       </h1>
     </header>
 
     <div id="top-controls">
-      <button
-        id="toggle-theme"
-        title=""
-        data-i18n="toggle-theme"
-        data-i18n-html
-      >
-        🌙
-      </button>
+      <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>
         EN
       </button>
@@ -56,7 +50,7 @@
           <span class="badge">Docker</span>
         </div>
 
-        <p data-i18n-html="blog-discord-webpage-intro">
+        <p data-i18n="blog-discord-webpage-intro" data-i18n-html>
           Aufbau einer professionellen Webplattform zur Unterstützung einer
           großen Discord-Community für ein <strong>MMO</strong> (<em
             >Massively Multiplayer Online Game</em
@@ -66,30 +60,30 @@
         </p>
 
         <ul class="highlights">
-          <li data-i18n-html="highlight-1">
+          <li data-i18n="highlight-1" data-i18n-html>
             Mehrsprachige Plattform mit integrierter Suchfunktion für schnellen
             Zugriff auf Inhalte
           </li>
-          <li data-i18n-html="highlight-2">
+          <li data-i18n="highlight-2" data-i18n-html>
             Nahtlose Integration mit Discord für effizientes
             Community-Management
           </li>
-          <li data-i18n-html="highlight-3">
+          <li data-i18n="highlight-3" data-i18n-html>
             Reaktives Frontend mit Vue.js, SCSS und JavaScript für moderne
             Benutzeroberflächen
           </li>
-          <li data-i18n-html="highlight-4">
+          <li data-i18n="highlight-4" data-i18n-html>
             Backend in Python mit SQLite für schlanke, performante Datenhaltung
           </li>
-          <li data-i18n-html="highlight-5">
+          <li data-i18n="highlight-5" data-i18n-html>
             Deployment über Docker-Container und Nginx für flexible, stabile
             Bereitstellung
           </li>
         </ul>
 
         <section>
-          <h2 data-i18n-html="section-goals-title">Ziele & Motivation</h2>
-          <p data-i18n-html="section-goals-text">
+          <h2 data-i18n="section-goals-title" data-i18n-html>Ziele & Motivation</h2>
+          <p data-i18n="section-goals-text" data-i18n-html>
             Ziel des Projekts ist es, eine zentrale Plattform zu schaffen, auf
             der Community-Mitglieder alle relevanten Informationen, Tools und
             Anleitungen finden, ohne lange im Discord-Server suchen zu müssen.
@@ -100,8 +94,8 @@
         </section>
 
         <section>
-          <h2 data-i18n-html="section-tech-title">Technische Umsetzung</h2>
-          <p data-i18n-html="section-tech-text">
+          <h2 data-i18n="section-tech-title" data-i18n-html>Technische Umsetzung</h2>
+          <p data-i18n="section-tech-text" data-i18n-html>
             Das Frontend basiert auf <strong>Vue.js</strong> für eine reaktive
             und moderne Benutzeroberfläche, ergänzt durch
             <strong>SCSS</strong> für konsistentes und wartbares Styling. Die
@@ -115,8 +109,8 @@
         </section>
 
         <section>
-          <h2 data-i18n-html="section-features-title">Funktionen</h2>
-          <p data-i18n-html="section-features-text">
+          <h2 data-i18n="section-features-title" data-i18n-html>Funktionen</h2>
+          <p data-i18n="section-features-text" data-i18n-html>
             Zu den Kernfunktionen gehören: eine leistungsfähige Suchfunktion,
             strukturierte Guides und Tutorials für Spieler, aktuelle
             Community-News und eine zentrale Übersicht wichtiger Tools. Damit
@@ -126,8 +120,8 @@
         </section>
 
         <section>
-          <h2 data-i18n-html="section-outro-title">Ausblick</h2>
-          <p data-i18n-html="section-outro-text">
+          <h2 data-i18n="section-outro-title" data-i18n-html>Ausblick</h2>
+          <p data-i18n="section-outro-text" data-i18n-html>
             Das Projekt befindet sich weiterhin im Aufbau. Zukünftige Versionen
             werden die Benutzerführung weiter optimieren, neue Funktionen
             integrieren und das Nutzererlebnis insgesamt noch komfortabler
@@ -140,7 +134,7 @@
         <button
           class="button"
           onclick="location.href='../index.html#other-projects'"
-          data-i18n-html="back-button"
+          data-i18n="back-button"
         >
           Zurück zur Hauptseite
         </button>
@@ -148,6 +142,7 @@
     </main>
 
     <script src="../js/setup.js"></script>
+    <script src="../js/icons.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/badgeColors.js"></script>
     <script src="../js/translation.js"></script>

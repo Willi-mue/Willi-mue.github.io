@@ -1,35 +1,38 @@
 window.BadgeUtils = (() => {
-  const languageIcons = {
-    Python: "🐍",
-    JavaScript: "✨",
-    TypeScript: "🔷",
-    Java: "☕",
-    "C++": "💠",
-    "C#": "⚡",
-    Go: "🐹",
-    Rust: "⚙️",
-    HTML: "🌐",
-    CSS: "🎨",
-    SCSS: "🎨",
-    Shell: "🖥️",
-    Bash: "🖥️",
-    PHP: "🐘",
-    Ruby: "💎",
-    Swift: "🕊️",
-    Kotlin: "🧡",
-    Docker: "🐳",
-    Linux: "🐧",
-    OpenVPN: "🔐",
-    RAID: "💾",
-    Performance: "🚀",
-    GDScript: "🎮",
-    Makefile: "🛠️",
-    Batchfile: "📄",
-    "Event Management": "📅",
-    Automation: "🤖",
-    Vue: "🖼️",
-    SQLite: "🗄️",
-    Nginx: "🌐",
+  const languageIconKeys = {
+    Python: "code",
+    JavaScript: "brackets-curly",
+    TypeScript: "brackets-curly",
+    Java: "coffee",
+    "C++": "code-block",
+    "C#": "code-block",
+    Go: "code",
+    Rust: "gear",
+    HTML: "file-html",
+    CSS: "file-css",
+    SCSS: "file-css",
+    Shell: "terminal-window",
+    Bash: "terminal-window",
+    PHP: "code",
+    Ruby: "code",
+    Swift: "code",
+    Kotlin: "code",
+    Docker: "cube",
+    Linux: "linux-logo",
+    OpenVPN: "lock-key",
+    RAID: "hard-drives",
+    Performance: "gauge",
+    GDScript: "game-controller",
+    Makefile: "wrench",
+    Batchfile: "terminal-window",
+    "Event Management": "calendar",
+    Automation: "robot",
+    Vue: "file-vue",
+    SQLite: "database",
+    Nginx: "globe",
+    Git: "git-branch",
+    MySQL: "database",
+    Firewall: "shield-check",
   };
 
   const languageColors = {
@@ -56,29 +59,24 @@ window.BadgeUtils = (() => {
     RAID: "#FF8800",
     Performance: "#00CC66",
     GDScript: "#478CBF",
-    Makefile: "#346e04ff",
-    Batchfile: "#45a306ff",
+    Makefile: "#346e04",
+    Batchfile: "#45a306",
     "Event Management": "#FFAA33",
     Automation: "#66CCFF",
     Vue: "#42b883",
     SQLite: "#003B57",
     Nginx: "#009639",
+    Git: "#F1502F",
+    MySQL: "#00758F",
+    Firewall: "#e0521a",
   };
 
-  function lightenColor(color, luminosity = 0.8) {
-    color = color.replace(/[^0-9a-f]/gi, "");
-    if (color.length < 6) {
-      color = color[0] + color[0] + color[1] + color[1] + color[2] + color[2];
-    }
-    let newColor = "#",
-      c,
-      i;
-    for (i = 0; i < 3; i++) {
-      c = parseInt(color.substr(i * 2, 2), 16);
-      c = Math.min(255, Math.floor(c + (255 - c) * luminosity));
-      newColor += ("00" + c.toString(16)).substr(-2);
-    }
-    return newColor;
+  function iconKeyFor(label) {
+    return languageIconKeys[label] || "code";
+  }
+
+  function colorFor(label) {
+    return languageColors[label] || "#7a8699";
   }
 
   function applyBadgeStyles(root = document) {
@@ -86,19 +84,14 @@ window.BadgeUtils = (() => {
     badges.forEach((badge) => {
       if (badge.dataset.styled === "true") return;
 
-      const text = badge.textContent.trim();
-      const label = text;
-      const icon = languageIcons[label] || "💻";
-      const baseColor = languageColors[label] || "#888888";
-      const bgColor = lightenColor(baseColor, 0.8);
+      const label = badge.textContent.trim();
+      const color = colorFor(label);
 
       badge.innerHTML = `
-      <span class="icon">${icon}</span>
+      <span class="icon">${window.Icons.svg(iconKeyFor(label))}</span>
       <span class="label">${label}</span>
     `;
-      badge.style.backgroundColor = bgColor;
-      badge.style.color = "#1a1a1a";
-
+      badge.style.setProperty("--tag-color", color);
       badge.dataset.styled = "true";
     });
   }
@@ -110,8 +103,8 @@ window.BadgeUtils = (() => {
   }
 
   return {
-    lightenColor,
     applyBadgeStyles,
-    getLanguageIcon: (lang) => languageIcons[lang] || "💻",
+    getLanguageIconKey: iconKeyFor,
+    colorFor,
   };
 })();

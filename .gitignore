@@ -1,0 +1,32 @@
+# Umgebungskonfiguration
+.env
+
+# Virtual Environments
+venv/
+.env*/ 
+
+# VSCode oder andere IDEs
+.vscode/
+.idea/
+
+# MacOS und andere Systemdateien
+.DS_Store
+
+# Claude
+.claude/
+
+# Godot
+.godot/
+*.translation
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/

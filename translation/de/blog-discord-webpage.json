@@ -1,6 +1,7 @@
 {
-  "blog-discord-webpage-title": "Webseite für einen MMO Community",
-  "blog-discord-webpage-meta-description": "Professionelle Webplattform zur Unterstützung eines MMO Discord-Servers mit Guides, Tools und aktuellen News.",
+  "blog-discord-webpage-title": "Portfolio",
+  "blog-discord-webpage-meta-description": "Professionelle Webplattform zur Unterstützung eines MMO-Discord-Servers mit Guides, Tools und aktuellen News.",
+  "blog-discord-webpage-heading": "Webseite für eine MMO-Community",
   "blog-discord-webpage-intro": "Aufbau einer professionellen Webplattform zur Unterstützung einer großen Discord-Community für ein <strong>MMO</strong> (<em>Massively Multiplayer Online Game</em>). Die Webseite bündelt nützliche Guides, Tools und aktuelle News und dient sowohl neuen als auch erfahrenen Mitgliedern als zentrale Anlaufstelle.",
   "highlight-1": "Mehrsprachige Plattform mit integrierter Suchfunktion für schnellen Zugriff auf Inhalte",
   "highlight-2": "Nahtlose Integration mit Discord für effizientes Community-Management",
@@ -14,6 +15,5 @@
   "section-features-title": "Funktionen",
   "section-features-text": "Zu den Kernfunktionen gehören: eine leistungsfähige Suchfunktion, strukturierte Guides und Tutorials für Spieler, aktuelle Community-News und eine zentrale Übersicht wichtiger Tools. Damit können selbst Nutzer ohne MMO-Erfahrung direkt loslegen und sich schnell in der Plattform zurechtfinden.",
   "section-outro-title": "Ausblick",
-  "section-outro-text": "Das Projekt befindet sich weiterhin im Aufbau. Zukünftige Versionen werden die Benutzerführung weiter optimieren, neue Funktionen integrieren und das Nutzererlebnis insgesamt noch komfortabler gestalten. Ziel ist eine professionelle Plattform, die sowohl für erfahrene Community-Mitglieder als auch für Neueinsteiger einen echten Mehrwert bietet.",
-  "back-button": "Zurück zur Hauptseite"
+  "section-outro-text": "Das Projekt befindet sich weiterhin im Aufbau. Zukünftige Versionen werden die Benutzerführung weiter optimieren, neue Funktionen integrieren und das Nutzererlebnis insgesamt noch komfortabler gestalten. Ziel ist eine professionelle Plattform, die sowohl für erfahrene Community-Mitglieder als auch für Neueinsteiger einen echten Mehrwert bietet."
 }

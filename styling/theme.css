@@ -1,49 +1,70 @@
 :root {
-  --bg: #f5f8fb;
-  --section-bg: #e9f0f8;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Mono', monospace;
+
+  --bg: #eef1f6;
+  --section-bg: #e4e9f1;
   --hd-fo-bg: #ffffff;
   --card-bg: #ffffff;
 
-  --text: #0f172a;
-  --heading-color: #0b1324;
-  --text-secondary: #334155;
-  --skill-name: var(--text-secondary);
+  --text: #12182b;
+  --heading-color: #0c1120;
+  --text-secondary: #4a5169;
 
-  --link: #2563eb;
-  --link-hover: #1e40af;
+  --line: #d7dee7;
 
-  --button-bg: #2563eb;
+  --link: #0e7c86;
+  --link-hover: #095e66;
+
+  --signal: #0e7c86;
+  --signal-strong: #095e66;
+  --spark: #6d4fe0;
+
+  --button-bg: #12182b;
   --button-text: #ffffff;
+  --button-hover-bg: #0e7c86;
 
-  --card-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-  --card-shadow-hover: 0 10px 26px rgba(15, 23, 42, 0.18);
+  --card-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 20px rgba(15, 23, 42, 0.06);
+  --card-shadow-hover: 0 4px 10px rgba(15, 23, 42, 0.08), 0 16px 32px rgba(15, 23, 42, 0.1);
 
-  --bar-bg: #dbeafe;
-  --bar-fill: linear-gradient(90deg, #3b82f6, #2563eb);
+  --bar-bg: #dde3ec;
+  --bar-fill: linear-gradient(90deg, #0e7c86, #6d4fe0);
+
+  --hero-bg: #0a1120;
+  --hero-text: #f6f8fc;
+  --hero-text-secondary: #aeb9d4;
+  --hero-glow-1: #2dd4cb;
+  --hero-glow-2: #a78bfa;
 }
 
 
 body[data-theme='dark'] {
-  --bg: #121a26;
-  --section-bg: #182237;
-  --hd-fo-bg: #1f2a3a;
-  --card-bg: #1f2a3a;
+  --bg: #0b1220;
+  --section-bg: #131b2e;
+  --hd-fo-bg: #101827;
+  --card-bg: #131b2e;
 
-  --text: #e0e7ff;
-  --heading-color: #f1f5ff;
-  --text-secondary: #a3b5d1;
-  --skill-name: var(--text-secondary);
+  --text: #e7ecf5;
+  --heading-color: #f4f7fc;
+  --text-secondary: #a3aec6;
 
-  --link: #7ea9f6;
-  --link-hover: #4a90e2;
+  --line: #263252;
 
-  --button-bg: #3571b8;
-  --button-text: #ffffff;
+  --link: #3fd6cb;
+  --link-hover: #7ee4db;
 
-  --card-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
-  --card-shadow-hover: 0 10px 26px rgba(0, 0, 0, 0.85);
+  --signal: #2dd4cb;
+  --signal-strong: #5fe5db;
+  --spark: #a78bfa;
 
-  --bar-bg: #24354a;
-  --bar-fill: linear-gradient(90deg, #3571b8, #4a90e2);
+  --button-bg: #2dd4cb;
+  --button-text: #071019;
+  --button-hover-bg: #5fe5db;
+
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --card-shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.45), 0 18px 36px rgba(0, 0, 0, 0.4);
+
+  --bar-bg: #1e2a45;
+  --bar-fill: linear-gradient(90deg, #2dd4cb, #a78bfa);
 }
-

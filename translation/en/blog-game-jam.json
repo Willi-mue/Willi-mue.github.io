@@ -1,5 +1,5 @@
 {
-  "blog-game-jam-title": "My First Game Jam",
+  "blog-game-jam-title": "Portfolio",
   "blog-game-jam-meta-description": "Portfolio entry: Developing an AI-driven game during a Game Jam in just 72 hours.",
   "blog-game-jam-heading": "My First Game Jam",
 
@@ -20,8 +20,6 @@
 
   "gamejam-section-outro-title": "Conclusion & Outlook",
   "gamejam-section-outro-text": "The Game Jam was intense and educational. Our team delivered a working demo in three days - a valuable experience in <strong>agile development</strong>, <strong>team organization</strong>, and <strong>rapid decision-making</strong>. These learnings feed directly into future projects, especially regarding AI mechanics and efficient teamwork.",
-
-  "back-button": "Back to main page",
 
   "gamejam-highlight-1": "72-hour Game Jam: Game development under intense time pressure",
   "gamejam-highlight-2": "Dynamic AI mechanic: NPC evolves based on player decisions",

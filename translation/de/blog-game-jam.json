@@ -1,5 +1,5 @@
 {
-  "blog-game-jam-title": "Meine erste Game Jam",
+  "blog-game-jam-title": "Portfolio",
   "blog-game-jam-meta-description": "Portfolio-Beitrag: Entwicklung eines KI-getriebenen Spiels während einer Game Jam in nur 72 Stunden.",
   "blog-game-jam-heading": "Meine erste Game Jam",
 
@@ -20,8 +20,6 @@
 
   "gamejam-section-outro-title": "Fazit & Ausblick",
   "gamejam-section-outro-text": "Die Game Jam war intensiv und lehrreich. Unser Team lieferte in drei Tagen eine funktionierende Demo - wertvolle Erfahrung in <strong>agiler Entwicklung</strong>, <strong>Teamorganisation</strong> und <strong>schneller Entscheidungsfindung</strong>. Diese Learnings fließen direkt in zukünftige Projekte ein, besonders bei KI-Mechaniken und effizienter Teamarbeit.",
-
-  "back-button": "Zurück zur Hauptseite",
 
   "gamejam-highlight-1": "72-Stunden Game Jam: Spielentwicklung unter hohem Zeitdruck",
   "gamejam-highlight-2": "Dynamische KI-Mechanik: NPC entwickelt sich basierend auf Spielerentscheidungen",

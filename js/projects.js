@@ -1,5 +1,5 @@
 let loadedProjectsCount = 0;
-const projectsPerLoad = 4;
+const projectsPerLoad = 6;
 let allProjects = [];
 
 function shuffleArray(array) {
@@ -11,7 +11,7 @@ function shuffleArray(array) {
 
 async function loadProjects(currentLang = 'de', loadMore = false, translations = {}) {
   try {
-    const container = document.getElementById('projects');
+    const container = document.getElementById('projects-grid');
     const loadMoreBtnId = 'load-more-btn';
 
     if (!loadMore) {
@@ -33,25 +33,35 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
     const nextProjects = allProjects.slice(loadedProjectsCount, loadedProjectsCount + projectsPerLoad);
 
     nextProjects.forEach(project => {
-      const flipCard = document.createElement('article');
-      flipCard.className = 'flip-card';
-
-      const inner = document.createElement('div');
-      inner.className = 'card-inner';
-
-      const front = document.createElement('div');
-      front.className = 'card-front';
+      const card = document.createElement('article');
+      card.className = 'project-card';
 
       if (project.image) {
+        const media = document.createElement('div');
+        media.className = 'project-media';
         const img = document.createElement('img');
         img.src = project.image;
         img.alt = `${project.name} Bild`;
-        front.appendChild(img);
+        img.loading = 'lazy';
+        media.appendChild(img);
+        card.appendChild(media);
       }
+
+      const body = document.createElement('div');
+      body.className = 'project-body';
 
       const title = document.createElement('h2');
       title.textContent = project.name;
-      front.appendChild(title);
+      body.appendChild(title);
+
+      const desc = document.createElement('p');
+      desc.className = 'project-desc';
+      if (currentLang === 'de') {
+        desc.textContent = project.translation || 'Keine Beschreibung verfügbar.';
+      } else {
+        desc.textContent = project.description || 'No description available.';
+      }
+      body.appendChild(desc);
 
       const badgeWrapper = document.createElement('div');
       badgeWrapper.className = 'badge-wrapper';
@@ -64,39 +74,27 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
         sortedLanguages.forEach(lang => {
           const badge = document.createElement('span');
           badge.className = 'badge';
-          badge.textContent = `${BadgeUtils.getLanguageIcon(lang)} ${lang}`;
+          badge.textContent = lang;
           badgeWrapper.appendChild(badge);
         });
+
+        if (sortedLanguages.length) {
+          card.style.setProperty('--tag-color', BadgeUtils.colorFor(sortedLanguages[0]));
+        }
       }
 
-      front.appendChild(badgeWrapper);
-
-      const back = document.createElement('div');
-      back.className = 'card-back';
-
-      const desc = document.createElement('p');
-      const descKey = `project-${project.name}-desc`;
-      if (currentLang === 'de') {
-        desc.textContent = project.translation || translations[descKey] || 'Keine Beschreibung verfügbar.';
-      } else {
-        desc.textContent = project.description || translations[descKey] || 'No description available.';
-}
-
-
-      back.appendChild(desc);
+      body.appendChild(badgeWrapper);
 
       const link = document.createElement('a');
       link.href = project.url;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
-      link.textContent = translations['project-github-link'];
-      link.classList.add('button');
-      back.appendChild(link);
+      link.className = 'project-link';
+      link.innerHTML = `<span class="icon" data-icon="arrow-square-out"></span><span>${translations['project-github-link']}</span>`;
+      body.appendChild(link);
 
-      inner.appendChild(front);
-      inner.appendChild(back);
-      flipCard.appendChild(inner);
-      container.appendChild(flipCard);
+      card.appendChild(body);
+      container.appendChild(card);
     });
 
     loadedProjectsCount += nextProjects.length;
@@ -118,6 +116,7 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
     }
 
     BadgeUtils.applyBadgeStyles(container);
+    window.Icons.apply(container);
 
   } catch (err) {
     console.error('Fehler beim Laden der Projekte:', err);

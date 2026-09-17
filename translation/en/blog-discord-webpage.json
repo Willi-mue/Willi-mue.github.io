@@ -1,6 +1,7 @@
 {
-  "blog-discord-webpage-title": "Website for an MMO Community",
+  "blog-discord-webpage-title": "Portfolio",
   "blog-discord-webpage-meta-description": "Professional web platform to support an MMO Discord server with guides, tools, and up-to-date news.",
+  "blog-discord-webpage-heading": "Website for an MMO Community",
   "blog-discord-webpage-intro": "Development of a professional web platform to support a large Discord community for a <strong>MMO</strong> (<em>Massively Multiplayer Online Game</em>). The website bundles useful guides, tools, and current news, serving both new and experienced members as a central hub.",
   "highlight-1": "Multilingual platform with integrated search for quick access to content",
   "highlight-2": "Seamless Discord integration for efficient community management",
@@ -14,6 +15,5 @@
   "section-features-title": "Features",
   "section-features-text": "Core features include a powerful search function, structured guides and tutorials for players, up-to-date community news, and a central overview of essential tools. This allows even users without MMO experience to get started immediately and navigate the platform quickly.",
   "section-outro-title": "Outlook",
-  "section-outro-text": "The project is still under development. Future versions will further improve user guidance, integrate new features, and make the overall user experience even more convenient. The goal is a professional platform that provides real value for both experienced community members and newcomers.",
-  "back-button": "Back to main page"
+  "section-outro-text": "The project is still under development. Future versions will further improve user guidance, integrate new features, and make the overall user experience even more convenient. The goal is a professional platform that provides real value for both experienced community members and newcomers."
 }

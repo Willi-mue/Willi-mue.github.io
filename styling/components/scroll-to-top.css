@@ -5,22 +5,25 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    border: none;
-    font-size: 1.25rem;
+    border: 1px solid var(--line);
     cursor: pointer;
     z-index: 999;
 
     background-color: var(--hd-fo-bg);
     color: var(--text);
-    box-shadow: var(--card-shadow);
     opacity: 0;
     pointer-events: none;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transition: opacity 0.3s ease, transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    transition: opacity 0.3s ease, transform 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+#scroll-to-top .icon {
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 #scroll-to-top.visible {
@@ -29,8 +32,8 @@
 }
 
 #scroll-to-top:hover {
-    transform: scale(1.15);
-    background-color: var(--button-bg);
+    transform: scale(1.08);
+    background-color: var(--signal);
+    border-color: var(--signal);
     color: var(--button-text);
-    box-shadow: var(--card-shadow-hover);
 }

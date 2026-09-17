@@ -4,13 +4,9 @@ const btnLang = document.getElementById("toggle-lang");
 
 async function fetchTranslations(lang) {
   const basePath = `../translation/${lang}/`;
-  const files = [
-    "main-page.json",
-    "blog-minecraft-server.json",
-    "blog-discord-bot-server.json",
-    "blog-discord-webpage.json",
-    "blog-game-jam.json",
-  ];
+  const files = ["main-page.json"];
+  const extraFile = document.body.dataset.i18nFile;
+  if (extraFile) files.push(`${extraFile}.json`);
   const result = {};
 
   for (const file of files) {
@@ -55,12 +51,6 @@ async function updateTexts(lang) {
         el.textContent = translation;
       }
     }
-  });
-
-  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-html");
-    const translation = translations[key];
-    if (translation) el.innerHTML = translation;
   });
 
   if (typeof loadProjects === "function") {

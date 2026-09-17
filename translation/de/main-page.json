@@ -1,67 +1,79 @@
 {
-  "main-page.title": "Willi Müller - Softwareentwickler",
+  "main-page.title": "Portfolio",
   "main-page.meta-description": "Portfolio von Willi Müller, Softwareentwickler für moderne, effiziente und nachhaltige Softwarelösungen.",
 
   "main-page.header-title": "Willi Müller",
-  "main-page.header-subtitle": "Softwareentwickler mit Fokus auf Fullstack-Entwicklung sowie praktische Erfahrung im Aufbau und Betrieb eigener Server-Infrastrukturen.",
+  "main-page.header-subtitle": "Tagsüber Code und Security, abends das eigene Home-Lab.",
+
+  "main-page.nav-about": "Über mich",
+  "main-page.nav-skills": "Skills",
+  "main-page.nav-projects": "Projekte",
+  "main-page.nav-blog": "Blog",
+  "main-page.nav-contact": "Kontakt",
+
+  "main-page.cta-projects": "Projekte ansehen",
+  "main-page.cta-contact": "Kontakt aufnehmen",
 
   "main-page.projects-title": "Meine öffentlichen Projekte",
+  "main-page.projects-intro": "Automatisch von GitHub synchronisiert – eine Auswahl eigener Tools, Simulationen und Spielereien.",
   "main-page.tech-title": "IT-Kenntnisse",
+  "main-page.skills-intro": "Vom Code bis zur Infrastruktur darunter – die Technologien, mit denen ich täglich arbeite.",
   "main-page.prog-title": "Programmiersprachen",
   "main-page.tools-title": "Tools & Plattformen",
 
   "main-page.about-me-title": "Über mich",
-  "main-page.about-me-p1": "IT und Softwareentwicklung faszinieren mich seit vielen Jahren. Während meiner Ausbildung arbeite ich sowohl an Frontend- als auch an Backend-Anwendungen. Besonders spannend finde ich das Zusammenspiel von Software, Infrastruktur und stabilen Systemen, das es erlaubt, komplexe Lösungen praxisnah umzusetzen.",
-  "main-page.about-me-p2": "Neben meiner Ausbildung realisiere ich eigene Projekte - von Webanwendungen und Bots bis hin zum Aufbau und Betrieb eigener Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und automatisiere ich Serverdienste, unter anderem mit eigenen VPN-Lösungen, Docker-Setups und Spielservern. Diese Projekte helfen mir, theoretisches Wissen praxisnah anzuwenden und zu vertiefen.",
-  "main-page.about-me-p3": "Ich arbeite strukturiert, eigenverantwortlich und lege Wert auf sauberen, wartbaren Code. Teamarbeit und der Austausch über technische Lösungen sind für mich selbstverständlich.",
+  "main-page.about-highlight-1": "Software-Entwickler & IT-Security",
+  "main-page.about-focus-1": "Kundenspezifische Lösungen",
+  "main-page.about-focus-2": "ISB-Unterstützung",
+  "main-page.about-interest-1": "Home-Lab & Server-Infrastruktur",
+  "main-page.about-interest-2": "Gaming",
+  "main-page.about-interest-3": "Community-Management",
+  "main-page.about-spoken-1": "Deutsch",
+  "main-page.about-spoken-2": "Englisch",
+  "main-page.about-spoken-3": "Spanisch (Grundkenntnisse)",
+  "main-page.about-based-in": "Deutschland",
+  "main-page.about-me-p1": "IT und Softwareentwicklung faszinieren mich seit vielen Jahren. Aktuell arbeite ich als Software-Entwickler mit Schwerpunkt IT-Security und entwickle Custom Solutions, die individuell auf die jeweiligen Anforderungen des Kunden zugeschnitten sind – mit besonderem Blick auf das Zusammenspiel von Software, Infrastruktur und Sicherheit.",
+  "main-page.about-me-p2": "Dabei unterstütze ich die Informationssicherheitsbeauftragten (ISBs), koordiniere Dokumente und Formulare und entwickle interne Tools, die die Zusammenarbeit zwischen Teams erleichtern. Ich arbeite strukturiert und eigenverantwortlich und möchte mich fachlich stetig weiterentwickeln.",
+  "main-page.about-me-p3": "Neben meinem Job realisiere ich eigene Projekte – von Webanwendungen und Bots bis zum Aufbau und Betrieb eigener Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und automatisiere ich Serverdienste, unter anderem mit eigenen VPN-Lösungen, Docker-Setups und Spielservern, und vertiefe so mein Wissen praxisnah.",
 
   "main-page.blog-title": "Weitere Projekte & Erfahrungen",
+  "main-page.blog-intro": "Tiefere Einblicke in ausgewählte Projekte und Erfahrungen abseits von GitHub.",
 
-  "main-page.blog-post-1-title": "Privater Minecraft-Server: VPN, Backup & Performance Optimierung",
-  "main-page.blog-post-1-desc": "Verwaltung und Optimierung eines privaten Minecraft Servers auf dem eigenen Homeserver. Mit OpenVPN Zugang, RAID Backup und ressourcenschonender Serverkonfiguration inklusive optimierter Server-JAR.",
+  "main-page.blog-post-1-title": "Privater Minecraft-Server: VPN, Backup & Performance",
+  "main-page.blog-post-1-desc": "Verwaltung und Optimierung eines privaten Minecraft-Servers auf dem eigenen Homeserver – mit OpenVPN-Zugang, RAID-Backup und ressourcenschonender Serverkonfiguration.",
   "main-page.blog-post-1-link": "Weiterlesen",
 
-  "main-page.blog-post-2-title": "Discord-Bot für Community-Management & Event-Organisation",
-  "main-page.blog-post-2-desc": "Vielseitiger Discord-Bot mit Event-Templates, Übersetzungen und Admin-Tools - vereinfacht die Verwaltung mehrsprachiger Community-Server.",
+  "main-page.blog-post-2-title": "Discord-Bot für Community-Management & Events",
+  "main-page.blog-post-2-desc": "Vielseitiger Discord-Bot mit Event-Templates, Übersetzungen und Admin-Tools, der die Verwaltung mehrsprachiger Community-Server spürbar vereinfacht.",
   "main-page.blog-post-2-link": "Weiterlesen",
 
-  "main-page.blog-post-3-title": "Webseite für einen MMO Community",
-  "main-page.blog-post-3-desc": "Entwicklung einer professionellen Webseite zur Unterstützung eines MMO Discord-Servers. Die Plattform bietet Guides, Tools um das Community-Management zu erleichtern und die Interaktion zu verbessern. Das Projekt befindet sich aktuell noch im Aufbau.",
+  "main-page.blog-post-3-title": "Webseite für eine MMO-Community",
+  "main-page.blog-post-3-desc": "Professionelle Webseite zur Unterstützung eines MMO-Discord-Servers mit Guides, Tools und Echtzeit-Informationen für einfacheres Community-Management. Aktuell noch im Aufbau.",
   "main-page.blog-post-3-link": "Weiterlesen",
 
-  "main-page.blog-post-4-title": "Erste Game Jam Erfahrung",
-  "main-page.blog-post-4-desc": "Ein praxisnaher Erfahrungsbericht: Von der ersten Idee über die Umsetzung bis hin zum fertigen Spiel.",
+  "main-page.blog-post-4-title": "Erste Game-Jam-Erfahrung",
+  "main-page.blog-post-4-desc": "Ein praxisnaher Erfahrungsbericht: von der ersten Idee über die Umsetzung in 72 Stunden bis zum fertigen Spiel.",
   "main-page.blog-post-4-link": "Weiterlesen",
 
-  "main-page.contact-intro": "Sie möchten gerne mit mir in Kontakt treten? Falls ich Ihr Interesse geweckt habe, erreichen Sie mich hier:",
+  "main-page.contact-title": "Kontakt",
+  "main-page.contact-intro": "Interesse an einer Zusammenarbeit?<br>Über eine Nachricht freue ich mich:",
 
   "main-page.contact-email": "E-Mail",
   "main-page.contact-github": "GitHub",
+  "main-page.contact-discord": "Discord",
+  "main-page.contact-discord-copied": "Kopiert!",
   "project-github-link": "Zu GitHub",
 
+  "back-button": "Zurück zur Hauptseite",
+
   "skill-category-software": "Programmiersprachen",
+  "skill-category-data": "Datenanalyse",
   "skill-category-frontend": "Frontend & Web",
   "skill-category-backend": "Backend & Datenbanken",
   "skill-category-devops": "DevOps & Infrastruktur",
-  "skill-category-versioning": "Versionierung",
+  "skill-category-versioning": "Tools & Workflow",
 
-  "skill-python": "🐍 Python",
-  "skill-java": "☕ Java",
-  "skill-cpp": "💠 C++",
-  "skill-js": "✨ JavaScript",
-  "skill-html": "🌐 HTML5",
-  "skill-scss": "🎨 SCSS",
-  "skill-vue": "🟢 Vue.js",
-  "skill-mysql": "🐬 MySQL & MariaDB",
-  "skill-docker": "🐳 Docker",
-  "skill-linux": "🐧 Linux",
-  "skill-openvpn": "🔐 OpenVPN (Self-hosted Server)",
-  "skill-firewall": "🔥 Firewall & Network Configuration",
-  "skill-git": "🐙 Git (GitHub & GitLab)",
-  "skill-dev-prod": "🌍 Getrennte Entwicklungs- und Produktivumgebungen",
-
-  "skill-level-beginner": "Grundkenntnisse",
-  "skill-level-intermediate": "Mittel",
-  "skill-level-advanced": "Fortgeschritten"
-
+  "skill-level-beginner": "grundkenntnisse",
+  "skill-level-intermediate": "mittel",
+  "skill-level-advanced": "fortgeschritten"
 }

@@ -1,39 +1,45 @@
-#contact {
-    margin-bottom: 4rem;
-    padding: 2rem 1.5rem;
-    background-color: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: var(--card-shadow);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-#contact h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--heading-color);
-}
-
-#contact p {
-    text-align: center;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
 .contact-list {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 30px;
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
 }
 
 .contact-list li {
-    font-size: 1.125rem;
-    color: var(--text);
+  margin: 0;
 }
 
+.contact-list a,
+.contact-list button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: none;
+  color: var(--hero-text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.contact-list a:hover,
+.contact-list button:hover {
+  border-color: var(--signal);
+  color: var(--button-text);
+  background-color: var(--signal);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -8px color-mix(in srgb, var(--signal) 65%, transparent);
+}
+
+.contact-list .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
