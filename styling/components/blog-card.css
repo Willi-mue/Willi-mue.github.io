@@ -1,6 +1,7 @@
 #blog {
   user-select: none;
   padding: 0 calc((100% / 3) / 2);
+  margin-top: 2rem;
 }
 
 .blog-grid {
@@ -81,6 +82,12 @@
   }
 }
 
+@media (max-width: 800px) {
+  #blog {
+    padding: 0 1.5rem;
+  }
+}
+
 @media (max-width: 700px) {
   .blog-grid {
     grid-template-columns: repeat(1, 1fr);
@@ -88,6 +95,9 @@
 }
 
 @media (max-width: 350px) {
+  #blog {
+    padding: 0 1rem;
+  }
   .blog-post {
     padding: 1rem;
   }

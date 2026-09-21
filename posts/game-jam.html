@@ -6,32 +6,60 @@
     <title data-i18n="blog-game-jam-title" data-i18n-html>Portfolio</title>
     <meta
       name="description"
-      content="Portfolio-Beitrag: Entwicklung eines KI-getriebenen Spiels während einer Game Jam in nur 72 Stunden."
+      content="Portfolio-Beitrag: Entwicklung eines KI-Begleiters für ein Spiel, gebaut in 72 Stunden bei der Wowie Jam 4.0 mit Godot."
       data-i18n="blog-game-jam-meta-description"
     />
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../styling/fonts.css" />
     <link rel="stylesheet" href="../styling/theme.css" />
     <link rel="stylesheet" href="../styling/main_page.css" />
     <link rel="stylesheet" href="../styling/components/top-controls.css" />
     <link rel="stylesheet" href="../styling/components/article.css" />
     <link rel="stylesheet" href="../styling/components/badge.css" />
+    <link rel="stylesheet" href="../styling/components/contact.css" />
+    <link rel="stylesheet" href="../styling/components/terminal.css" />
+    <link rel="stylesheet" href="../styling/components/lightbox.css" />
+    <link rel="stylesheet" href="../styling/animations.css" />
   </head>
 
   <body data-theme="light" lang="de" data-i18n-file="blog-game-jam">
-    <header class="glow-surface">
-      <h1 data-i18n="blog-game-jam-heading" data-i18n-html>
-        Meine erste Game Jam
-      </h1>
+    <header class="glow-surface post-hero">
+      <div class="post-hero-layout">
+        <div class="post-hero-content">
+          <p class="post-path" aria-hidden="true"><span>~/projects/</span>game-jam</p>
+          <h1 data-i18n="blog-game-jam-heading" data-i18n-html>
+            Wowie Jam 4.0: Ein KI-Begleiter in 72 Stunden
+          </h1>
+          <p class="post-lead" data-i18n="main-page.blog-post-4-desc" data-i18n-html>Bei der Wowie Jam 4.0 habe ich in einem Vierer-Team ein Spiel mit Godot gebaut. Als einer von zwei Programmierern habe ich den KI-Begleiter entwickelt, ein Waldwesen, das sich je nach Spielerentscheidungen zum Nah- oder Fernkämpfer entwickelt.</p>
+          <div class="badge-wrapper post-badges">
+            <span class="badge">GDScript</span>
+            <span class="badge">C#</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <span class="post-hero-icon"><span class="icon" data-icon="game-controller"></span></span>
+        </div>
+      </div>
     </header>
 
     <div id="top-controls">
+      <a
+        class="top-back"
+        href="../index.html#other-projects"
+        aria-label="Zurück zur Hauptseite"
+        title="Zurück zur Hauptseite"
+        >←</a
+      >
+      <button
+        type="button"
+        data-terminal-open
+        title="Terminal (/)"
+        aria-label="Terminal"
+      >
+        <span class="icon" data-icon="terminal-window"></span>
+      </button>
       <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>
         EN
@@ -39,133 +67,163 @@
     </div>
 
     <main>
-      <article>
-        <div class="showcase-badges">
-          <span class="badge">GDScript</span>
-          <span class="badge">C++</span>
-          <span class="badge">C#</span>
-        </div>
+      <ul class="post-facts">
+        <li class="post-fact">
+          <span class="icon" data-icon="calendar"></span>
+          <span class="post-fact-label" data-i18n="blog-game-jam-fact-event-label">Event</span>
+          <span class="post-fact-value" data-i18n="blog-game-jam-fact-event">Wowie Jam 4.0</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="clock"></span>
+          <span class="post-fact-label" data-i18n="blog-game-jam-fact-duration-label">Dauer</span>
+          <span class="post-fact-value" data-i18n="blog-game-jam-fact-duration">72 Stunden</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="share-network"></span>
+          <span class="post-fact-label" data-i18n="blog-game-jam-fact-team-label">Team</span>
+          <span class="post-fact-value" data-i18n="blog-game-jam-fact-team">4 Personen</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="code"></span>
+          <span class="post-fact-label" data-i18n="blog-game-jam-fact-role-label">Meine Rolle</span>
+          <span class="post-fact-value" data-i18n="blog-game-jam-fact-role">Programmierer: KI-Begleiter</span>
+        </li>
+      </ul>
 
-        <ul class="highlights">
-          <li data-i18n="gamejam-highlight-1" data-i18n-html></li>
-          <li data-i18n="gamejam-highlight-2" data-i18n-html></li>
-          <li data-i18n="gamejam-highlight-3" data-i18n-html></li>
-          <li data-i18n="gamejam-highlight-4" data-i18n-html></li>
-          <li data-i18n="gamejam-highlight-5" data-i18n-html></li>
-        </ul>
+      <div class="post-layout">
+        <nav class="post-toc" aria-label="Inhalt">
+          <p class="post-toc-title" data-i18n="post.toc">Inhalt</p>
+          <ol></ol>
+        </nav>
 
-        <div class="screenshot-gallery" style="align-items: center">
-          <div class="left">
-            <img src="../images/Game1.png" alt="Game1" />
-          </div>
-          <div class="right">
-            <img src="../images/Game2.png" alt="Game2" />
-          </div>
-        </div>
+        <article class="post-article">
+          <section>
+            <h2 data-i18n="gamejam-section-intro-title" data-i18n-html>Die Jam</h2>
+            <p data-i18n="gamejam-section-intro-text" data-i18n-html>Teilnahme an der <a href='https://itch.io/jam/wowie-jam-4'><strong>Wowie Jam 4.0</strong></a> unter dem Thema <em>'Collaborate With AI'</em>. Ziel war ein Spiel in nur 72 Stunden, bei dem die Zusammenarbeit mit einer künstlichen Intelligenz das zentrale Gameplay-Element bildet. Es war meine erste Game Jam, und sie verband kreative mit technischen Herausforderungen.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="gamejam-section-intro-title" data-i18n-html>
-            Motivation & Vorbereitung
-          </h2>
-          <p data-i18n="gamejam-section-intro-text" data-i18n-html>
-            Teilnahme an der
-            <a href="https://itch.io/jam/wowie-jam-4"
-              ><strong>Wowie Jam 4.0</strong></a
-            >
-            unter dem Thema <em>"Collaborate With AI"</em>. Ziel war die
-            Entwicklung eines Spiels in nur 72 Stunden, bei dem die
-            Zusammenarbeit mit einer künstlichen Intelligenz das zentrale
-            Gameplay-Element bildet. Das Projekt bot eine spannende Kombination
-            aus kreativen und technischen Herausforderungen.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="gamejam-section-team-title" data-i18n-html>Unser Team</h2>
+            <p data-i18n="gamejam-section-team-text" data-i18n-html>Ein Team aus <strong>zwei Programmierern</strong>, <strong>einem Musiker</strong> und <strong>einer Künstlerin</strong> entwickelte innerhalb von drei Tagen eine spielbare, atmosphärische Demo. Ich war einer der beiden Programmierer und habe den <strong>KI-Begleiter</strong> geschrieben.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="gamejam-section-team-title" data-i18n-html>
-            Unser Team
-          </h2>
-          <p data-i18n="gamejam-section-team-text" data-i18n-html>
-            Ein engagiertes Team bestehend aus
-            <strong>zwei Programmierern</strong>,
-            <strong>einem Musiker</strong> und
-            <strong>einer Künstlerin</strong> arbeitete Hand in Hand, um
-            innerhalb von drei Tagen eine funktionierende, atmosphärische
-            Spiel-Demo zu entwickeln.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="gamejam-section-theme-title" data-i18n-html>Die Spielidee</h2>
+            <p data-i18n="gamejam-section-theme-text" data-i18n-html>In <a href='https://todes-ritter.itch.io/jack-markus'><strong>„Jack and Markus“</strong></a> verirrt sich ein kleiner Junge in einem geheimnisvollen Wald. Ein Waldwesen begleitet ihn und hilft ihm, den Weg in die Freiheit zu finden. Je nach Spielerentscheidungen entwickelt es sich individuell weiter, als Nah- oder Fernkämpfer. Dieser Begleiter bildet den zentralen <strong>KI-Kern</strong> des Spiels.</p>
+            <div class="screenshot-gallery" style="align-items: center">
+              <div class="left">
+                <img src="../images/Game1.png" alt="Game1" />
+              </div>
+              <div class="right">
+                <img src="../images/Game2.png" alt="Game2" />
+              </div>
+            </div>
+          </section>
 
-        <section>
-          <h2 data-i18n="gamejam-section-theme-title" data-i18n-html>
-            Die Spielidee
-          </h2>
-          <p data-i18n="gamejam-section-theme-text" data-i18n-html>
-            In
-            <a href="https://todes-ritter.itch.io/jack-markus"
-              ><strong>„Jack and Markus“</strong></a
-            >
-            verirrt sich ein kleiner Junge in einem geheimnisvollen Wald. Ein
-            dynamisches Waldwesen hilft ihm, den Weg in die Freiheit zu finden.
-            Je nach Spielerentscheidungen entwickelt sich das Wesen individuell
-            weiter - Nah- oder Fernkämpfer. Diese Mechanik bildet den zentralen
-            <strong>KI-Kern</strong> des Spiels.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="gamejam-section-tech-title" data-i18n-html>Der KI-Begleiter</h2>
+            <p data-i18n="gamejam-section-tech-text" data-i18n-html>Das Spiel entstand in der <strong>Godot Engine</strong>, die Hauptlogik in <strong>GDScript</strong>, ergänzt durch <strong>C#</strong>-Komponenten für die KI. Den Begleiter habe ich als zustandsbasiertes System umgesetzt: Sein Verhalten und seine Entwicklung passen sich dynamisch an das Verhalten der Spielerin oder des Spielers an, zum Beispiel an Abstand, Bedrohungen und direkte Aktionen.</p>
+            <div class="about-panel">
+              <div class="about-panel-tab">
+                <span class="about-panel-dot"></span>
+                <span>companion.yml</span>
+              </div>
+              <pre class="about-panel-code"><code><span class="tok-key">engine</span>:  <span class="tok-str">godot</span>
+<span class="tok-key">logic</span>:   <span class="tok-str">gdscript</span>
+<span class="tok-key">ai</span>:      <span class="tok-str">c#</span>
+<span class="tok-key">model</span>:   <span class="tok-str">state-based</span>
+<span class="tok-key">inputs</span>:  <span class="tok-str">[distance, threats, player actions]</span>
+<span class="tok-key">evolves</span>: <span class="tok-str">[melee, ranged]</span></code></pre>
+            </div>
+          </section>
 
-        <section>
-          <h2 data-i18n="gamejam-section-tech-title" data-i18n-html>
-            Technischer Aufbau
-          </h2>
-          <p data-i18n="gamejam-section-tech-text" data-i18n-html>
-            Entwickelt mit der <strong>Godot Engine</strong>. Hauptlogik in
-            <strong>GDScript</strong>, unterstützt durch
-            <strong>C#</strong>-Komponenten für KI. Das zustandsbasierte System
-            passt Verhalten und Entwicklung des Begleiters dynamisch an
-            Spielerinteraktionen an (Abstand, Bedrohungen, direkte Aktionen).
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="gamejam-section-challenges-title" data-i18n-html>Herausforderungen</h2>
+            <p data-i18n="gamejam-section-challenges-text" data-i18n-html>Die größte Herausforderung war die <strong>Teamkoordination unter hohem Zeitdruck</strong>. Das Leveldesign musste ohne lange Erklärung verständlich sein, und Level, Gameplay, UI und Atmosphäre mussten gleichzeitig funktionieren. Schnelle Entscheidungen und pragmatische Lösungen waren dabei entscheidend.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="gamejam-section-challenges-title" data-i18n-html>
-            Herausforderungen
-          </h2>
-          <p data-i18n="gamejam-section-challenges-text" data-i18n-html>
-            Hauptschwierigkeit:
-            <strong>Teamkoordination unter hohem Zeitdruck</strong>. Leveldesign
-            musste intuitiv sein, Gameplay, UI und Atmosphäre gleichzeitig
-            funktionieren - schnelle Entscheidungen und pragmatische Lösungen
-            waren essenziell.
-          </p>
-        </section>
+          <section class="post-conclusion">
+            <h2 data-i18n="gamejam-section-outro-title" data-i18n-html>Fazit</h2>
+            <p data-i18n="gamejam-section-outro-text" data-i18n-html>Die Game Jam war intensiv und lehrreich. In drei Tagen ist eine spielbare Demo entstanden, und ich habe gelernt, das Verhalten eines KI-Begleiters schnell umzusetzen und mich im Team unter Zeitdruck abzustimmen. Die Erfahrung in <strong>agiler Entwicklung</strong>, <strong>Teamorganisation</strong> und <strong>schneller Entscheidungsfindung</strong> nehme ich in künftige Projekte mit.</p>
+          </section>
+        </article>
+      </div>
 
-        <section>
-          <h2 data-i18n="gamejam-section-outro-title" data-i18n-html>
-            Fazit & Ausblick
-          </h2>
-          <p data-i18n="gamejam-section-outro-text" data-i18n-html>
-            Die Game Jam war intensiv und lehrreich. Unser Team lieferte in drei
-            Tagen eine funktionierende Demo - wertvolle Erfahrung in
-            <strong>agiler Entwicklung</strong>,
-            <strong>Teamorganisation</strong> und
-            <strong>schneller Entscheidungsfindung</strong>. Diese Learnings
-            fließen direkt in zukünftige Projekte ein, besonders bei
-            KI-Mechaniken und effizienter Teamarbeit.
-          </p>
-        </section>
-
-        <button
-          class="button"
-          onclick="location.href='../index.html#other-projects'"
-          data-i18n="back-button"
-        >
-          Zurück zur Hauptseite
-        </button>
-      </article>
+      <nav class="post-nav">
+        <a class="post-back" href="../index.html#other-projects">
+          <span class="icon" data-icon="arrow-left"></span>
+          <span data-i18n="post.all-projects">Alle Projekte</span>
+        </a>
+        <a class="post-next" href="minecraft-server.html">
+          <span class="post-next-icon"><span class="icon" data-icon="hard-drives"></span></span>
+          <span class="post-next-body">
+            <span class="post-next-label" data-i18n="post.next">Nächstes Projekt</span>
+            <span class="post-next-title" data-i18n="main-page.blog-post-1-title" data-i18n-html>Self-hosted Minecraft-Server: Docker, VPN & Backups</span>
+          </span>
+          <span class="post-next-arrow"><span class="icon" data-icon="arrow-right"></span></span>
+        </a>
+      </nav>
     </main>
+
+    <footer id="contact" class="glow-surface">
+      <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
+      <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
+        Interesse an einer Zusammenarbeit?<br />
+        Über eine Nachricht freue ich mich:
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <a id="contact-email" href="mailto:willimuellerbremberg@gmail.com">
+            <span class="icon" data-icon="envelope-simple-fill"></span>
+            <span data-i18n="main-page.contact-email" data-i18n-html
+              >E-Mail</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            id="contact-github"
+            href="https://github.com/Willi-mue"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="icon" data-icon="github-logo-fill"></span>
+            <span data-i18n="main-page.contact-github" data-i18n-html
+              >GitHub</span
+            >
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            id="contact-discord"
+            class="contact-copy"
+            data-copy="todes_ritter"
+          >
+            <span class="icon" data-icon="discord-logo"></span>
+            <span data-i18n="main-page.contact-discord" data-i18n-html
+              >Discord</span
+            >
+          </button>
+        </li>
+      </ul>
+
+      <p class="footer-legal">
+        <a href="../datenschutz.html" data-i18n="main-page.footer-privacy">Datenschutz</a>
+      </p>
+    </footer>
 
     <script src="../js/setup.js"></script>
     <script src="../js/icons.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/badgeColors.js"></script>
     <script src="../js/translation.js"></script>
+    <script src="../js/post.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/lightbox.js"></script>
+    <script src="../js/easter-eggs.js"></script>
+    <script src="../js/terminal.js"></script>
   </body>
 </html>

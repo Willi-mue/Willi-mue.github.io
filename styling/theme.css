@@ -3,8 +3,8 @@
   --font-body: 'Inter', 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Mono', monospace;
 
-  --bg: #eef1f6;
-  --section-bg: #e4e9f1;
+  --bg: #f8fafd;
+  --section-bg: #eef1f6;
   --hd-fo-bg: #ffffff;
   --card-bg: #ffffff;
 
@@ -36,6 +36,24 @@
   --hero-text-secondary: #aeb9d4;
   --hero-glow-1: #2dd4cb;
   --hero-glow-2: #a78bfa;
+  --hero-dot: rgba(255, 255, 255, 0.07);
+  --hero-line: rgba(255, 255, 255, 0.1);
+  --hero-line-strong: rgba(255, 255, 255, 0.25);
+
+  --page-dot: rgba(12, 17, 32, 0.11);
+}
+
+/* Light variant of the hero header / contact footer. Scoped to .glow-surface so
+   other dark panels using the hero palette (about panel, terminal, toast) stay dark. */
+body[data-theme='light'] .glow-surface {
+  --hero-bg: var(--bg);
+  --hero-text: #0c1120;
+  --hero-text-secondary: #4a5169;
+  --hero-glow-1: #0e7c86;
+  --hero-glow-2: #6d4fe0;
+  --hero-dot: rgba(12, 17, 32, 0.09);
+  --hero-line: rgba(12, 17, 32, 0.1);
+  --hero-line-strong: rgba(12, 17, 32, 0.2);
 }
 
 
@@ -67,4 +85,6 @@ body[data-theme='dark'] {
 
   --bar-bg: #1e2a45;
   --bar-fill: linear-gradient(90deg, #2dd4cb, #a78bfa);
+
+  --page-dot: rgba(255, 255, 255, 0.08);
 }

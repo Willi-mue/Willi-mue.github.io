@@ -1,0 +1,84 @@
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.5rem, 6vw, 4rem);
+  background: #05080f;
+  color: #aeb9d4;
+  font-family: var(--font-mono);
+  font-size: clamp(0.78rem, 1.8vw, 0.95rem);
+  cursor: pointer;
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+#boot-screen.boot-done {
+  opacity: 0;
+  transform: translateY(-4%);
+  pointer-events: none;
+}
+
+.boot-log {
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+.boot-line {
+  line-height: 1.8;
+  animation: boot-line-in 0.18s ease-out both;
+}
+
+.boot-title {
+  color: #f6f8fc;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.boot-ok {
+  color: #2dd4cb;
+  text-shadow: 0 0 8px rgba(45, 212, 203, 0.6);
+}
+
+.boot-log::after {
+  content: '';
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.1em;
+  margin-top: 0.3rem;
+  background: #2dd4cb;
+  animation: boot-caret 0.9s steps(1) infinite;
+}
+
+.boot-skip {
+  margin-top: 2rem;
+  font-size: 0.72rem;
+  color: #56627f;
+}
+
+/* Hold the page's own intro animations until the boot screen lifts */
+html.booting body > :not(#boot-screen),
+html.booting body > :not(#boot-screen) *,
+html.booting body > :not(#boot-screen) *::before,
+html.booting body > :not(#boot-screen) *::after {
+  animation-play-state: paused !important;
+}
+
+html.booting {
+  overflow: hidden;
+}
+
+@keyframes boot-line-in {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+}
+
+@keyframes boot-caret {
+  50% {
+    opacity: 0;
+  }
+}

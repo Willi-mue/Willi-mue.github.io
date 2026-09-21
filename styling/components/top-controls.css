@@ -7,7 +7,8 @@
   z-index: 999;
 }
 
-#top-controls button {
+#top-controls button,
+#top-controls .top-back {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
@@ -19,6 +20,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 
   background-color: var(--hd-fo-bg);
   color: var(--text);
@@ -32,12 +34,37 @@
   height: 1.1rem;
 }
 
-#top-controls button:hover {
+#top-controls button:hover,
+#top-controls .top-back:hover,
+#top-controls .top-back:focus-visible {
   transform: scale(1.08);
   background-color: var(--signal);
   border-color: var(--signal);
   color: var(--button-text);
   box-shadow: 0 8px 20px -4px color-mix(in srgb, var(--signal) 65%, transparent);
+}
+
+/* Main page: the terminal button only shows up once the hero is scrolled past. */
+#top-controls .top-terminal[data-scroll-reveal] {
+  display: none;
+}
+
+#top-controls .top-terminal[data-scroll-reveal].visible {
+  display: flex;
+  animation: top-terminal-in 0.25s ease both;
+}
+
+@keyframes top-terminal-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #top-controls .top-terminal[data-scroll-reveal].visible {
+    animation: none;
+  }
 }
 
 @media (max-width: 490px) {

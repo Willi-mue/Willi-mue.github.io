@@ -1,27 +1,285 @@
-article {
+/* Detail pages (posts/*.html): hero header, fact strip, TOC + article, next-project nav */
+
+/* ---------- Hero header ---------- */
+header.post-hero {
+  padding: 6.5rem clamp(1.5rem, 5vw, 3rem) 6.5rem;
+}
+
+.post-hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.post-hero-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.post-path {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--hero-text-secondary);
+}
+
+.post-path span {
+  color: var(--hero-glow-1);
+}
+
+.post-hero h1 {
+  margin: 0;
+  max-width: 22ch;
+}
+
+.post-lead {
+  max-width: 60ch;
+  margin: 1.1rem 0 0;
+  font-size: 1.08rem;
+  color: var(--hero-text-secondary);
+}
+
+.post-hero .post-badges {
+  justify-content: flex-start;
+  margin: 1rem 0 0;
+}
+
+.anim-ready .post-badges .badge {
+  animation: badge-pop 0.5s var(--ease-out) calc(700ms + var(--i, 0) * 60ms) backwards;
+}
+
+/* Icon tile, reusing the orbiting gradient ring of the main page's photo */
+.post-hero .hero-media {
+  flex: 0 0 168px;
+  width: 168px;
+  margin: 0;
+}
+
+/* Unlike the photo ring, keep a faint full border so the tile never loses an edge */
+.post-hero .hero-media::before {
+  background: conic-gradient(
+    from var(--spin),
+    var(--hero-glow-1),
+    var(--hero-glow-2),
+    color-mix(in srgb, var(--hero-glow-2) 30%, transparent) 30%,
+    color-mix(in srgb, var(--hero-glow-1) 30%, transparent) 55%,
+    var(--hero-glow-2) 75%,
+    var(--hero-glow-1)
+  );
+}
+
+.post-hero-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--hero-glow-1) 22%, transparent), transparent 65%),
+    var(--hero-bg);
+  color: var(--hero-glow-1);
+}
+
+.post-hero-icon > .icon {
+  display: flex;
+  width: 42%;
+  height: 42%;
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--hero-glow-1) 60%, transparent));
+}
+
+.post-hero-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Fact strip, overlapping the header's bottom edge ---------- */
+.post-facts {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 1040px;
+  margin: -3rem auto 0;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
+  list-style: none;
+}
+
+.post-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+.post-fact .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: var(--signal);
+}
+
+.post-fact:nth-child(even) .icon {
+  color: var(--spark);
+}
+
+.post-fact-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.post-fact-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--heading-color);
+}
+
+/* ---------- Layout: sticky TOC + article ---------- */
+.post-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1040px;
+  margin: 3rem auto 0;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
+}
+
+.post-toc {
+  position: sticky;
+  top: 5rem;
+  padding-top: 2.5rem;
+}
+
+.post-toc-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.post-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid var(--line);
+  counter-reset: toc;
+}
+
+.post-toc li {
+  counter-increment: toc;
+}
+
+.post-toc a:not(.button) {
+  display: block;
+  margin-left: -2px;
+  padding: 0.4rem 0 0.4rem 0.9rem;
+  border-bottom: none;
+  border-left: 2px solid transparent;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.25s var(--ease-out, ease);
+}
+
+.post-toc a::before {
+  content: counter(toc, decimal-leading-zero) ' ';
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--signal);
+  opacity: 0.6;
+}
+
+.post-toc a:not(.button):hover {
+  color: var(--heading-color);
+}
+
+.post-toc a.is-active {
+  padding-left: 1.15rem;
+  border-left-color: var(--signal);
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.post-toc a.is-active::before {
+  opacity: 1;
+}
+
+/* ---------- Article ---------- */
+.post-article {
+  min-width: 0;
   background-color: var(--card-bg);
   color: var(--text);
-  max-width: 760px;
-  margin: 3rem auto 4rem;
   padding: 2.5rem clamp(1.25rem, 5vw, 3rem);
   border: 1px solid var(--line);
   border-radius: 14px;
 }
 
-article section {
-  margin-bottom: 2rem;
+.post-article section {
+  margin-bottom: 2.25rem;
+  scroll-margin-top: 5rem;
 }
 
-article h2 {
+.post-article section:last-child {
+  margin-bottom: 0;
+}
+
+.post-article section > :first-child {
+  margin-top: 0;
+}
+
+.post-article h2 {
+  position: relative;
   font-size: 1.3rem;
   color: var(--heading-color);
   padding-left: 0.9rem;
-  border-left: 4px solid var(--signal);
   margin-bottom: 1rem;
   text-align: left;
 }
 
-article p {
+/* Accent bar grows in when the heading is revealed */
+.post-article h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  bottom: 0.1em;
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--signal), var(--spark));
+  transform-origin: top;
+}
+
+.anim-ready .post-article h2[data-reveal]::before {
+  transform: scaleY(0);
+  transition: transform 0.7s var(--ease-out) calc(var(--reveal-delay, 0ms) + 200ms);
+}
+
+.anim-ready .post-article h2.is-visible::before {
+  transform: scaleY(1);
+}
+
+.post-article p {
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -29,46 +287,19 @@ article p {
   max-width: 68ch;
 }
 
-article ul {
+.post-article ul {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
 
-article ul li {
+.post-article ul li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 3rem;
-  color: var(--link);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.back-button {
-  display: inline-block;
-  margin-top: 3rem;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  color: var(--button-text);
-  background-color: var(--button-bg);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-  font-family: var(--font-body);
-}
-
-.back-button:hover {
-  background-color: var(--button-hover-bg);
-}
-
-article pre {
+.post-article pre {
   background-color: var(--section-bg);
   color: var(--text);
   padding: 1rem 1.2rem;
@@ -80,6 +311,152 @@ article pre {
   overflow-x: auto;
 }
 
+/* Code-style summary panel (reuses the main page's .about-panel look) */
+.post-article .about-panel {
+  margin-top: 1.5rem;
+}
+
+.post-article .about-panel pre.about-panel-code {
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 1.25rem 1.25rem 1.5rem;
+  color: var(--hero-text-secondary);
+  line-height: 1.75;
+}
+
+/* "What I learned": checklist */
+.post-article ul.checklist {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.post-article ul.checklist li {
+  position: relative;
+  margin: 0;
+  padding: 0.7rem 1rem 0.7rem 2.6rem;
+  background: color-mix(in srgb, var(--signal) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--signal) 18%, transparent);
+  border-radius: 10px;
+}
+
+.post-article ul.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  top: 0.85rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: var(--signal);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Feature lists with a bold lead-in: small card grid */
+.post-article ul.feature-grid {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+.post-article ul.feature-grid li {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--signal);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  transition: transform 0.25s var(--ease-out, ease), box-shadow 0.25s ease;
+}
+
+.post-article ul.feature-grid li:nth-child(even) {
+  border-top-color: var(--spark);
+}
+
+.post-article ul.feature-grid li:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.post-article ul.feature-grid strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--heading-color);
+}
+
+/* Slash-command reference: command chips followed by a short description */
+.post-article ul.command-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.post-article ul.command-list li {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--signal);
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.post-article ul.command-list code {
+  display: inline-block;
+  margin: 0 0.35rem 0.2rem 0;
+  padding: 0.1rem 0.45rem;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--signal) 12%, transparent);
+  color: var(--signal-strong);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Conclusion: highlighted card with a gradient border */
+.post-article section.post-conclusion {
+  position: relative;
+  margin-top: 2.75rem;
+  padding: 1.6rem 1.6rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(120deg, var(--signal), var(--spark)) border-box;
+  box-shadow: 0 18px 40px -24px color-mix(in srgb, var(--signal) 60%, transparent);
+}
+
+.post-article section.post-conclusion::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--signal) 7%, transparent), color-mix(in srgb, var(--spark) 7%, transparent));
+  pointer-events: none;
+}
+
+.post-article section.post-conclusion > * {
+  position: relative;
+}
+
+.post-article section.post-conclusion h2 {
+  padding-left: 0;
+}
+
+.post-article section.post-conclusion h2::before {
+  display: none;
+}
+
+/* ---------- Screenshots ---------- */
 .screenshot-gallery {
   display: flex;
   gap: 1rem;
@@ -103,28 +480,182 @@ article pre {
   border: 1px solid var(--line);
 }
 
-article .highlights {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2rem;
+/* ---------- Bottom nav: back link + next project ---------- */
+.post-nav {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  align-items: stretch;
+  gap: 1rem;
+  max-width: 1040px;
+  margin: 2.5rem auto 0;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
 }
 
-article .highlights li {
-  padding-left: 1rem;
-  border-left: 2px solid var(--signal);
+/* .post-nav prefix: outranks the global a:not(.button) bottom-border rule */
+.post-nav .post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1.4rem;
+  min-height: 5.5rem; /* matches the "next project" card, so it also works on its own */
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
   color: var(--text-secondary);
-  line-height: 1.55;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.post-back .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: transform 0.25s var(--ease-out, ease);
+}
+
+.post-nav .post-back:hover {
+  color: var(--heading-color);
+  border-color: var(--signal);
+}
+
+.post-back:hover .icon {
+  transform: translateX(-4px);
+}
+
+.post-nav .post-next {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(120deg, var(--line), var(--line)) border-box;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+.post-nav .post-next:hover {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(120deg, var(--signal), var(--spark)) border-box;
+  box-shadow: var(--card-shadow-hover);
+}
+
+.post-next-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--signal) 15%, transparent);
+  color: var(--signal);
+}
+
+.post-next-icon .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.post-next-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.post-next-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.post-next-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.post-next-arrow {
+  display: inline-flex;
+  color: var(--signal);
+  transition: transform 0.25s var(--ease-out, ease);
+}
+
+.post-next-arrow .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.post-next:hover .post-next-arrow {
+  transform: translateX(5px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .post-layout {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 808px;
+  }
+
+  .post-toc {
+    display: none;
+  }
+
+  .post-nav {
+    max-width: 808px;
+  }
+}
+
+@media (max-width: 900px) {
+  .post-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .post-hero .hero-media {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
+  header.post-hero {
+    padding: 4.5rem 1.5rem 5rem;
+  }
+
   .screenshot-gallery {
     flex-direction: column;
   }
+
   .screenshot-gallery .left,
   .screenshot-gallery .right {
     width: 100%;
+  }
+
+  .post-nav {
+    flex-direction: column-reverse;
+  }
+
+  .post-nav .post-back {
+    justify-content: center;
+    padding: 0.85rem 1.4rem;
+    min-height: 0;
+  }
+
+  .post-article section.post-conclusion {
+    padding: 1.25rem 1.1rem 0.4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .post-facts {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

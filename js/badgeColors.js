@@ -29,10 +29,13 @@ window.BadgeUtils = (() => {
     Automation: "robot",
     Vue: "file-vue",
     SQLite: "database",
+    "discord.py": "robot",
     Nginx: "globe",
     Git: "git-branch",
     MySQL: "database",
     Firewall: "shield-check",
+    FastAPI: "gauge",
+    FFmpeg: "gear",
   };
 
   const languageColors = {
@@ -65,10 +68,13 @@ window.BadgeUtils = (() => {
     Automation: "#66CCFF",
     Vue: "#42b883",
     SQLite: "#003B57",
+    "discord.py": "#5865F2",
     Nginx: "#009639",
     Git: "#F1502F",
     MySQL: "#00758F",
     Firewall: "#e0521a",
+    FastAPI: "#009688",
+    FFmpeg: "#2d8a3e",
   };
 
   function iconKeyFor(label) {
@@ -77,6 +83,27 @@ window.BadgeUtils = (() => {
 
   function colorFor(label) {
     return languageColors[label] || "#7a8699";
+  }
+
+  // Some language colors (e.g. light yellows/blues) are too close in
+  // lightness to their own tinted badge background to read clearly, so the
+  // icon gets a darkened variant instead of the raw brand color.
+  function relativeLuminance(hex) {
+    const full = hex.replace("#", "").replace(/^(.)(.)(.)$/, "$1$1$2$2$3$3");
+    const [r, g, b] = [0, 2, 4].map((i) => parseInt(full.substr(i, 2), 16) / 255);
+    const lin = (v) => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4));
+    return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+  }
+
+  function darken(hex, amount) {
+    const full = hex.replace("#", "").replace(/^(.)(.)(.)$/, "$1$1$2$2$3$3");
+    const [r, g, b] = [0, 2, 4].map((i) => parseInt(full.substr(i, 2), 16));
+    const mix = (v) => Math.round(v * (1 - amount)).toString(16).padStart(2, "0");
+    return `#${mix(r)}${mix(g)}${mix(b)}`;
+  }
+
+  function iconColorFor(color) {
+    return relativeLuminance(color) > 0.5 ? darken(color, 0.35) : color;
   }
 
   function applyBadgeStyles(root = document) {
@@ -92,6 +119,7 @@ window.BadgeUtils = (() => {
       <span class="label">${label}</span>
     `;
       badge.style.setProperty("--tag-color", color);
+      badge.style.setProperty("--icon-color", iconColorFor(color));
       badge.dataset.styled = "true";
     });
   }

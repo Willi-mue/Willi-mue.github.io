@@ -1,8 +1,21 @@
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 1.5rem;
   padding: 0 calc((100% / 3) / 2);
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .projects {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .projects {
+    padding: 0 1rem;
+  }
 }
 
 .project-card {
@@ -93,4 +106,67 @@ a.project-link:hover {
   display: flex;
   width: fit-content;
   margin: 2.5rem auto 0;
+}
+
+/* Language filter chips above the grid (rendered by renderFilters in js/projects.js) */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 calc((100% / 3) / 2);
+  margin-top: 1.5rem;
+}
+
+.filter-chip {
+  --tag-color: var(--signal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card-bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.filter-chip .icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--tag-color);
+}
+
+.filter-count {
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  background: color-mix(in srgb, var(--tag-color) 16%, transparent);
+  transition: background-color 0.2s ease;
+}
+
+.filter-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--tag-color);
+  box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--tag-color) 70%, transparent);
+}
+
+.filter-chip[aria-pressed='true'] {
+  border-color: var(--tag-color);
+  background: color-mix(in srgb, var(--tag-color) 18%, var(--card-bg));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tag-color) 20%, transparent);
+}
+
+.filter-chip[aria-pressed='true'] .filter-count {
+  background: var(--tag-color);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .project-filters {
+    padding: 0 1.5rem;
+  }
 }

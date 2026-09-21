@@ -1,27 +1,31 @@
 {
   "blog-minecraft-server-title": "Portfolio",
-  "blog-minecraft-server-meta-description": "Ein praxisnaher Blog über den Aufbau und die Optimierung eines privaten Minecraft-Servers mit Docker, OpenVPN, RAID-Backups und ressourcenschonender Serverkonfiguration.",
-  "blog-minecraft-server-heading": "Privater Minecraft-Server: VPN, Backup & Performance-Optimierung",
-  
+  "blog-minecraft-server-meta-description": "Wie ich meinen privaten Minecraft-Server betreibe: Paper-optimiert oder als eigenes Modpack, in Docker, mit abgesichertem Zugang sowie RAID-1 und Cron-Backups.",
+  "blog-minecraft-server-heading": "Self-hosted Minecraft-Server: Docker, VPN & Backups",
   "blog-minecraft-server-section-1-title": "Warum ein eigener Minecraft-Server?",
-  "blog-minecraft-server-section-1-text": "Ich betreibe einen eigenen Minecraft-Server, um die volle Kontrolle über Spielumgebung, Sicherheit und Performance zu haben. Durch die Self-Hosting-Lösung kann ich eigene Zertifikate für VPN-Verbindungen erstellen und den Server effizient optimieren.",
-
-  "blog-minecraft-server-section-2-title": "Systemarchitektur & Backups",
-  "blog-minecraft-server-section-2-text": "Der Server läuft auf Linux, abgesichert durch RAID-1 und regelmäßige Backups. Dadurch sind Daten und Welten stets geschützt. Die Architektur ist darauf ausgelegt, Ressourcen zu sparen und die Server.jar effizient auszuführen.",
-
+  "blog-minecraft-server-section-1-text": "Ich betreibe meinen Minecraft-Server selbst, um volle Kontrolle über Spielumgebung, Sicherheit und Performance zu haben. Er läuft auf eigener Hardware. Durch das Self-Hosting entscheide ich selbst, wer Zugang bekommt, und kann die Konfiguration genau auf die jeweilige Spielrunde abstimmen.",
+  "blog-minecraft-server-section-2-title": "Paper-optimiert oder eigenes Modpack",
+  "blog-minecraft-server-section-2-text": "Je nach Anlass läuft der Server in einer von zwei Varianten: als Paper-Server mit optimierter Konfiguration für ein flüssiges und ressourcenschonendes Spielerlebnis oder als komplett eigenes Modpack, dessen Mods und Konfiguration ich selbst zusammenstelle und aufeinander abstimme.",
   "blog-minecraft-server-section-3-title": "Setup mit Docker",
-  "blog-minecraft-server-section-3-text": "Der Server läuft in einem Docker-Container, was die Wartung vereinfacht und die Umgebung isoliert. Updates und Konfigurationen lassen sich dadurch effizient handhaben.",
-
-  "blog-minecraft-server-section-4-title": "Zugriff über VPN",
-  "blog-minecraft-server-section-4-text": "Spieler verbinden sich über ein OpenVPN-Netzwerk, sodass keine direkten Portfreigaben ins Internet nötig sind. Alle Verbindungen sind verschlüsselt und mit eigenen Zertifikaten abgesichert.",
-
-  "blog-minecraft-server-section-5-title": "Was ich dabei gelernt habe",
-  "blog-minecraft-server-section-5-list-1": "Aufbau und Absicherung eines privaten Servers inkl. VPN-Authentifizierung",
-  "blog-minecraft-server-section-5-list-2": "Effiziente Serverkonfiguration und Ressourcenoptimierung",
-  "blog-minecraft-server-section-5-list-3": "Backup-Strategien mit RAID und Automatisierungsskripten",
-
-  "blog-minecraft-server-section-6-title": "Fazit",
-  "blog-minecraft-server-section-6-text": "Der eigene Minecraft-Server ist ein praxisnahes Projekt, das sowohl meine Fähigkeiten in Server-Management, Sicherheit und Automatisierung als auch in Optimierung und Containerisierung demonstriert.",
-
-  "blog-minecraft-server-back-button": "Zurück zur Hauptseite"
+  "blog-minecraft-server-section-3-text": "Der Server läuft in einem Docker-Container. Das isoliert die Umgebung vom restlichen System und vereinfacht Wartung, Updates und den Wechsel zwischen verschiedenen Setups.",
+  "blog-minecraft-server-section-4-title": "Zugang nur per VPN",
+  "blog-minecraft-server-section-4-text": "Spieler verbinden sich über ein OpenVPN-Netzwerk, daher braucht der Server keine direkte Portfreigabe ins Internet. Alle Verbindungen sind verschlüsselt und mit eigenen Zertifikaten abgesichert, sodass nur Spieler mit gültigem Zertifikat den Server überhaupt erreichen.",
+  "blog-minecraft-server-section-5-title": "Backups & Datensicherheit",
+  "blog-minecraft-server-section-5-text": "Der Server läuft auf Linux, die Daten liegen auf einem RAID-1, das vor dem Ausfall einer Festplatte schützt. Zusätzlich sichern Cron-Jobs die Welten automatisch, sodass Spielstände auch bei Fehlern oder fehlgeschlagenen Updates wiederherstellbar bleiben.",
+  "blog-minecraft-server-section-6-title": "Was ich dabei gelernt habe",
+  "blog-minecraft-server-section-6-list-1": "Aufbau und Absicherung eines privaten Servers inklusive VPN mit eigenen Zertifikaten",
+  "blog-minecraft-server-section-6-list-2": "Containerisierung mit Docker und Optimierung der Serverkonfiguration mit Paper",
+  "blog-minecraft-server-section-6-list-3": "Backup-Strategien mit RAID-1 und automatisierten Cron-Jobs",
+  "blog-minecraft-server-section-6-list-4": "Zusammenstellen und Abstimmen eigener Modpacks",
+  "blog-minecraft-server-section-7-title": "Fazit",
+  "blog-minecraft-server-section-7-text": "Der Minecraft-Server ist ein praxisnahes Projekt, in dem ich Server-Management, Netzwerksicherheit, Automatisierung und Containerisierung im Alltag anwende.",
+  "blog-minecraft-server-back-button": "Zurück zur Hauptseite",
+  "blog-minecraft-server-fact-type-label": "Typ",
+  "blog-minecraft-server-fact-type": "Self-hosted Gameserver",
+  "blog-minecraft-server-fact-role-label": "Meine Rolle",
+  "blog-minecraft-server-fact-role": "Setup & Betrieb",
+  "blog-minecraft-server-fact-stack-label": "Stack",
+  "blog-minecraft-server-fact-stack": "Docker · Linux · VPN",
+  "blog-minecraft-server-fact-status-label": "Status",
+  "blog-minecraft-server-fact-status": "In Betrieb"
 }

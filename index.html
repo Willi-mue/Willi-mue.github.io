@@ -12,12 +12,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="styling/fonts.css" />
     <link rel="stylesheet" href="styling/theme.css" />
     <link rel="stylesheet" href="styling/main_page.css" />
     <link rel="stylesheet" href="styling/components/top-controls.css" />
@@ -26,36 +21,68 @@
     <link rel="stylesheet" href="styling/components/blog-card.css" />
     <link rel="stylesheet" href="styling/components/contact.css" />
     <link rel="stylesheet" href="styling/components/badge.css" />
+    <link rel="stylesheet" href="styling/components/terminal.css" />
+    <link rel="stylesheet" href="styling/components/boot.css" />
+    <link rel="stylesheet" href="styling/animations.css" />
   </head>
 
   <body data-theme="light" lang="de">
+    <script src="js/boot.js"></script>
     <header class="glow-surface">
-      <h1 id="title" data-i18n="main-page.header-title" data-i18n-html>
-        Willi Müller
-      </h1>
-      <p id="subtitle" data-i18n="main-page.header-subtitle" data-i18n-html>
-        Tagsüber Code und Security, abends das eigene Home-Lab.
-      </p>
+      <div class="hero-layout">
+        <div class="hero-content">
+          <h1 id="title" data-i18n="main-page.header-title" data-i18n-html>
+            Willi Müller
+          </h1>
 
-      <div class="hero-cta">
-        <a class="button" href="#projects" data-i18n="main-page.cta-projects" data-i18n-html>
-          Projekte ansehen
-        </a>
-        <a class="button button-ghost" href="#contact" data-i18n="main-page.cta-contact" data-i18n-html>
-          Kontakt aufnehmen
-        </a>
+          <p class="hero-terminal" aria-hidden="true" data-terminal-open>
+            <span class="hero-terminal-prompt">willi@homelab:~$</span>
+            <span class="hero-typed"></span><span class="hero-caret"></span>
+          </p>
+          <button type="button" class="terminal-hint" data-terminal-open>
+            <kbd>/</kbd><span data-i18n="main-page.terminal-hint">Terminal öffnen</span>
+          </button>
+          <span id="hero-roles" hidden data-i18n="main-page.hero-roles">Software-Entwickler|IT-Security|Home-Lab-Admin|Discord-Bot-Entwickler|Game-Jam-Teilnehmer</span>
+
+          <div class="hero-cta">
+            <a class="button" href="#projects" data-i18n="main-page.cta-projects" data-i18n-html>
+              Projekte ansehen
+            </a>
+            <a class="button" href="#contact" data-i18n="main-page.cta-contact" data-i18n-html>
+              Kontakt aufnehmen
+            </a>
+          </div>
+
+          <nav class="hero-nav" aria-label="Seitennavigation">
+            <a href="#about" data-i18n="main-page.nav-about" data-i18n-html>Über mich</a>
+            <a href="#skills" data-i18n="main-page.nav-skills" data-i18n-html>Skills</a>
+            <a href="#other-projects" data-i18n="main-page.nav-blog" data-i18n-html>Blog</a>
+            <a href="#projects" data-i18n="main-page.nav-projects" data-i18n-html>Projekte</a>
+            <a href="#contact" data-i18n="main-page.nav-contact" data-i18n-html>Kontakt</a>
+          </nav>
+        </div>
+
+        <div class="hero-media">
+          <img
+            class="hero-photo"
+            src="images/profile.jpg"
+            alt="Willi Müller beim Fotografieren in den Bergen"
+          />
+        </div>
       </div>
-
-      <nav class="hero-nav" aria-label="Seitennavigation">
-        <a href="#about" data-i18n="main-page.nav-about" data-i18n-html>Über mich</a>
-        <a href="#skills" data-i18n="main-page.nav-skills" data-i18n-html>Skills</a>
-        <a href="#projects" data-i18n="main-page.nav-projects" data-i18n-html>Projekte</a>
-        <a href="#other-projects" data-i18n="main-page.nav-blog" data-i18n-html>Blog</a>
-        <a href="#contact" data-i18n="main-page.nav-contact" data-i18n-html>Kontakt</a>
-      </nav>
     </header>
 
     <div id="top-controls">
+      <button
+        type="button"
+        class="top-terminal"
+        data-terminal-open
+        data-scroll-reveal
+        title="Terminal (/)"
+        aria-label="Terminal"
+      >
+        <span class="icon" data-icon="terminal-window"></span>
+      </button>
       <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button
         id="toggle-lang"
@@ -91,6 +118,7 @@
               <span>about.py</span>
             </div>
             <pre class="about-panel-code"><code><span class="tok-var">willi</span> = {
+    <span class="tok-key">"age"</span>: <span class="tok-num">25</span>,
     <span class="tok-key">"role"</span>: <span class="tok-str" data-i18n="main-page.about-highlight-1">Software-Entwickler & IT-Security</span>,
     <span class="tok-key">"focus"</span>: [
         <span class="tok-str" data-i18n="main-page.about-focus-1">Kundenspezifische Lösungen</span>,
@@ -108,7 +136,7 @@
         <span class="tok-str" data-i18n="main-page.about-spoken-3">Spanisch (Grundkenntnisse)</span>,
     ],
     <span class="tok-key">"based_in"</span>: <span class="tok-str" data-i18n="main-page.about-based-in">Deutschland</span>,
-}</code></pre>
+}<span class="code-caret"></span></code></pre>
           </div>
           <div class="about-me">
             <p class="about-lead" data-i18n="main-page.about-me-p1" data-i18n-html>
@@ -123,16 +151,16 @@
             <p data-i18n="main-page.about-me-p2" data-i18n-html>
               Dabei unterstütze ich die Informationssicherheitsbeauftragten
               (ISBs), koordiniere Dokumente und Formulare und
-              entwickle interne Tools, die die Zusammenarbeit zwischen Teams
-              erleichtern. Ich arbeite strukturiert und eigenverantwortlich
-              und möchte mich fachlich stetig weiterentwickeln.
+              entwickle eigenverantwortlich interne Tools, die die
+              Zusammenarbeit zwischen Teams erleichtern. Fachlich möchte ich
+              mich dabei stetig weiterentwickeln.
             </p>
             <p data-i18n="main-page.about-me-p3" data-i18n-html>
-              Neben meinem Job realisiere ich eigene Projekte – von
+              Neben meinem Job realisiere ich eigene Projekte, von
               Webanwendungen und Bots bis zum Aufbau und Betrieb eigener
               Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und
-              automatisiere ich Serverdienste, unter anderem mit eigenen
-              VPN-Lösungen, Docker-Setups und Spielservern, und vertiefe so
+              automatisiere ich Serverdienste, unter anderem mit eigenem
+              VPN-Zugang, Docker-Setups und Spielservern, und vertiefe so
               mein Wissen praxisnah.
             </p>
           </div>
@@ -302,30 +330,16 @@
       </section>
 
       <h2
-        id="projects"
-        class="main-sections"
-        data-i18n="main-page.projects-title"
-        data-i18n-html
-      >
-        Meine öffentlichen Projekte
-      </h2>
-      <p class="section-intro" data-i18n="main-page.projects-intro" data-i18n-html>
-        Automatisch von GitHub synchronisiert – eine Auswahl eigener Tools,
-        Simulationen und Spielereien.
-      </p>
-      <section id="projects-grid" class="projects"></section>
-
-      <h2
         id="other-projects"
         class="main-sections"
         data-i18n="main-page.blog-title"
         data-i18n-html
       >
-        Weitere Projekte & Erfahrungen
+        Projekte & Erfahrungen
       </h2>
       <p class="section-intro" data-i18n="main-page.blog-intro" data-i18n-html>
-        Tiefere Einblicke in ausgewählte Projekte und Erfahrungen abseits von
-        GitHub.
+        Ausgewählte Projekte und Erfahrungen, die auf GitHub nur zur Hälfte
+        sichtbar sind: mit Technik, Entscheidungen und Stolpersteinen.
       </p>
 
       <section id="blog">
@@ -333,12 +347,12 @@
           <article class="blog-post">
             <span class="blog-icon" data-icon="hard-drives"></span>
             <h3 data-i18n="main-page.blog-post-1-title" data-i18n-html>
-              Privater Minecraft-Server: VPN, Backup & Performance
+              Self-hosted Minecraft-Server: Docker, VPN & Backups
             </h3>
             <p data-i18n="main-page.blog-post-1-desc" data-i18n-html>
-              Verwaltung und Optimierung eines privaten Minecraft-Servers auf
-              dem eigenen Homeserver – mit OpenVPN-Zugang, RAID-Backup und
-              ressourcenschonender Serverkonfiguration.
+              Privater Minecraft-Server auf eigener Hardware, wahlweise
+              Paper-optimiert oder als eigenes Modpack. Läuft in Docker, mit
+              abgesichertem Zugang sowie RAID-1 und Cron-Backups.
             </p>
             <div class="badge-wrapper">
               <span class="badge">Docker</span>
@@ -347,7 +361,6 @@
               <span class="badge">OpenVPN</span>
               <span class="badge">Bash</span>
               <span class="badge">RAID</span>
-              <span class="badge">Performance</span>
             </div>
             <a
               class="button"
@@ -362,15 +375,18 @@
           <article class="blog-post">
             <span class="blog-icon" data-icon="robot"></span>
             <h3 data-i18n="main-page.blog-post-2-title" data-i18n-html>
-              Discord-Bot für Community-Management & Events
+              Discord-Bot für Events & Community-Management
             </h3>
             <p data-i18n="main-page.blog-post-2-desc" data-i18n-html>
-              Vielseitiger Discord-Bot mit Event-Templates, Übersetzungen und
-              Admin-Tools, der die Verwaltung mehrsprachiger Community-Server
-              spürbar vereinfacht.
+              Selbst entwickelter Discord-Bot in Python, der vier
+              Bots in einem vereint: Event-Management für MMOs,
+              Übersetzung, Admin-Tools und ein News-Bot. Der
+              Betrieb läuft in Docker.
             </p>
             <div class="badge-wrapper">
               <span class="badge">Python</span>
+              <span class="badge">discord.py</span>
+              <span class="badge">SQLite</span>
               <span class="badge">Docker</span>
               <span class="badge">Linux</span>
               <span class="badge">Event Management</span>
@@ -386,28 +402,28 @@
           </article>
 
           <article class="blog-post">
-            <span class="blog-icon" data-icon="globe"></span>
+            <span class="blog-icon" data-icon="gauge"></span>
             <h3 data-i18n="main-page.blog-post-3-title" data-i18n-html>
-              Webseite für eine MMO-Community
+              OxidPanel: Dashboard für meinen Home-Server
             </h3>
             <p data-i18n="main-page.blog-post-3-desc" data-i18n-html>
-              Professionelle Webseite zur Unterstützung eines
-              MMO-Discord-Servers mit Guides, Tools und
-              Echtzeit-Informationen für einfacheres Community-Management.
-              Aktuell noch im Aufbau.
+              Eigenes Dashboard mit Live-Systemstatistiken, News-Aggregator
+              für IT-Security und einer Medienbibliothek mit adaptivem
+              HLS-Streaming. FastAPI im Backend, Vue 3 im Frontend, alles in
+              einem Docker-Container.
             </p>
             <div class="badge-wrapper">
               <span class="badge">Python</span>
-              <span class="badge">JavaScript</span>
+              <span class="badge">FastAPI</span>
               <span class="badge">Vue</span>
-              <span class="badge">SCSS</span>
+              <span class="badge">TypeScript</span>
               <span class="badge">SQLite</span>
-              <span class="badge">Nginx</span>
+              <span class="badge">FFmpeg</span>
               <span class="badge">Docker</span>
             </div>
             <a
               class="button"
-              href="posts/discord-server-webseite.html"
+              href="posts/oxidpanel.html"
               data-i18n="main-page.blog-post-3-link"
               data-i18n-html
               >Weiterlesen</a
@@ -417,15 +433,18 @@
           <article class="blog-post">
             <span class="blog-icon" data-icon="game-controller"></span>
             <h3 data-i18n="main-page.blog-post-4-title" data-i18n-html>
-              Erste Game-Jam-Erfahrung
+              Game Jam: KI-Begleiter in 72 Stunden
             </h3>
             <p data-i18n="main-page.blog-post-4-desc" data-i18n-html>
-              Ein praxisnaher Erfahrungsbericht: von der ersten Idee über die
-              Umsetzung in 72 Stunden bis zum fertigen Spiel.
+              Bei der Wowie Jam 4.0 habe ich in einem Vierer-Team
+              ein Spiel mit Godot gebaut. Als einer von zwei
+              Programmierern habe ich den KI-Begleiter entwickelt,
+              ein Waldwesen, das sich je nach
+              Spielerentscheidungen zum Nah- oder Fernkämpfer
+              entwickelt.
             </p>
             <div class="badge-wrapper">
               <span class="badge">GDScript</span>
-              <span class="badge">C++</span>
               <span class="badge">C#</span>
             </div>
             <a
@@ -438,6 +457,21 @@
           </article>
         </div>
       </section>
+
+      <h2
+        id="projects"
+        class="main-sections"
+        data-i18n="main-page.projects-title"
+        data-i18n-html
+      >
+        Meine öffentlichen Projekte
+      </h2>
+      <p class="section-intro" data-i18n="main-page.projects-intro" data-i18n-html>
+        Automatisch von GitHub synchronisiert – eine Auswahl eigener Tools,
+        Simulationen und Spielereien.
+      </p>
+      <div id="project-filters" class="project-filters" role="group" aria-label="Filter"></div>
+      <section id="projects-grid" class="projects"></section>
     </main>
     <footer id="contact" class="glow-surface">
       <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
@@ -452,7 +486,7 @@
             id="contact-email"
             href="mailto:willimuellerbremberg@gmail.com"
           >
-            <span class="icon" data-icon="envelope-simple"></span>
+            <span class="icon" data-icon="envelope-simple-fill"></span>
             <span data-i18n="main-page.contact-email" data-i18n-html
               >E-Mail</span
             >
@@ -465,7 +499,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="icon" data-icon="github-logo"></span>
+            <span class="icon" data-icon="github-logo-fill"></span>
             <span data-i18n="main-page.contact-github" data-i18n-html
               >GitHub</span
             >
@@ -485,6 +519,10 @@
           </button>
         </li>
       </ul>
+
+      <p class="footer-legal">
+        <a href="datenschutz.html" data-i18n="main-page.footer-privacy">Datenschutz</a>
+      </p>
     </footer>
 
     <script src="js/setup.js"></script>
@@ -495,6 +533,9 @@
     <script src="js/scroll-to-top.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/easter-eggs.js"></script>
+    <script src="js/terminal.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {

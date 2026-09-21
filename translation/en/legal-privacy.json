@@ -1,0 +1,22 @@
+{
+  "legal-privacy-title": "Privacy Policy",
+  "legal-privacy-heading": "Privacy Policy",
+  "legal-privacy-lead": "This site is a static portfolio without cookies, tracking, or forms. Here is which data is still processed, and by whom.",
+  "legal.back-home": "Back to main page",
+  "legal-privacy-controller-title": "Controller",
+  "legal-privacy-controller-text": "The controller within the meaning of the GDPR is Willi Müller (Germany).<br>Contact: <a href=\"mailto:willimuellerbremberg@gmail.com\">willimuellerbremberg@gmail.com</a>.",
+  "legal-privacy-hosting-title": "Hosting via GitHub Pages",
+  "legal-privacy-hosting-text": "This website is served via <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When you visit, GitHub processes technically necessary connection data such as your IP address, date and time, the requested page, and browser information in order to deliver and secure the site. I have no access to this data. The legal basis is Art. 6(1)(f) GDPR (interest in secure and efficient delivery). Transfers to the USA rely on the adequacy decision for the EU-US Data Privacy Framework or on standard contractual clauses. See the <a href=\"https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub Privacy Statement</a> for details.",
+  "legal-privacy-fonts-title": "Fonts",
+  "legal-privacy-fonts-text": "The fonts used on this site (<em>Inter</em>, <em>JetBrains Mono</em>, <em>Space Grotesk</em>) are hosted on this server and delivered together with the page. No connection is made to Google or any other font provider.",
+  "legal-privacy-images-title": "Project preview images (GitHub)",
+  "legal-privacy-images-text": "The preview images on the project cards are loaded directly from <code>raw.githubusercontent.com</code> (GitHub). GitHub receives your IP address in this case as well. Legal basis and transfer are the same as in the “Hosting” section.",
+  "legal-privacy-storage-title": "Local storage in your browser",
+  "legal-privacy-storage-text": "This site sets <strong>no cookies</strong> and uses no analytics or advertising services. Only settings that make the site work for you are stored in your browser: your <strong>language</strong> and <strong>color scheme</strong> (<code>localStorage</code>), plus a marker that the intro animation already ran in this session (<code>sessionStorage</code>). These values never leave your device and can be deleted at any time in your browser settings. The legal basis is Section 25(2) No. 2 TDDDG and Art. 6(1)(f) GDPR.",
+  "legal-privacy-contact-title": "Contacting me",
+  "legal-privacy-contact-text": "If you email me, I process your address and the content of your message in order to reply (Art. 6(1)(b) or (f) GDPR). I delete the data once your request is dealt with and no statutory retention duties apply. Links to GitHub or Discord transmit data only once you click them; the privacy notices of the respective providers then apply.",
+  "legal-privacy-rights-title": "Your rights",
+  "legal-privacy-rights-text": "You have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and to object to processing based on legitimate interests (Art. 21 GDPR). Use the email address above to exercise them. You can also lodge a complaint with a data protection supervisory authority, for example the one where you live.",
+  "legal-privacy-updated-title": "Last updated",
+  "legal-privacy-updated-text": "September 2026. If the site or the legal situation changes, I will update this policy."
+}

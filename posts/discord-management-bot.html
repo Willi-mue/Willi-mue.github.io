@@ -6,32 +6,65 @@
     <title data-i18n="blog-discord-bot-title" data-i18n-html>Portfolio</title>
     <meta
       name="description"
-      content="Ein mehrsprachiger Discord-Bot für Moderation, Automatisierung und Community-Tools."
+      content="Ein selbst entwickelter, mehrsprachiger Discord-Bot für Event-Anmeldung, Übersetzungen und Administration, gebaut mit Python, discord.py und SQLite."
       data-i18n="blog-discord-bot-meta-description"
     />
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../styling/fonts.css" />
     <link rel="stylesheet" href="../styling/theme.css" />
     <link rel="stylesheet" href="../styling/main_page.css" />
     <link rel="stylesheet" href="../styling/components/top-controls.css" />
     <link rel="stylesheet" href="../styling/components/article.css" />
     <link rel="stylesheet" href="../styling/components/badge.css" />
+    <link rel="stylesheet" href="../styling/components/contact.css" />
+    <link rel="stylesheet" href="../styling/components/terminal.css" />
+    <link rel="stylesheet" href="../styling/components/lightbox.css" />
+    <link rel="stylesheet" href="../styling/animations.css" />
   </head>
 
   <body data-theme="light" lang="de" data-i18n-file="blog-discord-bot-server">
-    <header class="glow-surface">
-      <h1 data-i18n="blog-discord-bot-heading" data-i18n-html>
-        Eigener Discord-Bot für Community-Management
-      </h1>
+    <header class="glow-surface post-hero">
+      <div class="post-hero-layout">
+        <div class="post-hero-content">
+          <p class="post-path" aria-hidden="true"><span>~/projects/</span>discord-management-bot</p>
+          <h1 data-i18n="blog-discord-bot-heading" data-i18n-html>
+            Discord-Bot für Events & Community-Management
+          </h1>
+          <p class="post-lead" data-i18n="main-page.blog-post-2-desc" data-i18n-html>Selbst entwickelter Discord-Bot in Python, der vier Bots in einem vereint: Event-Management für MMOs, Übersetzung, Admin-Tools und ein News-Bot. Der Betrieb läuft in Docker.</p>
+          <div class="badge-wrapper post-badges">
+            <span class="badge">Python</span>
+            <span class="badge">discord.py</span>
+            <span class="badge">SQLite</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Event Management</span>
+            <span class="badge">Automation</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <span class="post-hero-icon"><span class="icon" data-icon="robot"></span></span>
+        </div>
+      </div>
     </header>
 
     <div id="top-controls">
+      <a
+        class="top-back"
+        href="../index.html#other-projects"
+        aria-label="Zurück zur Hauptseite"
+        title="Zurück zur Hauptseite"
+        >←</a
+      >
+      <button
+        type="button"
+        data-terminal-open
+        title="Terminal (/)"
+        aria-label="Terminal"
+      >
+        <span class="icon" data-icon="terminal-window"></span>
+      </button>
       <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>
         EN
@@ -39,32 +72,43 @@
     </div>
 
     <main>
-      <article>
-        <div class="showcase-badges">
-          <span class="badge">Python</span>
-          <span class="badge">Docker</span>
-          <span class="badge">Linux</span>
-          <span class="badge">Event Management</span>
-          <span class="badge">Automation</span>
-        </div>
+      <ul class="post-facts">
+        <li class="post-fact">
+          <span class="icon" data-icon="stack"></span>
+          <span class="post-fact-label" data-i18n="blog-discord-bot-fact-type-label">Typ</span>
+          <span class="post-fact-value" data-i18n="blog-discord-bot-fact-type">Discord-Bot (4 in 1)</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="wrench"></span>
+          <span class="post-fact-label" data-i18n="blog-discord-bot-fact-role-label">Meine Rolle</span>
+          <span class="post-fact-value" data-i18n="blog-discord-bot-fact-role">Alles (Solo-Projekt)</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="code"></span>
+          <span class="post-fact-label" data-i18n="blog-discord-bot-fact-stack-label">Stack</span>
+          <span class="post-fact-value" data-i18n="blog-discord-bot-fact-stack">Python · discord.py · SQLite</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="shield-check"></span>
+          <span class="post-fact-label" data-i18n="blog-discord-bot-fact-status-label">Status</span>
+          <span class="post-fact-value" data-i18n="blog-discord-bot-fact-status">Im Einsatz, 120+ Nutzer</span>
+        </li>
+      </ul>
 
-        <section>
-          <p data-i18n="section-discord-intro" data-i18n-html>
-            <strong>Discord</strong> ist eine beliebte Plattform für
-            Communities, die Text-, Sprach- und Video-Chats unterstützt. Mein
-            Bot automatisiert Aufgaben auf Discord-Servern, erleichtert die
-            Organisation von Events und unterstützt mehrsprachige Kommunikation,
-            sodass Community-Manager Zeit sparen und die Übersicht behalten.
-          </p>
+      <div class="post-layout">
+        <nav class="post-toc" aria-label="Inhalt">
+          <p class="post-toc-title" data-i18n="post.toc">Inhalt</p>
+          <ol></ol>
+        </nav>
+
+        <article class="post-article">
+          <section>
+            <p data-i18n="section-discord-intro" data-i18n-html><strong>Discord</strong> ist eine beliebte Plattform für Communities mit Text-, Sprach- und Video-Chats. Mein Bot automatisiert Aufgaben auf Discord-Servern, erleichtert die auf MMOs ausgelegte Event-Organisation und unterstützt mehrsprachige Kommunikation, sodass Community-Manager Zeit sparen und den Überblick behalten.</p>
+          </section>
 
           <section>
-            <h2 data-i18n="section-signup-screenshots-title">
-              Signup im Einsatz
-            </h2>
-            <p data-i18n="section-signup-screenshots-text" data-i18n-html>
-              So sieht die Anmeldung für ein Event direkt auf dem Discord-Server
-              aus:
-            </p>
+            <h2 data-i18n="section-signup-screenshots-title">Signup im Einsatz</h2>
+            <p data-i18n="section-signup-screenshots-text" data-i18n-html>So sieht die Anmeldung für ein Event direkt auf dem Discord-Server aus:</p>
             <div class="screenshot-gallery">
               <div class="left">
                 <img src="../images/Signup1.png" alt="Signup Event Schritt 1" />
@@ -76,88 +120,143 @@
             </div>
           </section>
 
-          <h2 data-i18n="section-core-features-title">Kernfunktionen</h2>
-          <p data-i18n="section-core-features-text" data-i18n-html>
-            Eigenentwickelter Discord-Bot mit Event-Templates, Übersetzungen und
-            Admin-Features. Unterstützt Live- und Test-Systeme, automatisiert
-            Community-Management und erleichtert Moderation - im Einsatz bei
-            über 140 Nutzern.
-          </p>
+          <section>
+            <h2 data-i18n="section-core-features-title">Kernfunktionen</h2>
+            <p data-i18n="section-core-features-text" data-i18n-html>Mein Bot vereint vier Bots in einem: Event-Anmeldung für MMOs, Übersetzung, Admin-Tools und ein News-Bot. Bedient wird er über Slash-Commands und Buttons direkt in Discord. Die wichtigsten Funktionen:</p>
+            <ul class="feature-grid">
+              <li data-i18n="feature-1" data-i18n-html><strong>Event-Anmeldung:</strong> Vorgefertigte Templates, Anmeldung mit mehreren Accounts, eigene Threads und Statusoptionen, ausgelegt auf MMO-Events.</li>
+              <li data-i18n="feature-2" data-i18n-html><strong>Übersetzung:</strong> Nachrichten werden auf Knopfdruck direkt im Chat übersetzt, damit mehrsprachige Communities zusammenfinden.</li>
+              <li data-i18n="feature-3" data-i18n-html><strong>Admin-Tools:</strong> Werkzeuge für die Verwaltung von Mitgliedern, Rollen und Alt-Accounts sowie Aktivitätsstatistiken.</li>
+              <li data-i18n="feature-4" data-i18n-html><strong>News-Bot:</strong> Ein eigener Bot für Neuigkeiten in der Community.</li>
+            </ul>
+          </section>
 
-          <ul>
-            <li data-i18n="cmd-signup" data-i18n-html></li>
+          <section>
+            <h2 data-i18n="section-commands-title" data-i18n-html>Befehle im Überblick</h2>
+            <p data-i18n="section-commands-text" data-i18n-html>Eine Auswahl der Slash-Commands, mit denen Mitglieder und Event-Leitungen arbeiten:</p>
+            <ul class="command-list">
+              <li data-i18n="cmd-signup" data-i18n-html><code>/signup</code> Anmeldung für Events. Startet automatisch ein Event-Template, sodass wiederkehrende Events in Sekunden stehen. Mit Multi-Account-Support, eigenen Threads und Statusoptionen.</li>
+              <li data-i18n="cmd-signup_custom" data-i18n-html><code>/signup_custom</code> Eigene Events unabhängig von Templates anlegen.</li>
+              <li data-i18n="cmd-list_events" data-i18n-html><code>/list_events</code> Alle Events des Servers auf einen Blick.</li>
+              <li data-i18n="cmd-ping_role" data-i18n-html><code>/ping_role</code> Rollen gezielt benachrichtigen.</li>
+              <li data-i18n="cmd-translate" data-i18n-html><code>/translate</code> <code>/translate_section</code> Einzelne Nachrichten oder ganze Abschnitte automatisch übersetzen.</li>
+              <li data-i18n="cmd-create_translation_button" data-i18n-html><code>/create_translation_button</code> Setzt Buttons mit Sprachflaggen unter einen Abschnitt. Ein Klick auf eine Flagge liefert die Übersetzung.</li>
+              <li data-i18n="cmd-users" data-i18n-html><code>/users_in_server</code> <code>/users_in_role</code> Überblick über Mitglieder und Rollen.</li>
+              <li data-i18n="cmd-embed_description" data-i18n-html><code>/embed_description</code> Erstellt Discord-Embeds automatisch.</li>
+              <li data-i18n="cmd-help" data-i18n-html><code>/help</code> Legt bei Problemen schnell ein Bug-Ticket an.</li>
+            </ul>
+          </section>
 
-            <li data-i18n="cmd-signup_custom" data-i18n-html></li>
-            <li data-i18n="cmd-ping_role" data-i18n-html></li>
-            <li data-i18n="cmd-translate" data-i18n-html></li>
-            <li data-i18n="cmd-create_translation_button" data-i18n-html></li>
-            <li data-i18n="cmd-clear_translation_cache" data-i18n-html></li>
-            <li data-i18n="cmd-users" data-i18n-html></li>
-            <li data-i18n="cmd-list_events" data-i18n-html></li>
-            <li data-i18n="cmd-embed_description" data-i18n-html></li>
-            <li data-i18n="cmd-signup_delete" data-i18n-html></li>
-            <li data-i18n="cmd-get_logs" data-i18n-html></li>
-            <li data-i18n="cmd-help" data-i18n-html></li>
-          </ul>
-        </section>
+          <section>
+            <h2 data-i18n="section-technical-architecture-title">Technischer Aufbau</h2>
+            <p data-i18n="section-technical-architecture-text" data-i18n-html>Der Bot ist in Python mit discord.py geschrieben und läuft in Docker auf Linux. Die vier Bots werden als ein gemeinsames Projekt entwickelt und betrieben. Neue Funktionen laufen zuerst in einer eigenen Test-Umgebung, bevor sie ins Live-System gehen.</p>
+            <div class="about-panel">
+              <div class="about-panel-tab">
+                <span class="about-panel-dot"></span>
+                <span>bot.yml</span>
+              </div>
+              <pre class="about-panel-code"><code><span class="tok-key">language</span>:  <span class="tok-str">python</span>
+<span class="tok-key">framework</span>: <span class="tok-str">discord.py</span>
+<span class="tok-key">modules</span>:   <span class="tok-str">[events, translation, admin, news]</span>
+<span class="tok-key">storage</span>:   <span class="tok-str">sqlite</span>
+<span class="tok-key">runtime</span>:   <span class="tok-str">docker on linux</span></code></pre>
+            </div>
+            <ul class="checklist">
+              <li data-i18n="arch-list-1" data-i18n-html>Vier Bots in einer gemeinsamen Codebasis</li>
+              <li data-i18n="arch-list-2" data-i18n-html>Persistente Datenhaltung mit SQLite</li>
+              <li data-i18n="arch-list-3" data-i18n-html>Flexibel konfigurierbare Event-Templates</li>
+              <li data-i18n="arch-list-4" data-i18n-html>Getrennte Test- und Live-Umgebung</li>
+              <li data-i18n="arch-list-5" data-i18n-html>Bedienung über Slash-Commands und Buttons</li>
+            </ul>
+          </section>
 
-        <section>
-          <h2 data-i18n="section-technical-architecture-title">
-            Technischer Aufbau
-          </h2>
-          <p data-i18n="section-technical-architecture-text" data-i18n-html>
-            Der Bot läuft in Python und nutzt die Discord-API via Slash-Commands
-            und Buttons. Deployment erfolgt in Docker-Containern auf
-            Linux-Systemen. Templates und modulare Strukturen ermöglichen
-            flexible Event-Organisation und übersichtliche Administration.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="section-challenges-title">Herausforderungen</h2>
+            <p data-i18n="section-challenges-text" data-i18n-html>Die größte Herausforderung war, mehrere Bots sauber in einem Projekt zu vereinen und den Zustand laufender Events zuverlässig zu erhalten, auch über Neustarts hinweg. Dazu kamen Mehrsprachigkeit und die Template-Logik, die saubere Datenstrukturen und ein durchdachtes Command-Handling verlangt haben.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="section-challenges-title">Herausforderungen</h2>
-          <p data-i18n="section-challenges-text" data-i18n-html>
-            Die Implementierung eines skalierbaren Event-Systems mit Test- und
-            Live-Umgebung, Mehrsprachigkeit, Template-Logik und Admin-Funktionen
-            stellte komplexe Anforderungen an Datenstrukturen und
-            Kommando-Handling.
-          </p>
-        </section>
+          <section class="post-conclusion">
+            <h2 data-i18n="section-conclusion-outlook-title">Fazit</h2>
+            <p data-i18n="section-conclusion-outlook-text" data-i18n-html>Der Bot ist bei über 120 Nutzern im Einsatz und erleichtert das tägliche Community-Management auf Discord-Servern spürbar. Er ist ein Praxisprojekt, in dem ich Architektur, Persistenz und Automatisierung an einem echten Einsatzfall umsetze.</p>
+          </section>
+        </article>
+      </div>
 
-        <section>
-          <h2 data-i18n="section-conclusion-outlook-title">Fazit & Ausblick</h2>
-          <p data-i18n="section-conclusion-outlook-text" data-i18n-html>
-            Der Bot ist bereits bei über 140+ Nutzern im Einsatz und erleichtert
-            das tägliche Community-Management erheblich. Die Entwicklung ist
-            aktiv, und folgende Funktionen stehen auf der Roadmap:
-          </p>
-          <ul>
-            <li data-i18n="cmd-signup_repeat" data-i18n-html></li>
-            <li data-i18n="cmd-statistics" data-i18n-html></li>
-            <li data-i18n="cmd-ping_all_signed" data-i18n-html></li>
-            <li data-i18n="cmd-template_improvements" data-i18n-html></li>
-            <li data-i18n="cmd-translation_improvements" data-i18n-html></li>
-          </ul>
-          <p data-i18n="section-conclusion-outlook-text2" data-i18n-html>
-            Ziel ist es, den Bot ständig weiterzuentwickeln, neue Tools zu
-            integrieren und ein leistungsfähiges, flexibles Werkzeug für
-            mittelgroße bis große Discord-Server bereitzustellen.
-          </p>
-        </section>
-
-        <button
-          class="button"
-          onclick="location.href='../index.html#other-projects'"
-          data-i18n="back-button"
-        >
-          Zurück zur Hauptseite
-        </button>
-      </article>
+      <nav class="post-nav">
+        <a class="post-back" href="../index.html#other-projects">
+          <span class="icon" data-icon="arrow-left"></span>
+          <span data-i18n="post.all-projects">Alle Projekte</span>
+        </a>
+        <a class="post-next" href="oxidpanel.html">
+          <span class="post-next-icon"><span class="icon" data-icon="gauge"></span></span>
+          <span class="post-next-body">
+            <span class="post-next-label" data-i18n="post.next">Nächstes Projekt</span>
+            <span class="post-next-title" data-i18n="main-page.blog-post-3-title" data-i18n-html>OxidPanel: Dashboard für meinen Home-Server</span>
+          </span>
+          <span class="post-next-arrow"><span class="icon" data-icon="arrow-right"></span></span>
+        </a>
+      </nav>
     </main>
+
+    <footer id="contact" class="glow-surface">
+      <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
+      <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
+        Interesse an einer Zusammenarbeit?<br />
+        Über eine Nachricht freue ich mich:
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <a id="contact-email" href="mailto:willimuellerbremberg@gmail.com">
+            <span class="icon" data-icon="envelope-simple-fill"></span>
+            <span data-i18n="main-page.contact-email" data-i18n-html
+              >E-Mail</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            id="contact-github"
+            href="https://github.com/Willi-mue"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="icon" data-icon="github-logo-fill"></span>
+            <span data-i18n="main-page.contact-github" data-i18n-html
+              >GitHub</span
+            >
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            id="contact-discord"
+            class="contact-copy"
+            data-copy="todes_ritter"
+          >
+            <span class="icon" data-icon="discord-logo"></span>
+            <span data-i18n="main-page.contact-discord" data-i18n-html
+              >Discord</span
+            >
+          </button>
+        </li>
+      </ul>
+
+      <p class="footer-legal">
+        <a href="../datenschutz.html" data-i18n="main-page.footer-privacy">Datenschutz</a>
+      </p>
+    </footer>
 
     <script src="../js/setup.js"></script>
     <script src="../js/icons.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/badgeColors.js"></script>
     <script src="../js/translation.js"></script>
+    <script src="../js/post.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/lightbox.js"></script>
+    <script src="../js/easter-eggs.js"></script>
+    <script src="../js/terminal.js"></script>
   </body>
 </html>

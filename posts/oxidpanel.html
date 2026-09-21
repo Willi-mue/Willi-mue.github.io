@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="blog-oxidpanel-title" data-i18n-html>Portfolio</title>
+    <meta
+      name="description"
+      content="OxidPanel ist mein selbst entwickeltes Dashboard für den Home-Server: Systemstatistiken, News-Aggregator und Medienbibliothek mit HLS-Streaming, gebaut mit FastAPI und Vue 3."
+      data-i18n="blog-oxidpanel-meta-description"
+    />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+
+    <link rel="stylesheet" href="../styling/fonts.css" />
+    <link rel="stylesheet" href="../styling/theme.css" />
+    <link rel="stylesheet" href="../styling/main_page.css" />
+    <link rel="stylesheet" href="../styling/components/top-controls.css" />
+    <link rel="stylesheet" href="../styling/components/article.css" />
+    <link rel="stylesheet" href="../styling/components/badge.css" />
+    <link rel="stylesheet" href="../styling/components/contact.css" />
+    <link rel="stylesheet" href="../styling/components/terminal.css" />
+    <link rel="stylesheet" href="../styling/components/lightbox.css" />
+    <link rel="stylesheet" href="../styling/animations.css" />
+  </head>
+
+  <body data-theme="light" lang="de" data-i18n-file="blog-oxidpanel">
+    <header class="glow-surface post-hero">
+      <div class="post-hero-layout">
+        <div class="post-hero-content">
+          <p class="post-path" aria-hidden="true"><span>~/projects/</span>oxidpanel</p>
+          <h1 data-i18n="blog-oxidpanel-heading" data-i18n-html>
+            OxidPanel: Dashboard für meinen Home-Server
+          </h1>
+          <p class="post-lead" data-i18n="main-page.blog-post-3-desc" data-i18n-html>Eigenes Dashboard mit Live-Systemstatistiken, News-Aggregator für IT-Security und einer Medienbibliothek mit adaptivem HLS-Streaming. FastAPI im Backend, Vue 3 im Frontend, alles in einem Docker-Container.</p>
+          <div class="badge-wrapper post-badges">
+            <span class="badge">Python</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">Vue</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">SQLite</span>
+            <span class="badge">FFmpeg</span>
+            <span class="badge">Docker</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <span class="post-hero-icon"><span class="icon" data-icon="gauge"></span></span>
+        </div>
+      </div>
+    </header>
+
+    <div id="top-controls">
+      <a
+        class="top-back"
+        href="../index.html#other-projects"
+        aria-label="Zurück zur Hauptseite"
+        title="Zurück zur Hauptseite"
+        >←</a
+      >
+      <button
+        type="button"
+        data-terminal-open
+        title="Terminal (/)"
+        aria-label="Terminal"
+      >
+        <span class="icon" data-icon="terminal-window"></span>
+      </button>
+      <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
+      <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>
+        EN
+      </button>
+    </div>
+
+    <main>
+      <ul class="post-facts">
+        <li class="post-fact">
+          <span class="icon" data-icon="stack"></span>
+          <span class="post-fact-label" data-i18n="blog-oxidpanel-fact-type-label">Typ</span>
+          <span class="post-fact-value" data-i18n="blog-oxidpanel-fact-type">Home-Server-Dashboard</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="wrench"></span>
+          <span class="post-fact-label" data-i18n="blog-oxidpanel-fact-role-label">Meine Rolle</span>
+          <span class="post-fact-value" data-i18n="blog-oxidpanel-fact-role">Alles (Solo-Projekt)</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="code"></span>
+          <span class="post-fact-label" data-i18n="blog-oxidpanel-fact-stack-label">Stack</span>
+          <span class="post-fact-value" data-i18n="blog-oxidpanel-fact-stack">FastAPI · Vue 3 · Docker</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="shield-check"></span>
+          <span class="post-fact-label" data-i18n="blog-oxidpanel-fact-status-label">Status</span>
+          <span class="post-fact-value" data-i18n="blog-oxidpanel-fact-status">In Betrieb</span>
+        </li>
+      </ul>
+
+      <div class="post-layout">
+        <nav class="post-toc" aria-label="Inhalt">
+          <p class="post-toc-title" data-i18n="post.toc">Inhalt</p>
+          <ol></ol>
+        </nav>
+
+        <article class="post-article">
+          <section>
+            <p data-i18n="blog-oxidpanel-intro" data-i18n-html>OxidPanel ist mein selbst entwickeltes Dashboard für den Home-Server. Es bündelt Systemüberwachung, einen News-Aggregator und eine Medienbibliothek in einer Oberfläche.</p>
+          </section>
+
+          <section>
+            <h2 data-i18n="blog-oxidpanel-screenshot-title" data-i18n-html>Das Dashboard im Betrieb</h2>
+            <p data-i18n="blog-oxidpanel-screenshot-text" data-i18n-html>Ausschnitt der Startseite: Live-Systemwerte, Wetter und der News-Globus.</p>
+            <div class="screenshot-gallery">
+              <img
+                src="../images/oxid_panel_preview.png"
+                alt="OxidPanel-Startseite mit CPU-, Speicher- und Temperaturanzeige, Wetter und News-Globus"
+              />
+            </div>
+          </section>
+
+          <section>
+            <h2 data-i18n="blog-oxidpanel-modules-title" data-i18n-html>Funktionen</h2>
+            <ul class="feature-grid">
+              <li data-i18n="blog-oxidpanel-module-stats" data-i18n-html><strong>Systemüberwachung:</strong> Live-Werte zu CPU (gesamt und pro Kern), Arbeitsspeicher, Temperaturen, Last, Festplatten und Netzwerkdurchsatz, dazu die aktivsten Prozesse, Verlaufsgrafiken und eine Wetter-Kachel. Die Anzeige aktualisiert sich selbst und pausiert, solange der Tab nicht sichtbar ist.</li>
+              <li data-i18n="blog-oxidpanel-module-news" data-i18n-html><strong>News:</strong> Nachrichten und IT-Security-Meldungen aus mehreren Quellen, filterbar über eigene Schlagwörter. Ein Globus zeigt, woher die Meldungen stammen.</li>
+              <li data-i18n="blog-oxidpanel-module-media" data-i18n-html><strong>Medien:</strong> Film- und Serienbibliothek mit Streaming direkt im Browser, Favoriten, zuletzt Gesehenem und gespeichertem Fortschritt. Bedienbar auch per Tastatur oder TV-Fernbedienung.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 data-i18n="blog-oxidpanel-news-title" data-i18n-html>News-Aggregator</h2>
+            <p data-i18n="blog-oxidpanel-news-text" data-i18n-html>Die Meldungen kommen aus der Tagesschau, aus IT-Security-Feeds, der CISA-Liste aktiv ausgenutzter Schwachstellen, CVE-Meldungen von NVD und GitHub sowie aus mehreren Subreddits. Einmal täglich läuft eine komplette Aktualisierung im Hintergrund. Zusätzlich lädt das Panel einzelne Feeds bei Bedarf nach, höchstens alle 30 Minuten.</p>
+            <ul class="checklist">
+              <li data-i18n="blog-oxidpanel-news-list-1" data-i18n-html>Doppelte Meldungen werden auch quellenübergreifend über die URL erkannt</li>
+              <li data-i18n="blog-oxidpanel-news-list-2" data-i18n-html>Eigene Schlagwörter werden automatisch in Titel und Anriss gesucht</li>
+              <li data-i18n="blog-oxidpanel-news-list-3" data-i18n-html>Ortserkennung per NLP (spaCy, Deutsch und Englisch) für den News-Globus</li>
+              <li data-i18n="blog-oxidpanel-news-list-4" data-i18n-html>Fehlende Vorschaubilder werden über Open-Graph-Daten nachgeladen</li>
+              <li data-i18n="blog-oxidpanel-news-list-5" data-i18n-html>Meldungen, die älter als vier Tage sind, werden automatisch aufgeräumt</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 data-i18n="blog-oxidpanel-streaming-title" data-i18n-html>Adaptives Streaming mit HLS</h2>
+            <p data-i18n="blog-oxidpanel-streaming-text" data-i18n-html>Videos werden erst beim ersten Abspielen mit <strong>FFmpeg</strong> in HLS umgewandelt, in bis zu drei Qualitätsstufen (360p, 720p, 1080p). Die niedrigste Stufe entsteht zuerst, sodass das Video schon läuft, während die höheren noch berechnet werden. Hochskaliert wird nie: Ein 720p-Film bekommt keine 1080p-Stufe. Die fertigen Umwandlungen landen in einem Cache, der sich automatisch erneuert, wenn sich das Verfahren ändert.</p>
+          </section>
+
+          <section>
+            <h2 data-i18n="blog-oxidpanel-tech-title" data-i18n-html>Umsetzung</h2>
+            <p data-i18n="blog-oxidpanel-tech-text" data-i18n-html>Backend in <strong>Python</strong> mit <strong>FastAPI</strong>, Frontend als <strong>Vue-3-SPA</strong> mit TypeScript und Vite, die FastAPI direkt mit ausliefert. Die News liegen in <strong>SQLite</strong>, ein Scheduler im selben Prozess hält sie aktuell, die Videos wandelt <strong>FFmpeg</strong> um. Gebaut wird in einem mehrstufigen <strong>Docker</strong>-Build: Eine Stufe baut das Frontend, die zweite liefert alles aus. Alle dauerhaften Daten liegen in einem einzigen Ordner, das hält Backups einfach.</p>
+            <div class="about-panel">
+              <div class="about-panel-tab">
+                <span class="about-panel-dot"></span>
+                <span>stack.yml</span>
+              </div>
+              <pre class="about-panel-code"><code><span class="tok-key">backend</span>:   <span class="tok-str">python + fastapi</span>
+<span class="tok-key">frontend</span>:  <span class="tok-str">vue 3 + typescript + vite</span>
+<span class="tok-key">database</span>:  <span class="tok-str">sqlite</span>
+<span class="tok-key">scheduler</span>: <span class="tok-str">apscheduler (in-process)</span>
+<span class="tok-key">nlp</span>:       <span class="tok-str">spacy (de, en)</span>
+<span class="tok-key">media</span>:     <span class="tok-str">ffmpeg -> hls (360p / 720p / 1080p)</span>
+<span class="tok-key">deploy</span>:    <span class="tok-str">docker (multi-stage)</span></code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2 data-i18n="blog-oxidpanel-challenges-title" data-i18n-html>Herausforderungen</h2>
+            <p data-i18n="blog-oxidpanel-challenges-text" data-i18n-html>Reddit erlaubt ohne Anmeldung nur etwa eine Anfrage pro Minute. Deshalb ruft das Panel die Subreddits nacheinander mit Pause ab statt parallel. Außerdem läuft das Backend bewusst mit nur einem Worker: Scheduler, Umwandlungs-Jobs und die Netzwerkmessung halten ihren Zustand im Speicher, mehrere Worker würden Jobs doppelt starten.</p>
+          </section>
+
+          <section class="post-conclusion">
+            <h2 data-i18n="blog-oxidpanel-conclusion-title" data-i18n-html>Fazit</h2>
+            <p data-i18n="blog-oxidpanel-conclusion-text" data-i18n-html>OxidPanel ist ein Praxisprojekt, in dem ich Frontend, Backend, Hintergrundprozesse und Betrieb von Anfang bis Ende selbst umsetze, von der Datenhaltung über geplante Jobs bis zum adaptiven Streaming.</p>
+          </section>
+        </article>
+      </div>
+
+      <nav class="post-nav">
+        <a class="post-back" href="../index.html#other-projects">
+          <span class="icon" data-icon="arrow-left"></span>
+          <span data-i18n="post.all-projects">Alle Projekte</span>
+        </a>
+        <a class="post-next" href="game-jam.html">
+          <span class="post-next-icon"><span class="icon" data-icon="game-controller"></span></span>
+          <span class="post-next-body">
+            <span class="post-next-label" data-i18n="post.next">Nächstes Projekt</span>
+            <span class="post-next-title" data-i18n="main-page.blog-post-4-title" data-i18n-html>Game Jam: KI-Begleiter in 72 Stunden</span>
+          </span>
+          <span class="post-next-arrow"><span class="icon" data-icon="arrow-right"></span></span>
+        </a>
+      </nav>
+    </main>
+
+    <footer id="contact" class="glow-surface">
+      <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
+      <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
+        Interesse an einer Zusammenarbeit?<br />
+        Über eine Nachricht freue ich mich:
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <a id="contact-email" href="mailto:willimuellerbremberg@gmail.com">
+            <span class="icon" data-icon="envelope-simple-fill"></span>
+            <span data-i18n="main-page.contact-email" data-i18n-html
+              >E-Mail</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            id="contact-github"
+            href="https://github.com/Willi-mue"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="icon" data-icon="github-logo-fill"></span>
+            <span data-i18n="main-page.contact-github" data-i18n-html
+              >GitHub</span
+            >
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            id="contact-discord"
+            class="contact-copy"
+            data-copy="todes_ritter"
+          >
+            <span class="icon" data-icon="discord-logo"></span>
+            <span data-i18n="main-page.contact-discord" data-i18n-html
+              >Discord</span
+            >
+          </button>
+        </li>
+      </ul>
+
+      <p class="footer-legal">
+        <a href="../datenschutz.html" data-i18n="main-page.footer-privacy">Datenschutz</a>
+      </p>
+    </footer>
+
+    <script src="../js/setup.js"></script>
+    <script src="../js/icons.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/badgeColors.js"></script>
+    <script src="../js/translation.js"></script>
+    <script src="../js/post.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/lightbox.js"></script>
+    <script src="../js/easter-eggs.js"></script>
+    <script src="../js/terminal.js"></script>
+  </body>
+</html>

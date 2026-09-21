@@ -33,7 +33,7 @@
   width: 0.9rem;
   height: 0.9rem;
   flex-shrink: 0;
-  color: var(--tag-color);
+  color: var(--icon-color, var(--tag-color));
 }
 
 .badge .label {

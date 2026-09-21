@@ -47,14 +47,14 @@ html {
   }
 }
 
-/* Dark glowing surface shared by the hero header and the closing contact band */
+/* Glowing surface (dark, or light in light theme) shared by the hero header and the closing contact band */
 .glow-surface {
   position: relative;
   overflow: hidden;
   background:
     radial-gradient(560px circle at 8% 0%, color-mix(in srgb, var(--hero-glow-1) 32%, transparent), transparent 60%),
     radial-gradient(520px circle at 96% 100%, color-mix(in srgb, var(--hero-glow-2) 26%, transparent), transparent 60%),
-    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 26px 26px,
+    radial-gradient(var(--hero-dot) 1px, transparent 1px) 0 0 / 26px 26px,
     var(--hero-bg);
 }
 
@@ -66,33 +66,53 @@ html {
 }
 
 header.glow-surface::after {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--hero-line);
 }
 
 footer.glow-surface::after {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--hero-line);
 }
 
 header {
   padding: 6rem calc((100% / 3) / 2) 4rem;
 }
 
-header #title {
+.hero-layout {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.hero-media {
+  flex: 0 0 260px;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--hero-line);
+  box-shadow: var(--card-shadow);
+  animation: fadeIn 0.8s ease 0.15s forwards;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+header #title {
   animation: fadeInDown 0.7s ease forwards;
   margin: 0;
 }
 
-header #subtitle {
-  position: relative;
-  max-width: 46rem;
-  color: var(--hero-text-secondary);
-  animation: fadeInDown 0.7s ease 0.1s forwards;
-  animation-fill-mode: both;
-}
-
 .hero-cta {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
@@ -110,12 +130,12 @@ header #subtitle {
   gap: 0.5rem 1.5rem;
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--hero-line);
 }
 
 .hero-nav a {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 16px;
   font-weight: 600;
   color: var(--hero-text-secondary);
   border-bottom: 1px solid transparent;
@@ -156,6 +176,17 @@ h3 {
 
 main {
   counter-reset: section;
+}
+
+/* Backdrop between header and footer: the header's dot grid, fixed so it
+   stays put while the content scrolls over it. */
+main::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(var(--page-dot) 1px, transparent 1px) 0 0 / 26px 26px;
 }
 
 .main-sections {
@@ -293,7 +324,8 @@ p {
   color: var(--hero-glow-1);
 }
 
-.about-panel-code .tok-str {
+.about-panel-code .tok-str,
+.about-panel-code .tok-num {
   color: var(--hero-glow-2);
 }
 
@@ -436,7 +468,7 @@ body[data-theme='dark'] .skill-ring-tile {
   font-size: 0.85rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.2s ease, background-image 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
 
@@ -450,16 +482,21 @@ body[data-theme='dark'] .skill-ring-tile {
   transform: scale(0.96);
 }
 
-.button-ghost {
+/* Both hero buttons share one identical look: a muted tinted pill at rest
+   that turns into the same brand gradient as the primary CTA on hover. */
+.hero-cta .button {
   background-image: none;
-  background-color: transparent;
+  background-color: color-mix(in srgb, var(--hero-bg) 80%, color-mix(in srgb, var(--hero-glow-1) 50%, var(--hero-glow-2) 50%) 20%);
   color: var(--hero-text);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid color-mix(in srgb, var(--hero-glow-1) 45%, var(--hero-glow-2) 45%);
 }
 
-.button-ghost:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: none;
+.hero-cta .button:hover {
+  background-image: var(--bar-fill);
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--button-text);
+  box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--hero-glow-1) 55%, transparent);
 }
 
 .button:focus-visible,
@@ -486,6 +523,21 @@ footer h2 {
   color: var(--hero-text);
 }
 
+.footer-legal {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.footer-legal a {
+  color: var(--hero-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-legal a:hover {
+  color: var(--hero-text);
+}
+
 #contact-intro {
   position: relative;
   max-width: 40rem;
@@ -501,6 +553,24 @@ footer h2 {
 
   .about-panel {
     max-width: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .hero-content {
+    flex: 1 1 auto;
+  }
+
+  .hero-media {
+    flex: 0 0 auto;
+    width: min(280px, 60%);
+    margin: 0 auto;
   }
 }
 

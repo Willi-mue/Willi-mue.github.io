@@ -13,4 +13,7 @@ scrollBtn.addEventListener('click', () => {
     top: 0,
     behavior: 'smooth'
   });
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
 });

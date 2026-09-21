@@ -11,27 +11,59 @@
     />
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../styling/fonts.css" />
     <link rel="stylesheet" href="../styling/theme.css" />
     <link rel="stylesheet" href="../styling/main_page.css" />
     <link rel="stylesheet" href="../styling/components/top-controls.css" />
     <link rel="stylesheet" href="../styling/components/article.css" />
     <link rel="stylesheet" href="../styling/components/badge.css" />
+    <link rel="stylesheet" href="../styling/components/contact.css" />
+    <link rel="stylesheet" href="../styling/components/terminal.css" />
+    <link rel="stylesheet" href="../styling/components/lightbox.css" />
+    <link rel="stylesheet" href="../styling/animations.css" />
   </head>
 
   <body data-theme="light" lang="de" data-i18n-file="blog-minecraft-server">
-    <header class="glow-surface">
-      <h1 data-i18n="blog-minecraft-server-heading" data-i18n-html>
-        Privater Minecraft-Server: VPN, Backup & Performance-Optimierung
-      </h1>
+    <header class="glow-surface post-hero">
+      <div class="post-hero-layout">
+        <div class="post-hero-content">
+          <p class="post-path" aria-hidden="true"><span>~/projects/</span>minecraft-server</p>
+          <h1 data-i18n="blog-minecraft-server-heading" data-i18n-html>
+            Self-hosted Minecraft-Server: Docker, VPN & Backups
+          </h1>
+          <p class="post-lead" data-i18n="main-page.blog-post-1-desc" data-i18n-html>Privater Minecraft-Server auf eigener Hardware, wahlweise Paper-optimiert oder als eigenes Modpack. Läuft in Docker, mit abgesichertem Zugang sowie RAID-1 und Cron-Backups.</p>
+          <div class="badge-wrapper post-badges">
+            <span class="badge">Java</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Linux</span>
+            <span class="badge">OpenVPN</span>
+            <span class="badge">RAID</span>
+            <span class="badge">Bash</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <span class="post-hero-icon"><span class="icon" data-icon="hard-drives"></span></span>
+        </div>
+      </div>
     </header>
 
     <div id="top-controls">
+      <a
+        class="top-back"
+        href="../index.html#other-projects"
+        aria-label="Zurück zur Hauptseite"
+        title="Zurück zur Hauptseite"
+        >←</a
+      >
+      <button
+        type="button"
+        data-terminal-open
+        title="Terminal (/)"
+        aria-label="Terminal"
+      >
+        <span class="icon" data-icon="terminal-window"></span>
+      </button>
       <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
       <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>
         EN
@@ -39,116 +71,177 @@
     </div>
 
     <main>
-      <article>
-        <div class="showcase-badges">
-          <span class="badge">Java</span>
-          <span class="badge">Docker</span>
-          <span class="badge">Linux</span>
-          <span class="badge">OpenVPN</span>
-          <span class="badge">RAID</span>
-          <span class="badge">Bash</span>
-          <span class="badge">Performance</span>
-        </div>
+      <ul class="post-facts">
+        <li class="post-fact">
+          <span class="icon" data-icon="stack"></span>
+          <span class="post-fact-label" data-i18n="blog-minecraft-server-fact-type-label">Typ</span>
+          <span class="post-fact-value" data-i18n="blog-minecraft-server-fact-type">Self-hosted Gameserver</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="wrench"></span>
+          <span class="post-fact-label" data-i18n="blog-minecraft-server-fact-role-label">Meine Rolle</span>
+          <span class="post-fact-value" data-i18n="blog-minecraft-server-fact-role">Setup & Betrieb</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="cube"></span>
+          <span class="post-fact-label" data-i18n="blog-minecraft-server-fact-stack-label">Stack</span>
+          <span class="post-fact-value" data-i18n="blog-minecraft-server-fact-stack">Docker · Linux · VPN</span>
+        </li>
+        <li class="post-fact">
+          <span class="icon" data-icon="shield-check"></span>
+          <span class="post-fact-label" data-i18n="blog-minecraft-server-fact-status-label">Status</span>
+          <span class="post-fact-value" data-i18n="blog-minecraft-server-fact-status">In Betrieb</span>
+        </li>
+      </ul>
 
-        <section>
-          <h2 data-i18n="blog-minecraft-server-section-1-title" data-i18n-html>
-            Warum ein eigener Minecraft-Server?
-          </h2>
-          <p data-i18n="blog-minecraft-server-section-1-text" data-i18n-html>
-            Ich betreibe einen eigenen Minecraft-Server, um die volle Kontrolle
-            über Spielumgebung, Sicherheit und Performance zu haben. Durch die
-            Self-Hosting-Lösung kann ich eigene Zertifikate für VPN-Verbindungen
-            erstellen und den Server effizient optimieren.
-          </p>
-        </section>
+      <div class="post-layout">
+        <nav class="post-toc" aria-label="Inhalt">
+          <p class="post-toc-title" data-i18n="post.toc">Inhalt</p>
+          <ol></ol>
+        </nav>
 
-        <section>
-          <h2 data-i18n="blog-minecraft-server-section-2-title" data-i18n-html>
-            Systemarchitektur & Backups
-          </h2>
-          <p data-i18n="blog-minecraft-server-section-2-text" data-i18n-html>
-            Der Server läuft auf Linux, abgesichert durch RAID-1 und regelmäßige
-            Backups. Dadurch sind Daten und Welten stets geschützt. Die
-            Architektur ist darauf ausgelegt, Ressourcen zu sparen und die
-            Server.jar effizient auszuführen.
-          </p>
-        </section>
+        <article class="post-article">
+          <section>
+            <h2 data-i18n="blog-minecraft-server-section-1-title" data-i18n-html>Warum ein eigener Minecraft-Server?</h2>
+            <p data-i18n="blog-minecraft-server-section-1-text" data-i18n-html>Ich betreibe meinen Minecraft-Server selbst, um volle Kontrolle über Spielumgebung, Sicherheit und Performance zu haben. Er läuft auf eigener Hardware. Durch das Self-Hosting entscheide ich selbst, wer Zugang bekommt, und kann die Konfiguration genau auf die jeweilige Spielrunde abstimmen.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="blog-minecraft-server-section-3-title" data-i18n-html>
-            Setup mit Docker
-          </h2>
-          <p data-i18n="blog-minecraft-server-section-3-text" data-i18n-html>
-            Der Server läuft in einem Docker-Container, was die Wartung
-            vereinfacht und die Umgebung isoliert. Updates und Konfigurationen
-            lassen sich dadurch effizient handhaben.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="blog-minecraft-server-section-2-title" data-i18n-html>Paper-optimiert oder eigenes Modpack</h2>
+            <p data-i18n="blog-minecraft-server-section-2-text" data-i18n-html>Je nach Anlass läuft der Server in einer von zwei Varianten: als Paper-Server mit optimierter Konfiguration für ein flüssiges und ressourcenschonendes Spielerlebnis oder als komplett eigenes Modpack, dessen Mods und Konfiguration ich selbst zusammenstelle und aufeinander abstimme.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="blog-minecraft-server-section-4-title" data-i18n-html>
-            Zugriff über VPN
-          </h2>
-          <p data-i18n="blog-minecraft-server-section-4-text" data-i18n-html>
-            Spieler verbinden sich über ein OpenVPN-Netzwerk, sodass keine
-            direkten Portfreigaben ins Internet nötig sind. Alle Verbindungen
-            sind verschlüsselt und mit eigenen Zertifikaten abgesichert.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="blog-minecraft-server-section-3-title" data-i18n-html>Setup mit Docker</h2>
+            <p data-i18n="blog-minecraft-server-section-3-text" data-i18n-html>Der Server läuft in einem Docker-Container. Das isoliert die Umgebung vom restlichen System und vereinfacht Wartung, Updates und den Wechsel zwischen verschiedenen Setups.</p>
+            <div class="about-panel">
+              <div class="about-panel-tab">
+                <span class="about-panel-dot"></span>
+                <span>setup.yml</span>
+              </div>
+              <pre class="about-panel-code"><code><span class="tok-key">server</span>:  <span class="tok-str">[paper, custom-modpack]</span>
+<span class="tok-key">runtime</span>: <span class="tok-str">docker</span>
+<span class="tok-key">host</span>:    <span class="tok-str">linux</span>
+<span class="tok-key">access</span>:  <span class="tok-str">vpn</span>
+<span class="tok-key">storage</span>: <span class="tok-str">raid-1</span>
+<span class="tok-key">backups</span>: <span class="tok-str">cron</span></code></pre>
+            </div>
+          </section>
 
-        <section>
-          <h2 data-i18n="blog-minecraft-server-section-5-title" data-i18n-html>
-            Was ich dabei gelernt habe
-          </h2>
-          <ul>
-            <li
-              data-i18n="blog-minecraft-server-section-5-list-1"
-              data-i18n-html
-            >
-              Aufbau und Absicherung eines privaten Servers inkl.
-              VPN-Authentifizierung
-            </li>
-            <li
-              data-i18n="blog-minecraft-server-section-5-list-2"
-              data-i18n-html
-            >
-              Effiziente Serverkonfiguration und Ressourcenoptimierung
-            </li>
-            <li
-              data-i18n="blog-minecraft-server-section-5-list-3"
-              data-i18n-html
-            >
-              Backup-Strategien mit RAID und Automatisierungsskripten
-            </li>
-          </ul>
-        </section>
+          <section>
+            <h2 data-i18n="blog-minecraft-server-section-4-title" data-i18n-html>Zugang nur per VPN</h2>
+            <p data-i18n="blog-minecraft-server-section-4-text" data-i18n-html>Spieler verbinden sich über ein OpenVPN-Netzwerk, daher braucht der Server keine direkte Portfreigabe ins Internet. Alle Verbindungen sind verschlüsselt und mit eigenen Zertifikaten abgesichert, sodass nur Spieler mit gültigem Zertifikat den Server überhaupt erreichen.</p>
+          </section>
 
-        <section>
-          <h2 data-i18n="blog-minecraft-server-section-6-title" data-i18n-html>
-            Fazit
-          </h2>
-          <p data-i18n="blog-minecraft-server-section-6-text" data-i18n-html>
-            Der eigene Minecraft-Server ist ein praxisnahes Projekt, das sowohl
-            meine Fähigkeiten in Server-Management, Sicherheit und
-            Automatisierung als auch in Optimierung und Containerisierung
-            demonstriert.
-          </p>
-        </section>
+          <section>
+            <h2 data-i18n="blog-minecraft-server-section-5-title" data-i18n-html>Backups & Datensicherheit</h2>
+            <p data-i18n="blog-minecraft-server-section-5-text" data-i18n-html>Der Server läuft auf Linux, die Daten liegen auf einem RAID-1, das vor dem Ausfall einer Festplatte schützt. Zusätzlich sichern Cron-Jobs die Welten automatisch, sodass Spielstände auch bei Fehlern oder fehlgeschlagenen Updates wiederherstellbar bleiben.</p>
+          </section>
 
-        <button
-          class="button"
-          onclick="location.href='../index.html#other-projects'"
-          data-i18n="back-button"
-        >
-          Zurück zur Hauptseite
-        </button>
-      </article>
+          <section>
+            <h2 data-i18n="blog-minecraft-server-section-6-title" data-i18n-html>Was ich dabei gelernt habe</h2>
+            <ul class="checklist">
+              <li
+                data-i18n="blog-minecraft-server-section-6-list-1"
+                data-i18n-html
+              >Aufbau und Absicherung eines privaten Servers inklusive VPN mit eigenen Zertifikaten</li>
+              <li
+                data-i18n="blog-minecraft-server-section-6-list-2"
+                data-i18n-html
+              >Containerisierung mit Docker und Optimierung der Serverkonfiguration mit Paper</li>
+              <li
+                data-i18n="blog-minecraft-server-section-6-list-3"
+                data-i18n-html
+              >Backup-Strategien mit RAID-1 und automatisierten Cron-Jobs</li>
+              <li
+                data-i18n="blog-minecraft-server-section-6-list-4"
+                data-i18n-html
+              >Zusammenstellen und Abstimmen eigener Modpacks</li>
+            </ul>
+          </section>
+
+          <section class="post-conclusion">
+            <h2 data-i18n="blog-minecraft-server-section-7-title" data-i18n-html>Fazit</h2>
+            <p data-i18n="blog-minecraft-server-section-7-text" data-i18n-html>Der Minecraft-Server ist ein praxisnahes Projekt, in dem ich Server-Management, Netzwerksicherheit, Automatisierung und Containerisierung im Alltag anwende.</p>
+          </section>
+        </article>
+      </div>
+
+      <nav class="post-nav">
+        <a class="post-back" href="../index.html#other-projects">
+          <span class="icon" data-icon="arrow-left"></span>
+          <span data-i18n="post.all-projects">Alle Projekte</span>
+        </a>
+        <a class="post-next" href="discord-management-bot.html">
+          <span class="post-next-icon"><span class="icon" data-icon="robot"></span></span>
+          <span class="post-next-body">
+            <span class="post-next-label" data-i18n="post.next">Nächstes Projekt</span>
+            <span class="post-next-title" data-i18n="main-page.blog-post-2-title" data-i18n-html>Discord-Bot für Events & Community-Management</span>
+          </span>
+          <span class="post-next-arrow"><span class="icon" data-icon="arrow-right"></span></span>
+        </a>
+      </nav>
     </main>
+
+    <footer id="contact" class="glow-surface">
+      <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
+      <p id="contact-intro" data-i18n="main-page.contact-intro" data-i18n-html>
+        Interesse an einer Zusammenarbeit?<br />
+        Über eine Nachricht freue ich mich:
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <a id="contact-email" href="mailto:willimuellerbremberg@gmail.com">
+            <span class="icon" data-icon="envelope-simple-fill"></span>
+            <span data-i18n="main-page.contact-email" data-i18n-html
+              >E-Mail</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            id="contact-github"
+            href="https://github.com/Willi-mue"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="icon" data-icon="github-logo-fill"></span>
+            <span data-i18n="main-page.contact-github" data-i18n-html
+              >GitHub</span
+            >
+          </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            id="contact-discord"
+            class="contact-copy"
+            data-copy="todes_ritter"
+          >
+            <span class="icon" data-icon="discord-logo"></span>
+            <span data-i18n="main-page.contact-discord" data-i18n-html
+              >Discord</span
+            >
+          </button>
+        </li>
+      </ul>
+
+      <p class="footer-legal">
+        <a href="../datenschutz.html" data-i18n="main-page.footer-privacy">Datenschutz</a>
+      </p>
+    </footer>
 
     <script src="../js/setup.js"></script>
     <script src="../js/icons.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/badgeColors.js"></script>
     <script src="../js/translation.js"></script>
+    <script src="../js/post.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/lightbox.js"></script>
+    <script src="../js/easter-eggs.js"></script>
+    <script src="../js/terminal.js"></script>
   </body>
 </html>
