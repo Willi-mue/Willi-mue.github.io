@@ -88,6 +88,7 @@
   "main-page.term-welcome-2": "für alle Befehle.",
   "main-page.term-help-intro": "Verfügbare Befehle:",
   "main-page.term-help-hint": "Tab = Autovervollständigung · ↑/↓ = Verlauf · Esc = schließen",
+  "main-page.term-help-hint-touch": "Tippe auf einen Befehl oder schreib ihn selbst.",
   "main-page.term-help-help": "diese Hilfe",
   "main-page.term-help-whoami": "wer bin ich?",
   "main-page.term-help-neofetch": "Systeminfo mit Stil",

@@ -88,6 +88,7 @@
   "main-page.term-welcome-2": "to see all commands.",
   "main-page.term-help-intro": "Available commands:",
   "main-page.term-help-hint": "Tab = autocomplete · ↑/↓ = history · Esc = close",
+  "main-page.term-help-hint-touch": "Tap a command or type it yourself.",
   "main-page.term-help-help": "this help",
   "main-page.term-help-whoami": "who am I?",
   "main-page.term-help-neofetch": "system info, with style",

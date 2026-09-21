@@ -17,6 +17,10 @@
   const t = (key, fallback = '') =>
     (typeof translations !== 'undefined' && translations[`main-page.term-${key}`]) || fallback;
   const lang = () => (typeof currentLang !== 'undefined' ? currentLang : 'de');
+  // Phones/tablets: no Tab or arrow keys, and the on-screen keyboard eats half the screen.
+  const TOUCH = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  // Commands offered as tap targets (quick bar + help list); the others need arguments.
+  const QUICK = ['help', 'whoami', 'skills', 'projects', 'blog', 'contact', 'neofetch', 'theme', 'lang', 'clear', 'exit'];
 
   /* ---------- DOM ---------- */
   const overlay = document.createElement('div');
@@ -39,12 +43,14 @@
           <input class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Command" />
         </label>
       </div>
+      <div class="term-quick"></div>
     </div>`;
   document.body.appendChild(overlay);
 
   const output = overlay.querySelector('.term-output');
   const input = overlay.querySelector('.term-input');
   const bodyEl = overlay.querySelector('.term-body');
+  const quick = overlay.querySelector('.term-quick');
 
   /* ---------- Printing ---------- */
   // A line is a string or an array of parts: string | { text, cls, href, action }.
@@ -142,10 +148,18 @@
           t('help-intro', 'Verfügbare Befehle:'),
           ...Object.entries(COMMANDS)
             .filter(([, cmd]) => !cmd.hidden)
-            .map(([name, cmd]) => [{ text: pad(name, 12), cls: 'term-accent' }, t(`help-${name}`, cmd.usage || '')]),
+            .map(([name, cmd]) => [
+              QUICK.includes(name)
+                ? { text: name, cls: 'term-accent', action: () => run(name) }
+                : { text: name, cls: 'term-accent' },
+              ' '.repeat(Math.max(1, 12 - name.length)),
+              t(`help-${name}`, cmd.usage || ''),
+            ]),
           '',
-          t('help-hint', 'Tab = Autovervollständigung, ↑/↓ = Verlauf'),
-        ]),
+          TOUCH
+            ? t('help-hint-touch', 'Tippe auf einen Befehl oder schreib ihn selbst.')
+            : t('help-hint', 'Tab = Autovervollständigung, ↑/↓ = Verlauf'),
+        ], 'term-hang'),
     },
 
     whoami: {
@@ -441,6 +455,28 @@
     e.stopPropagation();
   });
 
+  QUICK.forEach((name) => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.textContent = name;
+    chip.addEventListener('click', () => run(name));
+    quick.append(chip);
+  });
+
+  // Keep the window inside the visible area when the on-screen keyboard opens
+  // (the fixed overlay would otherwise stay full height behind the keyboard).
+  const vv = window.visualViewport;
+  function fitViewport() {
+    if (!vv || overlay.hidden) return;
+    overlay.style.top = `${vv.offsetTop}px`;
+    overlay.style.height = `${vv.height}px`;
+    bodyEl.scrollTop = bodyEl.scrollHeight;
+  }
+  if (vv) {
+    vv.addEventListener('resize', fitViewport);
+    vv.addEventListener('scroll', fitViewport);
+  }
+
   /* ---------- Open / close ---------- */
   let greeted = false;
 
@@ -450,7 +486,9 @@
     overlay.hidden = false;
     document.documentElement.classList.add('term-open');
     requestAnimationFrame(() => overlay.classList.add('show'));
-    input.focus();
+    fitViewport();
+    // On touch devices the keyboard only comes up when the input is tapped.
+    if (!TOUCH) input.focus();
     if (!greeted) {
       greeted = true;
       print([
@@ -476,7 +514,8 @@
   });
   overlay.querySelector('.term-btn-close').addEventListener('click', close);
   overlay.querySelector('.term-window').addEventListener('click', (e) => {
-    if (!e.target.closest('a, button') && !window.getSelection().toString()) input.focus();
+    if (TOUCH || e.target.closest('a, button') || window.getSelection().toString()) return;
+    input.focus();
   });
 
   window.addEventListener('keydown', (e) => {

@@ -196,11 +196,64 @@ html.term-open {
   caret-color: var(--hero-glow-1);
 }
 
+/* help list: wrapped descriptions stay in their column instead of sliding under the name */
+.term-line.term-hang {
+  padding-left: 12ch;
+  text-indent: -12ch;
+}
+
+/* Tap-to-run command bar, only on touch devices (see QUICK in js/terminal.js) */
+.term-quick {
+  display: none;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  overflow-x: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  scrollbar-width: none;
+}
+
+.term-quick::-webkit-scrollbar {
+  display: none;
+}
+
+.term-quick button {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--hero-glow-1) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--hero-glow-1) 10%, transparent);
+  color: var(--hero-glow-1);
+  font: 600 0.8rem/1 var(--font-mono);
+  cursor: pointer;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .term-quick {
+    display: flex;
+  }
+  /* Below 16px, iOS zooms the whole page when the input gets focus */
+  .term-input {
+    font-size: 16px;
+  }
+  .term-btn-close {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 600px) {
-  .term-body {
-    font-size: 0.75rem;
+  /* Nearly full screen; js/terminal.js shrinks the overlay to the visible area when the keyboard opens */
+  #terminal {
+    align-items: stretch;
+    padding: 0.5rem;
   }
   .term-window {
-    height: 85vh;
+    height: auto;
+  }
+  .term-body {
+    padding: 0.8rem 0.9rem 1rem;
+    font-size: 0.75rem;
   }
 }
