@@ -29,13 +29,20 @@
     <link rel="stylesheet" href="styling/main_page.css" />
     <link rel="stylesheet" href="styling/components/top-controls.css" />
     <link rel="stylesheet" href="styling/components/scroll-to-top.css" />
-    <link rel="stylesheet" href="styling/components/card.css" />
-    <link rel="stylesheet" href="styling/components/blog-card.css" />
-    <link rel="stylesheet" href="styling/components/contact.css" />
     <link rel="stylesheet" href="styling/components/badge.css" />
-    <link rel="stylesheet" href="styling/components/terminal.css" />
     <link rel="stylesheet" href="styling/components/boot.css" />
     <link rel="stylesheet" href="styling/animations.css" />
+    <!-- Below-the-fold / on-demand styles: loaded without blocking the first render -->
+    <link rel="stylesheet" href="styling/components/card.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="styling/components/blog-card.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="styling/components/contact.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="styling/components/terminal.css" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="styling/components/card.css" />
+      <link rel="stylesheet" href="styling/components/blog-card.css" />
+      <link rel="stylesheet" href="styling/components/contact.css" />
+      <link rel="stylesheet" href="styling/components/terminal.css" />
+    </noscript>
   </head>
 
   <body data-theme="light" lang="de">
@@ -77,7 +84,12 @@
         <div class="hero-media">
           <img
             class="hero-photo"
-            src="images/profile.jpg"
+            src="images/profile-560.webp"
+            srcset="images/profile-560.webp 560w, images/profile-840.webp 840w"
+            sizes="280px"
+            width="560"
+            height="700"
+            fetchpriority="high"
             alt="Willi Müller beim Fotografieren in den Bergen"
           />
         </div>
@@ -380,7 +392,7 @@
               data-i18n="main-page.blog-post-1-link"
               data-i18n-html
             >
-              Weiterlesen
+              Weiterlesen<span class="visually-hidden">: Minecraft-Server</span>
             </a>
           </article>
 
@@ -409,7 +421,7 @@
               href="posts/discord-management-bot.html"
               data-i18n="main-page.blog-post-2-link"
               data-i18n-html
-              >Weiterlesen</a
+              >Weiterlesen<span class="visually-hidden">: Discord-Bot</span></a
             >
           </article>
 
@@ -438,7 +450,7 @@
               href="posts/oxidpanel.html"
               data-i18n="main-page.blog-post-3-link"
               data-i18n-html
-              >Weiterlesen</a
+              >Weiterlesen<span class="visually-hidden">: OxidPanel</span></a
             >
           </article>
 
@@ -464,7 +476,7 @@
               href="posts/game-jam.html"
               data-i18n="main-page.blog-post-4-link"
               data-i18n-html
-              >Weiterlesen</a
+              >Weiterlesen<span class="visually-hidden">: Game Jam</span></a
             >
           </article>
         </div>

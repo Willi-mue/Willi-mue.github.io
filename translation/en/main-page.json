@@ -42,19 +42,19 @@
 
   "main-page.blog-post-1-title": "Self-Hosted Minecraft Server: Docker, VPN & Backups",
   "main-page.blog-post-1-desc": "A private Minecraft server on my own hardware, either Paper-optimized or as a custom modpack. Runs in Docker, with secured access plus RAID-1 and cron backups.",
-  "main-page.blog-post-1-link": "Read More",
+  "main-page.blog-post-1-link": "Read More<span class=\"visually-hidden\"> about the Minecraft server</span>",
 
   "main-page.blog-post-2-title": "Discord Bot for Events & Community Management",
   "main-page.blog-post-2-desc": "A custom-built Discord bot in Python that combines four bots in one: event management for MMOs, translation, admin tools, and a news bot. Runs in Docker.",
-  "main-page.blog-post-2-link": "Read More",
+  "main-page.blog-post-2-link": "Read More<span class=\"visually-hidden\"> about the Discord bot</span>",
 
   "main-page.blog-post-3-title": "OxidPanel: Dashboard for My Home Server",
   "main-page.blog-post-3-desc": "A custom dashboard with live system stats, a news aggregator for IT security and a media library with adaptive HLS streaming. FastAPI backend, Vue 3 frontend, all in one Docker container.",
-  "main-page.blog-post-3-link": "Read More",
+  "main-page.blog-post-3-link": "Read More<span class=\"visually-hidden\"> about OxidPanel</span>",
 
   "main-page.blog-post-4-title": "Game Jam: AI Companion in 72 Hours",
   "main-page.blog-post-4-desc": "At Wowie Jam 4.0 I built a game with Godot in a team of four. As one of two programmers I developed the AI companion, a forest creature that evolves into a melee or ranged fighter depending on the player's choices.",
-  "main-page.blog-post-4-link": "Read More",
+  "main-page.blog-post-4-link": "Read More<span class=\"visually-hidden\"> about the game jam</span>",
 
   "main-page.contact-title": "Contact",
   "main-page.contact-intro": "Interested in working together?<br>I'd love to hear from you:",

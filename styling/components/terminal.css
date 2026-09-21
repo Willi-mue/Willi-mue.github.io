@@ -196,55 +196,11 @@ html.term-open {
   caret-color: var(--hero-glow-1);
 }
 
-/* Entry points on the page */
-.hero-terminal {
-  cursor: pointer;
-}
-
-.terminal-hint {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.6rem;
-  padding: 0;
-  border: none;
-  background: none;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--hero-text-secondary);
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.terminal-hint:hover {
-  color: var(--hero-text);
-}
-
-.terminal-hint kbd {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  padding: 0 0.35rem;
-  border-radius: 5px;
-  border: 1px solid var(--hero-line-strong);
-  border-bottom-width: 2px;
-  font: inherit;
-  color: var(--hero-glow-1);
-}
-
 @media (max-width: 600px) {
   .term-body {
     font-size: 0.75rem;
   }
   .term-window {
     height: 85vh;
-  }
-}
-
-@media (hover: none) {
-  .terminal-hint kbd {
-    display: none;
   }
 }

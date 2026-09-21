@@ -42,19 +42,19 @@
 
   "main-page.blog-post-1-title": "Self-hosted Minecraft-Server: Docker, VPN & Backups",
   "main-page.blog-post-1-desc": "Privater Minecraft-Server auf eigener Hardware, wahlweise Paper-optimiert oder als eigenes Modpack. Läuft in Docker, mit abgesichertem Zugang sowie RAID-1 und Cron-Backups.",
-  "main-page.blog-post-1-link": "Weiterlesen",
+  "main-page.blog-post-1-link": "Weiterlesen<span class=\"visually-hidden\">: Minecraft-Server</span>",
 
   "main-page.blog-post-2-title": "Discord-Bot für Events & Community-Management",
   "main-page.blog-post-2-desc": "Selbst entwickelter Discord-Bot in Python, der vier Bots in einem vereint: Event-Management für MMOs, Übersetzung, Admin-Tools und ein News-Bot. Der Betrieb läuft in Docker.",
-  "main-page.blog-post-2-link": "Weiterlesen",
+  "main-page.blog-post-2-link": "Weiterlesen<span class=\"visually-hidden\">: Discord-Bot</span>",
 
   "main-page.blog-post-3-title": "OxidPanel: Dashboard für meinen Home-Server",
   "main-page.blog-post-3-desc": "Eigenes Dashboard mit Live-Systemstatistiken, News-Aggregator für IT-Security und einer Medienbibliothek mit adaptivem HLS-Streaming. FastAPI im Backend, Vue 3 im Frontend, alles in einem Docker-Container.",
-  "main-page.blog-post-3-link": "Weiterlesen",
+  "main-page.blog-post-3-link": "Weiterlesen<span class=\"visually-hidden\">: OxidPanel</span>",
 
   "main-page.blog-post-4-title": "Game Jam: KI-Begleiter in 72 Stunden",
   "main-page.blog-post-4-desc": "Bei der Wowie Jam 4.0 habe ich in einem Vierer-Team ein Spiel mit Godot gebaut. Als einer von zwei Programmierern habe ich den KI-Begleiter entwickelt, ein Waldwesen, das sich je nach Spielerentscheidungen zum Nah- oder Fernkämpfer entwickelt.",
-  "main-page.blog-post-4-link": "Weiterlesen",
+  "main-page.blog-post-4-link": "Weiterlesen<span class=\"visually-hidden\">: Game Jam</span>",
 
   "main-page.contact-title": "Kontakt",
   "main-page.contact-intro": "Interesse an einer Zusammenarbeit?<br>Über eine Nachricht freue ich mich:",

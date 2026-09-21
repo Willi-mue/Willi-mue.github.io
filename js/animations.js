@@ -49,10 +49,21 @@
   /* ---------- Text scramble ("decrypt") ---------- */
   const GLYPHS = '!<>-_\\/[]{}=+*^?#$01';
 
-  function scramble(el, duration = 900) {
+  function scramble(el, duration = 900, fontWaited = false) {
     if (reduceMotion || el.children.length || el.dataset.scrambling) return;
     const target = el.textContent.trim().replace(/\s+/g, ' ');
     if (!target) return;
+
+    // The cell widths below are measured once. Measured in the fallback font, they
+    // would re-wrap the heading as soon as the web font arrives (a big layout shift),
+    // so wait for the heading's own font first.
+    const cs = getComputedStyle(el);
+    const font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    if (!fontWaited && !document.fonts.check(font, target)) {
+      const retry = () => scramble(el, duration, true);
+      document.fonts.load(font, target).then(retry, retry);
+      return;
+    }
 
     el.dataset.scrambling = '1';
 

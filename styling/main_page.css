@@ -33,6 +33,19 @@ a:not(.button):hover {
   border-bottom-color: currentColor;
 }
 
+/* Text only for screen readers and crawlers (e.g. link context for "Read More") */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -97,6 +110,7 @@ header {
 .hero-photo {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 16px;
@@ -604,5 +618,49 @@ footer h2 {
 @media (max-width: 600px) {
   .skills-panel {
     padding: 1.5rem;
+  }
+}
+
+/* Terminal entry points in the hero (kept here, not in the deferred terminal.css, so the hero doesn't shift) */
+.hero-terminal {
+  cursor: pointer;
+}
+
+.terminal-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--hero-text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.terminal-hint:hover {
+  color: var(--hero-text);
+}
+
+.terminal-hint kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.35rem;
+  border-radius: 5px;
+  border: 1px solid var(--hero-line-strong);
+  border-bottom-width: 2px;
+  font: inherit;
+  color: var(--hero-glow-1);
+}
+
+@media (hover: none) {
+  .terminal-hint kbd {
+    display: none;
   }
 }
