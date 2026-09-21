@@ -38,7 +38,7 @@ This is Willi Müller's personal portfolio site, hosted via GitHub Pages at `wil
 
 ## Adding a new blog post
 
-1. Create `posts/<slug>.html` copying the structure of an existing post (same `<head>` link set, `../` asset paths, `js/setup.js` → `icons.js` → `theme.js` → `badgeColors.js` → `translation.js` → `post.js` script order, `data-i18n-file="blog-<slug>"` on `<body>`).
+1. Create `posts/<slug>.html` copying the structure of an existing post (same `<head>` link set, `../` asset paths, `js/setup.js` → `icons.js` → `theme.js` → `badgeColors.js` → `translation.js` → `post.js` script order, `data-i18n-file="blog-<slug>"` on `<body>`). Fill the static `<meta name="description">` and the Open Graph block (`og:*`, `twitter:card`, `canonical`) with absolute `https://willi-mue.github.io/...` URLs (`name="description"` in German, `og:title`/`og:description` in English, taken from the `translation/en/` strings) — link previews (Discord etc.) don't run JS, so they only see these static values.
 2. Create `translation/de/blog-<slug>.json` and `translation/en/blog-<slug>.json` with matching keys prefixed `blog-<slug>-...`, including the four `...-fact-<key>-label` / `...-fact-<key>` pairs for the fact strip.
 3. Add a teaser `<article class="blog-post">` card to the `#blog` section in `index.html`, linking to `posts/<slug>.html`. The post header's lead (`main-page.blog-post-N-desc`) and the "next project" card (`main-page.blog-post-N-title`) reuse those teaser keys.
 4. Fix the "next project" chain: the new post's `.post-next` points to the following post, and the previous post's `.post-next` now points to the new one (order = teaser order on `index.html`, wrapping around).
