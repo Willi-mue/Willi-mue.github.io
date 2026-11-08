@@ -13,7 +13,7 @@ BLACKLIST = [
     f"{GITHUB_USER.lower()}.github.io"
 ]
 
-def get_readme_image(owner, repo):
+def get_readme_image(owner, repo, branch="main"):
     url = f"https://api.github.com/repos/{owner}/{repo}/readme"
     r = requests.get(url)
     if r.status_code != 200:
@@ -24,11 +24,13 @@ def get_readme_image(owner, repo):
     except Exception:
         return None
 
-    match = re.search(r'!\[.*?\]\((.*?)\)', content)
+    # Erstes Bild der README, egal ob Markdown ![..](..) oder HTML <img src="..">
+    match = re.search(r'!\[[^\]]*\]\(\s*<?([^)\s>]+)|<img[^>]*?\bsrc=["\']([^"\']+)["\']', content, re.IGNORECASE)
     if match:
-        img_url = match.group(1)
-        if img_url.startswith('./') or not img_url.startswith('http'):
-            img_url = f"https://raw.githubusercontent.com/{owner}/{repo}/master/{img_url.lstrip('./')}"
+        img_url = match.group(1) or match.group(2)
+        if not img_url.startswith('http'):
+            img_url = img_url.removeprefix('./').lstrip('/')
+            img_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{img_url}"
         return img_url
     return None
 
@@ -74,7 +76,7 @@ def fetch_projects(owner, existing_dict):
             continue
 
         print(f"Lade: {name}")
-        image = get_readme_image(owner, name)
+        image = get_readme_image(owner, name, repo.get("default_branch", "main"))
         languages = fetch_languages(owner, name)
         description = repo.get("description", "")
 

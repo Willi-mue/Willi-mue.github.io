@@ -21,15 +21,16 @@
   },
   {
     "name": "Cristal-Simulation",
-    "description": "This project simulates crystal growth based on the Diffusion-Limited Aggregation (DLA) model implemented in C++. The simulation generates crystal structures by modeling particle aggregation through random walks.  Visualization and video creation of the simulation results are handled via Python scripts, enabling easy generation of graphical outputs",
-    "translation": "Simulation des Kristallwachstums basierend auf dem Diffusions-begrenzten Aggregationsmodell (DLA) in C++. Visualisierung und Videoproduktion erfolgen über Python-Skripte.",
+    "description": "A fast C++20 simulation of crystal growth by diffusion-limited aggregation (DLA): particles wander randomly until they touch the crystal and freeze in place, growing branching, fractal structures. Radial and uniform modes with adjustable stick probability, a live view with raylib, and Python/ffmpeg scripts that render the growth as video.",
+    "translation": "Schnelle C++20-Simulation von Kristallwachstum durch diffusionsbegrenzte Aggregation (DLA): Teilchen wandern zufällig, bis sie den Kristall berühren und dort erstarren – so entstehen verästelte, fraktale Strukturen. Radialer und gleichmäßiger Modus mit einstellbarer Haftwahrscheinlichkeit, Live-Ansicht mit raylib und Python/ffmpeg-Skripte, die das Wachstum als Video rendern.",
     "url": "https://github.com/Willi-mue/Cristal-Simulation",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Cristal-Simulation/master/results/result_dla.png",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Cristal-Simulation/main/docs/media/dla_radial.gif",
     "languages": {
-      "C++": 5923,
-      "Python": 885,
-      "Makefile": 174,
-      "Batchfile": 63
+      "C++": 35750,
+      "CMake": 3060,
+      "Python": 3027,
+      "Batchfile": 634,
+      "Shell": 581
     }
   },
   {
@@ -65,22 +66,22 @@
   },
   {
     "name": "Solarsystem-Simulation",
-    "description": " A real-time solar system simulation using PyQt5. It visually represents planetary orbits, allows zooming in/out with the mouse wheel, and resets the view with the `R` key.",
-    "translation": "Eine Echtzeit-Simulation des Sonnensystems mit PyQt5. Sie stellt die Umlaufbahnen der Planeten visuell dar, ermöglicht das Zoomen mit dem Mausrad und setzt die Ansicht mit der R-Taste zurück.",
+    "description": "A real-time solar system simulation in Python with PyQt5 and numpy. It starts with the planets at their real positions for today's date and moves them with a 3D N-body Newtonian gravity simulation – including 7 major moons, Halley's Comet and an asteroid belt with Kirkwood gaps. Zoom, pan, follow any body, switch to true scale, German/English UI.",
+    "translation": "Echtzeit-Simulation des Sonnensystems in Python mit PyQt5 und numpy. Sie startet mit den echten Planetenpositionen des heutigen Datums und bewegt sie per 3D-N-Körper-Simulation mit Newtonscher Gravitation – inklusive 7 großer Monde, dem Halleyschen Kometen und einem Asteroidengürtel mit Kirkwoodlücken. Zoomen, verschieben, beliebigen Körpern folgen, maßstabsgetreue Ansicht, Oberfläche auf Deutsch/Englisch.",
     "url": "https://github.com/Willi-mue/Solarsystem-Simulation",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Solarsystem-Simulation/master/images/picture1.png",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Solarsystem-Simulation/main/docs/screenshot.png",
     "languages": {
-      "Python": 6425
+      "Python": 81229
     }
   },
   {
     "name": "Traffic-Simulation",
-    "description": "This is a traffic simulation written in Python that can run on any map, as long as the map is defined using the required parameters (e.g., roads, intersections, traffic rules). The simulation models vehicle movement and interactions.",
-    "translation": "Eine Verkehrssimulation in Python, die auf jeder Karte läuft, sofern die Karte mit den erforderlichen Parametern definiert ist (z. B. Straßen, Kreuzungen, Verkehrsregeln). Die Simulation modelliert Fahrzeugbewegungen und Interaktionen.",
+    "description": "A grid-based traffic simulation built with Python and PySide6 (Qt 6) that runs on any map drawn from simple characters (directions, intersections, traffic lights, lane markings). Cars choose their way at intersections, traffic lights run their own phases, and the map can be zoomed and panned. Runs on Windows and Linux, German/English UI.",
+    "translation": "Rasterbasierte Verkehrssimulation mit Python und PySide6 (Qt 6), die auf jeder Karte aus einfachen Zeichen läuft (Fahrtrichtungen, Kreuzungen, Ampeln, Fahrbahnmarkierungen). Autos wählen an Kreuzungen ihren Weg, jede Ampel hat ihre eigene Phase, die Karte lässt sich zoomen und verschieben. Läuft unter Windows und Linux, Oberfläche auf Deutsch/Englisch.",
     "url": "https://github.com/Willi-mue/Traffic-Simulation",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Traffic-Simulation/master/pics/verkehrs_sim.jpg",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Traffic-Simulation/main/docs/screenshot.png",
     "languages": {
-      "Python": 17217
+      "Python": 76842
     }
   }
 ]
