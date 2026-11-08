@@ -1,5 +1,5 @@
 {
-  "blog-oxidpanel-title": "Portfolio",
+  "blog-oxidpanel-title": "OxidPanel: Dashboard für meinen Home-Server | Willi Müller",
   "blog-oxidpanel-meta-description": "OxidPanel ist mein selbst entwickeltes Dashboard für den Home-Server: Systemstatistiken, News-Aggregator und Medienbibliothek mit HLS-Streaming, gebaut mit FastAPI und Vue 3.",
   "blog-oxidpanel-heading": "OxidPanel: Dashboard für meinen Home-Server",
   "blog-oxidpanel-intro": "OxidPanel ist mein selbst entwickeltes Dashboard für den Home-Server. Es bündelt Systemüberwachung, einen News-Aggregator und eine Medienbibliothek in einer Oberfläche.",

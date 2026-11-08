@@ -16,7 +16,7 @@
   justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--line);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
@@ -29,9 +29,20 @@
   transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-#top-controls button .icon {
+#top-controls button .icon,
+#top-controls .top-back .icon {
   width: 1.1rem;
   height: 1.1rem;
+  display: flex;
+}
+
+#top-controls .top-back .icon {
+  transition: transform 0.25s var(--ease-out, ease);
+}
+
+#top-controls .top-back:hover .icon,
+#top-controls .top-back:focus-visible .icon {
+  transform: translateX(-2px);
 }
 
 #top-controls button:hover,

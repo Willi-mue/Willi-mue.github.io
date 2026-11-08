@@ -51,7 +51,7 @@ body.lightbox-open {
 .lightbox-caption {
   margin: 0;
   color: #cfd6e4;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   text-align: center;
 }

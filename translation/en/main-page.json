@@ -1,6 +1,6 @@
 {
-  "main-page.title": "Portfolio",
-  "main-page.meta-description": "Portfolio of Willi Müller, software developer for modern, efficient, and sustainable software solutions.",
+  "main-page.title": "Willi Müller – Software Developer & IT Security | Portfolio",
+  "main-page.meta-description": "Portfolio of Willi Müller, software developer focused on IT security and home labs: projects in Python, C++ and Docker – from Discord bots to simulations.",
 
   "main-page.header-title": "Willi Müller",
 
@@ -17,6 +17,9 @@
 
   "main-page.projects-title": "My Public Projects",
   "main-page.projects-intro": "Synced automatically from GitHub – a selection of my own tools, simulations, and side experiments.",
+  "main-page.projects-loading": "Loading projects …",
+  "main-page.projects-error": "The projects could not be loaded. You can find all repositories directly on GitHub.",
+  "main-page.projects-retry": "Try again",
   "main-page.tech-title": "IT Skills",
   "main-page.skills-intro": "From the code down to the infrastructure underneath – the technologies I work with day to day.",
   "main-page.prog-title": "Programming Languages",
@@ -78,9 +81,6 @@
   "skill-category-devops": "DevOps & Infrastructure",
   "skill-category-versioning": "Tools & Workflow",
 
-  "skill-level-beginner": "beginner",
-  "skill-level-intermediate": "intermediate",
-  "skill-level-advanced": "advanced",
 
   "main-page.terminal-hint": "Open terminal",
   "main-page.filter-all": "All",

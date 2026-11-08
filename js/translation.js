@@ -1,9 +1,12 @@
 let translations = {};
 let currentLang = localStorage.getItem("lang") || "de";
 const btnLang = document.getElementById("toggle-lang");
+// Resolved from this script's own URL (js/translation.js -> translation/), so it works from
+// any page depth, including 404.html, which GitHub Pages serves under arbitrary paths.
+const TRANSLATION_BASE = new URL("../translation/", document.currentScript.src).href;
 
 async function fetchTranslations(lang) {
-  const basePath = `../translation/${lang}/`;
+  const basePath = `${TRANSLATION_BASE}${lang}/`;
   const files = ["main-page.json"];
   const extraFile = document.body.dataset.i18nFile;
   if (extraFile) files.push(`${extraFile}.json`);
@@ -41,7 +44,9 @@ async function updateTexts(lang) {
     if (translation !== undefined) {
       const tag = el.tagName.toLowerCase();
 
-      if (tag === "a" && el.hasAttribute("data-i18n-href")) {
+      if (tag === "meta") {
+        el.setAttribute("content", translation);
+      } else if (tag === "a" && el.hasAttribute("data-i18n-href")) {
         el.textContent = translation;
       } else if (tag === "input" || tag === "textarea" || tag === "select") {
         el.value = translation;

@@ -1,6 +1,6 @@
 {
-  "main-page.title": "Portfolio",
-  "main-page.meta-description": "Portfolio von Willi Müller, Softwareentwickler für moderne, effiziente und nachhaltige Softwarelösungen.",
+  "main-page.title": "Willi Müller – Softwareentwickler & IT-Security | Portfolio",
+  "main-page.meta-description": "Portfolio von Willi Müller, Softwareentwickler mit Fokus auf IT-Security und Home-Lab: Projekte mit Python, C++ und Docker – von Discord-Bots bis Simulationen.",
 
   "main-page.header-title": "Willi Müller",
 
@@ -17,6 +17,9 @@
 
   "main-page.projects-title": "Meine öffentlichen Projekte",
   "main-page.projects-intro": "Automatisch von GitHub synchronisiert – eine Auswahl eigener Tools, Simulationen und Spielereien.",
+  "main-page.projects-loading": "Projekte werden geladen …",
+  "main-page.projects-error": "Die Projekte konnten nicht geladen werden. Alle Repositories findest du direkt auf GitHub.",
+  "main-page.projects-retry": "Erneut versuchen",
   "main-page.tech-title": "IT-Kenntnisse",
   "main-page.skills-intro": "Vom Code bis zur Infrastruktur darunter – die Technologien, mit denen ich täglich arbeite.",
   "main-page.prog-title": "Programmiersprachen",
@@ -78,9 +81,6 @@
   "skill-category-devops": "DevOps & Infrastruktur",
   "skill-category-versioning": "Tools & Workflow",
 
-  "skill-level-beginner": "grundkenntnisse",
-  "skill-level-intermediate": "mittel",
-  "skill-level-advanced": "fortgeschritten",
 
   "main-page.terminal-hint": "Terminal öffnen",
   "main-page.filter-all": "Alle",

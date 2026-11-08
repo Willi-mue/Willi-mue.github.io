@@ -32,7 +32,7 @@ function createCard(project) {
     media.className = 'project-media';
     const img = document.createElement('img');
     img.src = project.image;
-    img.alt = `${project.name} Bild`;
+    img.alt = `Screenshot: ${project.name}`;
     img.loading = 'lazy';
     media.appendChild(img);
     card.appendChild(media);
@@ -211,6 +211,7 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
     if (!loadMore) {
       // Erster Aufruf (oder Sprachwechsel): Projekte laden und zurücksetzen
       const response = await fetch('data/projects_Willi-Mue.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       allProjects = await response.json();
 
       shuffleArray(allProjects); // Projekte mischen
@@ -218,6 +219,7 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
       loadedProjectsCount = 0;
       cardCache = new Map();
       container.innerHTML = '';
+      container.removeAttribute('aria-busy');
       renderFilters();
     }
 
@@ -232,5 +234,45 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
 
   } catch (err) {
     console.error('Fehler beim Laden der Projekte:', err);
+    if (!loadMore) showProjectsError(currentLang, translations);
   }
+}
+
+// Replaces the skeleton with a message, a GitHub link and a retry button.
+function showProjectsError(currentLang, translations) {
+  const container = document.getElementById('projects-grid');
+  if (!container) return;
+  const t = (key, fallback) => translations[key] || fallback;
+  const de = currentLang === 'de';
+
+  container.removeAttribute('aria-busy');
+  container.innerHTML = '';
+
+  const box = document.createElement('div');
+  box.className = 'projects-status';
+  box.setAttribute('role', 'alert');
+
+  const msg = document.createElement('p');
+  msg.textContent = t('main-page.projects-error', de
+    ? 'Die Projekte konnten nicht geladen werden. Alle Repositories findest du direkt auf GitHub.'
+    : 'The projects could not be loaded. You can find all repositories directly on GitHub.');
+
+  const actions = document.createElement('div');
+  actions.className = 'projects-status-actions';
+
+  const retry = document.createElement('button');
+  retry.type = 'button';
+  retry.className = 'button';
+  retry.textContent = t('main-page.projects-retry', de ? 'Erneut versuchen' : 'Try again');
+  retry.addEventListener('click', () => loadProjects(currentLang, false, translations));
+
+  const gh = document.createElement('a');
+  gh.href = 'https://github.com/Willi-mue?tab=repositories';
+  gh.target = '_blank';
+  gh.rel = 'noopener noreferrer';
+  gh.textContent = 'GitHub →';
+
+  actions.append(retry, gh);
+  box.append(msg, actions);
+  container.appendChild(box);
 }

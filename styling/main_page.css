@@ -147,7 +147,7 @@ header #title {
 }
 
 .hero-nav a {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 600;
   color: var(--hero-text-secondary);
@@ -178,6 +178,16 @@ h2 {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 h2,
@@ -447,6 +457,7 @@ body[data-theme='dark'] .skill-ring-tile {
   font-size: 0.55rem;
   font-weight: 700;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
   color: var(--text);
 }
 
@@ -458,12 +469,6 @@ body[data-theme='dark'] .skill-ring-tile {
   white-space: nowrap;
 }
 
-.skill-ring-level {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  color: var(--text-secondary);
-  margin-top: 0.1rem;
-}
 
 
 .button {
@@ -495,13 +500,19 @@ body[data-theme='dark'] .skill-ring-tile {
   transform: scale(0.96);
 }
 
-/* Both hero buttons share one identical look: a muted tinted pill at rest
-   that turns into the same brand gradient as the primary CTA on hover. */
-.hero-cta .button {
+/* Secondary hero button: a muted tinted pill at rest that turns into the
+   brand gradient on hover. The primary CTA (.button-primary) carries the
+   gradient from the start so it reads as the main action. */
+.hero-cta .button:not(.button-primary) {
   background-image: none;
   background-color: color-mix(in srgb, var(--hero-bg) 80%, color-mix(in srgb, var(--hero-glow-1) 50%, var(--hero-glow-2) 50%) 20%);
   color: var(--hero-text);
   border: 1px solid color-mix(in srgb, var(--hero-glow-1) 45%, var(--hero-glow-2) 45%);
+}
+
+.hero-cta .button-primary {
+  border: 1px solid transparent;
+  box-shadow: 0 8px 20px -10px color-mix(in srgb, var(--hero-glow-1) 60%, transparent);
 }
 
 .hero-cta .button:hover {

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title data-i18n="main-page.title" data-i18n-html>Portfolio</title>
+    <title data-i18n="main-page.title" data-i18n-html>Willi Müller – Softwareentwickler & IT-Security | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio von Willi Müller, Softwareentwickler für moderne, effiziente und nachhaltige Softwarelösungen."
+      content="Portfolio von Willi Müller, Softwareentwickler mit Fokus auf IT-Security und Home-Lab: Projekte mit Python, C++ und Docker – von Discord-Bots bis Simulationen."
       data-i18n="main-page.meta-description"
     />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
@@ -16,13 +16,54 @@
     <meta name="theme-color" content="#0e7c86" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Willi Müller" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:url" content="https://willi-mue.github.io/" />
-    <meta property="og:title" content="Willi Müller – Portfolio" />
-    <meta property="og:description" content="Portfolio of Willi Müller, software developer for modern, efficient, and sustainable software solutions." />
+    <meta property="og:title" content="Willi Müller – Softwareentwickler &amp; IT-Security" />
+    <meta property="og:description" content="Hi, ich bin Willi – Softwareentwickler mit Faible für IT-Security und Home-Lab. Hier findest du meine Projekte: Discord-Bots, Server-Setups, Game-Jam-Spiele und mehr." />
     <meta property="og:image" content="https://willi-mue.github.io/images/profile.jpg" />
     <meta name="twitter:card" content="summary" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://willi-mue.github.io/#website",
+          "url": "https://willi-mue.github.io/",
+          "name": "Willi Müller",
+          "inLanguage": [
+            "de",
+            "en"
+          ],
+          "publisher": {
+            "@id": "https://willi-mue.github.io/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://willi-mue.github.io/#person",
+          "name": "Willi Müller",
+          "url": "https://willi-mue.github.io/",
+          "image": "https://willi-mue.github.io/images/profile.jpg",
+          "jobTitle": "Softwareentwickler",
+          "knowsAbout": [
+            "Softwareentwicklung",
+            "IT-Security",
+            "Python",
+            "C++",
+            "Docker",
+            "Linux",
+            "Home-Lab"
+          ],
+          "sameAs": [
+            "https://github.com/Willi-mue"
+          ]
+        }
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="styling/fonts.css" />
     <link rel="stylesheet" href="styling/theme.css" />
@@ -47,6 +88,7 @@
 
   <body data-theme="light" lang="de">
     <script src="js/boot.js"></script>
+    <script src="js/setup.js"></script>
     <header class="glow-surface">
       <div class="hero-layout">
         <div class="hero-content">
@@ -64,7 +106,7 @@
           <span id="hero-roles" hidden data-i18n="main-page.hero-roles">Software-Entwickler|IT-Security|Home-Lab-Admin|Discord-Bot-Entwickler|Game-Jam-Teilnehmer</span>
 
           <div class="hero-cta">
-            <a class="button" href="#other-projects" data-i18n="main-page.cta-projects" data-i18n-html>
+            <a class="button button-primary" href="#other-projects" data-i18n="main-page.cta-projects" data-i18n-html>
               Projekte ansehen
             </a>
             <a class="button" href="#contact" data-i18n="main-page.cta-contact" data-i18n-html>
@@ -209,22 +251,18 @@
               <div class="skill-ring-tile" style="--tag-color-light:#3572A5; --pct:94">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="code"></span><span class="skill-ring-pct">94%</span></div></div>
                 <div class="skill-ring-name">Python</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#ec8611; --pct:90">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="coffee"></span><span class="skill-ring-pct">90%</span></div></div>
                 <div class="skill-ring-name">Java</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#f34b7d; --pct:67">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="code-block"></span><span class="skill-ring-pct">67%</span></div></div>
                 <div class="skill-ring-name">C++</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#dea584; --pct:45">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="rust-logo"></span><span class="skill-ring-pct">45%</span></div></div>
                 <div class="skill-ring-name">Rust</div>
-                <div class="skill-ring-level" data-i18n="skill-level-beginner">grundkenntnisse</div>
               </div>
             </div>
           </div>
@@ -235,17 +273,14 @@
               <div class="skill-ring-tile" style="--tag-color-light:#4dabcf; --pct:61">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="numpy"></span><span class="skill-ring-pct">61%</span></div></div>
                 <div class="skill-ring-name">NumPy</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#e05d44; --pct:39">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="chart-line"></span><span class="skill-ring-pct">39%</span></div></div>
                 <div class="skill-ring-name">Matplotlib</div>
-                <div class="skill-ring-level" data-i18n="skill-level-beginner">grundkenntnisse</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#150458; --tag-color-dark:#a78bfa; --pct:29">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="pandas"></span><span class="skill-ring-pct">29%</span></div></div>
                 <div class="skill-ring-name">Pandas</div>
-                <div class="skill-ring-level" data-i18n="skill-level-beginner">grundkenntnisse</div>
               </div>
             </div>
           </div>
@@ -256,17 +291,14 @@
               <div class="skill-ring-tile" style="--tag-color-light:#6366f1; --pct:89">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="share-network"></span><span class="skill-ring-pct">89%</span></div></div>
                 <div class="skill-ring-name">APIs</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#00758F; --tag-color-dark:#38bdf8; --pct:66">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="database"></span><span class="skill-ring-pct">66%</span></div></div>
                 <div class="skill-ring-name">MySQL</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#003B57; --tag-color-dark:#60a5fa; --pct:59">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="database"></span><span class="skill-ring-pct">59%</span></div></div>
                 <div class="skill-ring-name">SQLite</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
             </div>
           </div>
@@ -277,22 +309,18 @@
               <div class="skill-ring-tile" style="--tag-color-light:#e34c26; --pct:93">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="file-html"></span><span class="skill-ring-pct">93%</span></div></div>
                 <div class="skill-ring-name">HTML</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#cc6699; --pct:88">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="file-css"></span><span class="skill-ring-pct">88%</span></div></div>
                 <div class="skill-ring-name">SCSS</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#42b883; --pct:87">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="file-vue"></span><span class="skill-ring-pct">87%</span></div></div>
                 <div class="skill-ring-name">Vue</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#bea909; --pct:57">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="brackets-curly"></span><span class="skill-ring-pct">57%</span></div></div>
                 <div class="skill-ring-name">JavaScript</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
             </div>
           </div>
@@ -303,32 +331,26 @@
               <div class="skill-ring-tile" style="--tag-color-light:#2496ED; --pct:96">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="cube"></span><span class="skill-ring-pct">96%</span></div></div>
                 <div class="skill-ring-name">Docker</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#0066CC; --pct:95">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="lock-key"></span><span class="skill-ring-pct">95%</span></div></div>
                 <div class="skill-ring-name">OpenVPN</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#a6820c; --pct:70">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="linux-logo"></span><span class="skill-ring-pct">70%</span></div></div>
                 <div class="skill-ring-name">Linux</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#e0521a; --pct:64">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="shield-check"></span><span class="skill-ring-pct">64%</span></div></div>
                 <div class="skill-ring-name">Firewall</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#009639; --pct:62">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="globe"></span><span class="skill-ring-pct">62%</span></div></div>
                 <div class="skill-ring-name">Nginx</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#5fc022; --pct:58">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="terminal-window"></span><span class="skill-ring-pct">58%</span></div></div>
                 <div class="skill-ring-name">Bash</div>
-                <div class="skill-ring-level" data-i18n="skill-level-intermediate">mittel</div>
               </div>
             </div>
           </div>
@@ -339,12 +361,10 @@
               <div class="skill-ring-tile" style="--tag-color-light:#F1502F; --pct:92">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="git-branch"></span><span class="skill-ring-pct">92%</span></div></div>
                 <div class="skill-ring-name">Git</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
               <div class="skill-ring-tile" style="--tag-color-light:#8b5cf6; --pct:91">
                 <div class="skill-ring"><div class="skill-ring-inner"><span class="icon" data-icon="robot"></span><span class="skill-ring-pct">91%</span></div></div>
                 <div class="skill-ring-name">Agentic Coding</div>
-                <div class="skill-ring-level" data-i18n="skill-level-advanced">fortgeschritten</div>
               </div>
             </div>
           </div>
@@ -411,8 +431,6 @@
               <span class="badge">SQLite</span>
               <span class="badge">Docker</span>
               <span class="badge">Linux</span>
-              <span class="badge">Event Management</span>
-              <span class="badge">Automation</span>
             </div>
             <a
               class="button"
@@ -493,7 +511,13 @@
         Simulationen und Spielereien.
       </p>
       <div id="project-filters" class="project-filters" role="group" aria-label="Filter"></div>
-      <section id="projects-grid" class="projects"></section>
+      <section id="projects-grid" class="projects" aria-busy="true">
+        <span class="visually-hidden" data-i18n="main-page.projects-loading">Projekte werden geladen …</span>
+        <div class="project-skeleton" aria-hidden="true"></div>
+        <div class="project-skeleton" aria-hidden="true"></div>
+        <div class="project-skeleton" aria-hidden="true"></div>
+        <div class="project-skeleton" aria-hidden="true"></div>
+      </section>
     </main>
     <footer id="contact" class="glow-surface">
       <h2 data-i18n="main-page.contact-title" data-i18n-html>Kontakt</h2>
@@ -547,7 +571,6 @@
       </p>
     </footer>
 
-    <script src="js/setup.js"></script>
     <script src="js/icons.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/badgeColors.js"></script>

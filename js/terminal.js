@@ -8,10 +8,11 @@
   let projectsCache = null;
   let lastFocus = null;
 
-  // Post pages live one directory deep and have no skills/blog/project markup of their
-  // own, so they read that data from the root index.html instead.
+  // Post pages (and 404.html) have no skills/blog/project markup of their own, so they read
+  // that data from the root index.html instead. BASE is the site root, resolved from this
+  // script's URL (js/terminal.js -> ../) so it is right at any page depth.
   const IN_POST = !document.getElementById('other-projects');
-  const BASE = IN_POST ? '../' : '';
+  const BASE = new URL('../', document.currentScript.src).href;
   let indexDocCache = null;
 
   const t = (key, fallback = '') =>

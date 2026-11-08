@@ -6,6 +6,50 @@
   margin-top: 2rem;
 }
 
+/* Loading placeholders, replaced once projects_Willi-Mue.json is loaded */
+.project-skeleton {
+  min-height: 320px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background:
+    linear-gradient(100deg, transparent 30%, color-mix(in srgb, var(--line) 60%, transparent) 50%, transparent 70%)
+      0 0 / 200% 100%,
+    var(--card-bg);
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  from { background-position: 100% 0, 0 0; }
+  to { background-position: -100% 0, 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-skeleton {
+    animation: none;
+  }
+}
+
+.projects-status {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.projects-status p {
+  margin: 0;
+}
+
+.projects-status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
 @media (max-width: 800px) {
   .projects {
     padding: 0 1.5rem;
@@ -127,7 +171,7 @@ a.project-link:hover {
   border: 1px solid var(--line);
   background: var(--card-bg);
   color: var(--text);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;

@@ -176,6 +176,13 @@ body::before {
   opacity: 0;
 }
 
+/* setup.js sets .anim-ready before the first paint, but the [data-reveal] tags
+   only arrive with animations.js at the end of <body>. Until then (.anim-live)
+   keep the page body hidden, so a cached reload doesn't flash it visible first. */
+.anim-ready:not(.anim-live) :is(main, footer) {
+  opacity: 0;
+}
+
 .anim-ready [data-reveal].is-visible {
   opacity: 1;
   animation: reveal-up 0.85s var(--ease-out) var(--reveal-delay, 0ms) backwards;

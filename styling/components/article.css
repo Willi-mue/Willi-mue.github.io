@@ -134,7 +134,7 @@ header.post-hero {
 }
 
 .post-fact-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -169,7 +169,7 @@ header.post-hero {
 
 .post-toc-title {
   margin: 0 0 0.75rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -569,7 +569,7 @@ header.post-hero {
 }
 
 .post-next-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.06em;

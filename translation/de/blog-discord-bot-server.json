@@ -1,5 +1,5 @@
 {
-  "blog-discord-bot-title": "Portfolio",
+  "blog-discord-bot-title": "Discord-Bot für Events & Community-Management | Willi Müller",
   "blog-discord-bot-meta-description": "Ein selbst entwickelter, mehrsprachiger Discord-Bot für Event-Anmeldung, Übersetzungen und Administration, gebaut mit Python, discord.py und SQLite.",
   "blog-discord-bot-heading": "Discord-Bot für Events & Community-Management",
   "section-discord-intro": "<strong>Discord</strong> ist eine beliebte Plattform für Communities mit Text-, Sprach- und Video-Chats. Mein Bot automatisiert Aufgaben auf Discord-Servern, erleichtert die auf MMOs ausgelegte Event-Organisation und unterstützt mehrsprachige Kommunikation, sodass Community-Manager Zeit sparen und den Überblick behalten.",

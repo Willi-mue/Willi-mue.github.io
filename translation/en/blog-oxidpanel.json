@@ -1,5 +1,5 @@
 {
-  "blog-oxidpanel-title": "Portfolio",
+  "blog-oxidpanel-title": "OxidPanel: Dashboard for My Home Server | Willi Müller",
   "blog-oxidpanel-meta-description": "OxidPanel is my self-built dashboard for my home server: system stats, a news aggregator and a media library with HLS streaming, built with FastAPI and Vue 3.",
   "blog-oxidpanel-heading": "OxidPanel: Dashboard for My Home Server",
   "blog-oxidpanel-intro": "OxidPanel is my self-built dashboard for my home server. It brings system monitoring, a news aggregator and a media library together in one interface.",

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title data-i18n="not-found-title" data-i18n-html>Seite nicht gefunden | Willi Müller</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <meta name="theme-color" content="#0e7c86" />
+
+    <!-- GitHub Pages serves this file under any missing URL (e.g. /posts/foo/bar),
+         so every asset path here is root-absolute. -->
+    <link rel="stylesheet" href="/styling/fonts.css" />
+    <link rel="stylesheet" href="/styling/theme.css" />
+    <link rel="stylesheet" href="/styling/main_page.css" />
+    <link rel="stylesheet" href="/styling/components/top-controls.css" />
+    <link rel="stylesheet" href="/styling/components/article.css" />
+    <link rel="stylesheet" href="/styling/components/terminal.css" />
+    <link rel="stylesheet" href="/styling/components/not-found.css" />
+    <link rel="stylesheet" href="/styling/animations.css" />
+  </head>
+
+  <body data-theme="light" lang="de" data-i18n-file="not-found">
+    <script src="/js/setup.js"></script>
+    <header class="glow-surface post-hero not-found">
+      <div class="post-hero-layout">
+        <div class="post-hero-content">
+          <p class="post-path" aria-hidden="true"><span>~/</span>404</p>
+          <h1 data-i18n="not-found-heading" data-i18n-html>Seite nicht gefunden</h1>
+          <p class="not-found-error" aria-hidden="true">
+            <span class="not-found-prompt">willi@homelab:~$</span> cd <span id="not-found-path">/</span><br />
+            bash: cd: <span id="not-found-path-echo">/</span>: <span data-i18n="not-found-error">Datei oder Verzeichnis nicht gefunden</span>
+          </p>
+          <p class="post-lead" data-i18n="not-found-lead" data-i18n-html>
+            Diese Seite gibt es nicht (mehr). Vielleicht hat sich ein Link geändert – von hier aus findest du zurück.
+          </p>
+
+          <div class="hero-cta">
+            <a class="button button-primary" href="/" data-i18n="not-found-home" data-i18n-html>Zur Startseite</a>
+            <a class="button" href="/#other-projects" data-i18n="not-found-stories" data-i18n-html>Projekt-Stories</a>
+            <button type="button" class="button" data-terminal-open data-i18n="not-found-terminal" data-i18n-html>
+              Terminal öffnen
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <span class="post-hero-icon"><span class="icon" data-icon="terminal-window"></span></span>
+        </div>
+      </div>
+    </header>
+
+    <div id="top-controls">
+      <a class="top-back" href="/" aria-label="Zurück zur Hauptseite" title="Zurück zur Hauptseite"><span class="icon" data-icon="arrow-left"></span></a>
+      <button type="button" data-terminal-open title="Terminal (/)" aria-label="Terminal">
+        <span class="icon" data-icon="terminal-window"></span>
+      </button>
+      <button id="toggle-theme" title="" aria-label="Theme wechseln"></button>
+      <button id="toggle-lang" title="" data-i18n="toggle-lang" data-i18n-html>EN</button>
+    </div>
+
+    <footer class="glow-surface">
+      <p class="footer-legal">
+        <a href="/datenschutz.html" data-i18n="main-page.footer-privacy">Datenschutz</a>
+      </p>
+    </footer>
+
+    <script>
+      // Show the URL the visitor actually tried to open.
+      (() => {
+        const path = decodeURIComponent(location.pathname);
+        document.getElementById('not-found-path').textContent = path;
+        document.getElementById('not-found-path-echo').textContent = path;
+      })();
+    </script>
+    <script src="/js/icons.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/translation.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/easter-eggs.js"></script>
+    <script src="/js/terminal.js"></script>
+  </body>
+</html>

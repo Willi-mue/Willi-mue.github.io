@@ -90,10 +90,14 @@
       cell.style.width = `${widths[i]}px`;
     });
 
-    const start = performance.now();
+    // The clock starts on the first painted frame, not at call time: on a cached
+    // reload this runs before the page is even drawn, and that wait would be
+    // counted as animation time (the intro would seem to play in fast-forward).
+    let start = null;
     let written = null;
 
     const frame = (now) => {
+      if (start === null) start = now;
       // Someone else (e.g. the language toggle) replaced the text: stop quietly.
       if (written !== null && el.textContent !== written) {
         delete el.dataset.scrambling;
@@ -330,9 +334,10 @@
   function countUp(el, target, delay) {
     if (reduceMotion) return;
     const duration = 1400;
-    const start = performance.now() + delay;
+    let start = null; // set on the first frame, see scramble()
     el.textContent = '0%';
     const tick = (now) => {
+      if (start === null) start = now + delay;
       const p = Math.min(Math.max((now - start) / duration, 0), 1);
       const eased = 1 - Math.pow(1 - p, 3);
       el.textContent = `${Math.round(target * eased)}%`;
@@ -442,6 +447,8 @@
   }
 
   registerReveals();
+  // Reveal targets are tagged now, so main/footer may be shown (see setup.js).
+  root.classList.add('anim-live');
 
   // Project cards are rendered asynchronously (and re-rendered on language toggle).
   const projectsGrid = document.getElementById('projects-grid');

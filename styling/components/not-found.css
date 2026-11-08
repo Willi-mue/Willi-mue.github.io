@@ -1,0 +1,41 @@
+/* 404.html: the post hero stretched to fill the screen, plus a fake shell error line */
+
+header.post-hero.not-found {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+header.post-hero.not-found .post-hero-layout {
+  flex: 1 1 auto;
+  min-width: 0; /* as a flex item it would otherwise grow to its content width on phones */
+}
+
+.not-found-error {
+  margin: 1.1rem 0 0;
+  padding: 0.85rem 1rem;
+  max-width: 60ch;
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--hero-text-secondary);
+  background: color-mix(in srgb, var(--hero-glow-1) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--hero-glow-1) 35%, transparent);
+  border-radius: 8px;
+}
+
+.not-found-prompt {
+  color: var(--hero-glow-1);
+  font-weight: 600;
+}
+
+/* The terminal button sits in .hero-cta next to the links; reset the <button> defaults */
+.not-found .hero-cta button.button {
+  font: inherit;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
