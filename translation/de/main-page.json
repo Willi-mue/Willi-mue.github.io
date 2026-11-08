@@ -41,7 +41,7 @@
   "main-page.about-me-p3": "Neben meinem Job realisiere ich eigene Projekte, von Webanwendungen und Bots bis zum Aufbau und Betrieb eigener Server-Infrastrukturen. In meinem Home-Lab plane, betreibe und automatisiere ich Serverdienste, unter anderem mit eigenem VPN-Zugang, Docker-Setups und Spielservern, und vertiefe so mein Wissen praxisnah.",
 
   "main-page.blog-title": "Projekte & Erfahrungen",
-  "main-page.blog-intro": "Ausgewählte Projekte und Erfahrungen, die auf GitHub nur zur Hälfte sichtbar sind: mit Technik, Entscheidungen und Stolpersteinen.",
+  "main-page.blog-intro": "Hier stelle ich einige meiner Projekte genauer vor: worum es geht, wie ich sie umgesetzt habe und was ich dabei gelernt habe.",
 
   "main-page.blog-post-1-title": "Self-hosted Minecraft-Server: Docker, VPN & Backups",
   "main-page.blog-post-1-desc": "Privater Minecraft-Server auf eigener Hardware, wahlweise Paper-optimiert oder als eigenes Modpack. Läuft in Docker, mit abgesichertem Zugang sowie RAID-1 und Cron-Backups.",
