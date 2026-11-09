@@ -14,7 +14,7 @@ async function fetchTranslations(lang) {
 
   for (const file of files) {
     try {
-      const res = await fetch(basePath + file);
+      const res = await fetch(basePath + file, { cache: 'no-cache' });
       if (!res.ok) throw new Error(`Fehler beim Laden von ${file}`);
       const data = await res.json();
       Object.assign(result, data);

@@ -210,7 +210,7 @@ async function loadProjects(currentLang = 'de', loadMore = false, translations =
 
     if (!loadMore) {
       // Erster Aufruf (oder Sprachwechsel): Projekte laden und zurücksetzen
-      const response = await fetch('data/projects_Willi-Mue.json');
+      const response = await fetch('data/projects_Willi-Mue.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       allProjects = await response.json();
 

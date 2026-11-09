@@ -124,7 +124,7 @@
 
   async function projects() {
     if (!projectsCache) {
-      const res = await fetch(`${BASE}data/projects_Willi-Mue.json`);
+      const res = await fetch(`${BASE}data/projects_Willi-Mue.json`, { cache: 'no-cache' });
       projectsCache = await res.json();
     }
     return projectsCache;
