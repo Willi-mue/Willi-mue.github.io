@@ -1,28 +1,35 @@
 [
   {
+    "id": 1032455958,
     "name": "3D-Engine",
     "description": "A lightweight 3D rendering engine developed in Python using PyQt5. It enables loading and displaying PLY mesh files in an interactive 3D environment with basic camera controls and transformations.",
     "translation": "Ein leichter gewichtige 3D-Rendering-Engine, entwickelt in Python mit PyQt5. Ermöglicht das Laden und Anzeigen von PLY-Mesh-Dateien in einer interaktiven 3D-Umgebung mit grundlegenden Kamerasteuerungen und Transformationen.",
+    "github_description": "A lightweight 3D rendering engine developed in Python using PyQt5. It enables loading and displaying PLY mesh files in an interactive 3D environment with basic camera controls and transformations.",
     "url": "https://github.com/Willi-mue/3D-Engine",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/3D-Engine/master/screenshots/picture1.png",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/3D-Engine/main/screenshots/picture1.png",
     "languages": {
       "Python": 12653
     }
   },
   {
+    "id": 659248917,
     "name": "Conways-Game-of-Life",
-    "description": "This repository contains a Python implementation of Conway's Game of Life with two visualization options: one using PyQt and one using PyOpenGL.",
-    "translation": "Dieses Repository enthält eine Python-Implementierung von Conways Spiel des Lebens mit zwei Visualisierungsoptionen: eine mit PyQt und eine mit PyOpenGL.",
+    "description": "Fast, interactive Game of Life: GPU simulation with OpenGL and an infinite HashLife universe. Built with Python and pyglet.",
+    "translation": "Schnelles, interaktives Game of Life: GPU-Simulation mit OpenGL und ein unendliches HashLife-Universum. Entwickelt mit Python und pyglet.",
+    "github_description": "Fast, interactive Game of Life: GPU simulation with OpenGL and an infinite HashLife universe. Built with Python and pyglet.",
     "url": "https://github.com/Willi-mue/Conways-Game-of-Life",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Conways-Game-of-Life/master/pics/GL_Screenshot_4K.png",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Conways-Game-of-Life/main/pics/field.gif",
     "languages": {
-      "Python": 9700
+      "Python": 80029,
+      "PowerShell": 1178
     }
   },
   {
+    "id": 699400649,
     "name": "Cristal-Simulation",
     "description": "A fast C++20 simulation of crystal growth by diffusion-limited aggregation (DLA): particles wander randomly until they touch the crystal and freeze in place, growing branching, fractal structures. Radial and uniform modes with adjustable stick probability, a live view with raylib, and Python/ffmpeg scripts that render the growth as video.",
     "translation": "Schnelle C++20-Simulation von Kristallwachstum durch diffusionsbegrenzte Aggregation (DLA): Teilchen wandern zufällig, bis sie den Kristall berühren und dort erstarren – so entstehen verästelte, fraktale Strukturen. Radialer und gleichmäßiger Modus mit einstellbarer Haftwahrscheinlichkeit, Live-Ansicht mit raylib und Python/ffmpeg-Skripte, die das Wachstum als Video rendern.",
+    "github_description": "This project simulates crystal growth based on the Diffusion-Limited Aggregation (DLA) model implemented in C++. The simulation generates crystal structures by modeling particle aggregation through random walks.",
     "url": "https://github.com/Willi-mue/Cristal-Simulation",
     "image": "https://raw.githubusercontent.com/Willi-Mue/Cristal-Simulation/main/docs/media/dla_radial.gif",
     "languages": {
@@ -34,40 +41,35 @@
     }
   },
   {
+    "id": 903933947,
     "name": "Minecraft-Server-GUI",
     "description": "A simple graphical interface to manage a Minecraft server. Start, stop, restart, and backup the server easily. Monitor player activity and system resources in real time. Send server commands directly from the app.",
     "translation": "Eine einfache grafische Oberfläche zur Verwaltung eines Minecraft-Servers. Starte, stoppe, starte neu und sichere den Server bequem. Überwache Spieleraktivitäten und Systemressourcen in Echtzeit. Sende Serverbefehle direkt aus der App.",
+    "github_description": "A simple graphical interface to manage a Minecraft server. Start, stop, restart, and backup the server easily. Monitor player activity and system resources in real time. Send server commands directly from the app.",
     "url": "https://github.com/Willi-mue/Minecraft-Server-GUI",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Minecraft-Server-GUI/master/screenshots/picture1.png",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Minecraft-Server-GUI/main/screenshots/picture1.png",
     "languages": {
       "Python": 16888
     }
   },
   {
-    "name": "Pacman-Clone",
-    "description": "A fully playable Pacman clone developed in Python with PyQt5. The game includes level progression, ghost AI, power-ups, and a persistent high score system.",
-    "translation": "Ein vollständig spielbarer Pacman-Klon, entwickelt in Python mit PyQt5. Das Spiel bietet Level-Fortschritt, Geister-KI, Power-Ups und ein dauerhaftes Highscore-System.",
-    "url": "https://github.com/Willi-mue/Pacman-Clone",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Pacman-Clone/master/pacman.jpg",
-    "languages": {
-      "Python": 31044
-    }
-  },
-  {
+    "id": 1032667523,
     "name": "Randomizer-Wheel",
     "description": "A colorful spinning wheel built with PyQt6. Load items from a file, spin the wheel, and randomly select a winner with visual effects.",
     "translation": "Ein buntes Glücksrad, erstellt mit PyQt6. Lade Elemente aus einer Datei, drehe das Rad und wähle zufällig einen Gewinner mit visuellen Effekten aus.",
+    "github_description": "A colorful spinning wheel built with PyQt6. Load items from a file, spin the wheel, and randomly select a winner with visual effects.",
     "url": "https://github.com/Willi-mue/Randomizer-Wheel",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Randomizer-Wheel/master/images/picture1.png",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Randomizer-Wheel/main/images/picture1.png",
     "languages": {
-      "Python": 7729,
-      "Batchfile": 37
+      "Python": 93730
     }
   },
   {
+    "id": 1032613585,
     "name": "Solarsystem-Simulation",
     "description": "A real-time solar system simulation in Python with PyQt5 and numpy. It starts with the planets at their real positions for today's date and moves them with a 3D N-body Newtonian gravity simulation – including 7 major moons, Halley's Comet and an asteroid belt with Kirkwood gaps. Zoom, pan, follow any body, switch to true scale, German/English UI.",
     "translation": "Echtzeit-Simulation des Sonnensystems in Python mit PyQt5 und numpy. Sie startet mit den echten Planetenpositionen des heutigen Datums und bewegt sie per 3D-N-Körper-Simulation mit Newtonscher Gravitation – inklusive 7 großer Monde, dem Halleyschen Kometen und einem Asteroidengürtel mit Kirkwoodlücken. Zoomen, verschieben, beliebigen Körpern folgen, maßstabsgetreue Ansicht, Oberfläche auf Deutsch/Englisch.",
+    "github_description": "It visually represents planetary orbits, allows zooming in/out with the mouse wheel, and resets the view with the `R` key.",
     "url": "https://github.com/Willi-mue/Solarsystem-Simulation",
     "image": "https://raw.githubusercontent.com/Willi-Mue/Solarsystem-Simulation/main/docs/screenshot.png",
     "languages": {
@@ -75,9 +77,23 @@
     }
   },
   {
+    "id": 453057613,
+    "name": "Starbot-Maze",
+    "description": "A neon space maze game in Python & PyQt5: steer a robot pod, collect stars and freeze aliens with energy crystals. Level progression, SVG graphics, auto screen scaling and a persistent high score system.",
+    "translation": "Ein Neon-Weltraum-Labyrinthspiel in Python & PyQt5: Steuere eine Roboterkapsel, sammle Sterne und friere Aliens mit Energiekristallen ein. Level-Fortschritt, SVG-Grafiken, automatische Bildschirmskalierung und ein dauerhaftes Highscore-System.",
+    "github_description": "A neon space maze game in Python & PyQt5: steer a robot pod, collect stars and freeze aliens with energy crystals. Level progression, SVG graphics, auto screen scaling and a persistent high score system.",
+    "url": "https://github.com/Willi-mue/Starbot-Maze",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Starbot-Maze/main/screenshot.png",
+    "languages": {
+      "Python": 52336
+    }
+  },
+  {
+    "id": 478292921,
     "name": "Traffic-Simulation",
     "description": "A grid-based traffic simulation built with Python and PySide6 (Qt 6) that runs on any map drawn from simple characters (directions, intersections, traffic lights, lane markings). Cars choose their way at intersections, traffic lights run their own phases, and the map can be zoomed and panned. Runs on Windows and Linux, German/English UI.",
     "translation": "Rasterbasierte Verkehrssimulation mit Python und PySide6 (Qt 6), die auf jeder Karte aus einfachen Zeichen läuft (Fahrtrichtungen, Kreuzungen, Ampeln, Fahrbahnmarkierungen). Autos wählen an Kreuzungen ihren Weg, jede Ampel hat ihre eigene Phase, die Karte lässt sich zoomen und verschieben. Läuft unter Windows und Linux, Oberfläche auf Deutsch/Englisch.",
+    "github_description": "This is a traffic simulation written in Python that can run on any map, as long as the map is defined using the required parameters (e.g., roads, intersections, traffic rules). The simulation models vehicle movement and interactions.",
     "url": "https://github.com/Willi-mue/Traffic-Simulation",
     "image": "https://raw.githubusercontent.com/Willi-Mue/Traffic-Simulation/main/docs/screenshot.png",
     "languages": {
