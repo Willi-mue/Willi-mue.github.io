@@ -48,7 +48,8 @@ function createCard(project) {
   const desc = document.createElement('p');
   desc.className = 'project-desc';
   if (currentLang === 'de') {
-    desc.textContent = project.translation || 'Keine Beschreibung verfügbar.';
+    // Ohne (aktuelle) Übersetzung lieber Englisch zeigen als nichts
+    desc.textContent = project.translation || project.description || 'Keine Beschreibung verfügbar.';
   } else {
     desc.textContent = project.description || 'No description available.';
   }

@@ -22,9 +22,21 @@ session.headers["Accept"] = "application/vnd.github+json"
 if os.environ.get("GITHUB_TOKEN"):
     session.headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
 
-
 class ApiError(Exception):
     pass
+
+
+def translate_de(text):
+    """Englische GitHub-Beschreibung per Google Translate (ohne Key) ins Deutsche übersetzen."""
+    r = requests.get(
+        "https://translate.googleapis.com/translate_a/single",
+        params={"client": "gtx", "sl": "en", "tl": "de", "dt": "t", "q": text},
+        timeout=30,
+    )
+    if r.status_code != 200:
+        raise ApiError(f"Google Translate {r.status_code}: {r.text[:200]}")
+    # Antwort: [[["Satz DE", "Satz EN", ...], ...], ...] -> Sätze zusammensetzen
+    return "".join(part[0] for part in r.json()[0] if part[0]).strip()
 
 
 def api_get(path, allow_404=False):
@@ -50,14 +62,30 @@ def get_readme_image(owner, repo, branch):
     except Exception:
         return None
 
-    # Erstes Bild der README, egal ob Markdown ![..](..) oder HTML <img src="..">
-    match = re.search(r'!\[[^\]]*\]\(\s*<?([^)\s>]+)|<img[^>]*?\bsrc=["\']([^"\']+)["\']', content, re.IGNORECASE)
-    if match:
+    # Bilder der README, egal ob Markdown ![..](..) oder HTML <img src="..">.
+    # Ein GIF (animiert) hat Vorrang, sonst das erste Bild. Kaputte Links werden übersprungen.
+    pattern = r'!\[[^\]]*\]\(\s*<?([^)\s>]+)|<img[^>]*?\bsrc=["\']([^"\']+)["\']'
+    urls = []
+    for match in re.finditer(pattern, content, re.IGNORECASE):
         img_url = match.group(1) or match.group(2)
         if not img_url.startswith('http'):
             img_url = img_url.removeprefix('./').lstrip('/')
             img_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{img_url}"
-        return img_url
+        if img_url not in urls:
+            urls.append(img_url)
+
+    def is_gif(url):
+        return url.split('?')[0].lower().endswith('.gif')
+
+    # Stabile Sortierung: GIFs nach vorne, sonst README-Reihenfolge
+    for img_url in sorted(urls, key=lambda u: not is_gif(u)):
+        try:
+            ok = requests.head(img_url, allow_redirects=True, timeout=15).status_code == 200
+        except requests.RequestException:
+            ok = False
+        if ok:
+            return img_url
+        print(f"  ! README-Bild nicht erreichbar: {img_url}")
     return None
 
 
@@ -102,25 +130,28 @@ def fetch_projects(owner, existing_by_id):
         print(f"{'Aktualisiere' if old else 'Neu'}: {name}")
 
         branch = repo.get("default_branch", "main")
-        github_description = repo.get("description") or ""
-        # Handgepflegte description/translation in der JSON haben Vorrang vor GitHub.
-        description = old.get("description") or github_description
+        # Die GitHub-Beschreibung ist die einzige Quelle; Deutsch wird daraus übersetzt.
+        description = (repo.get("description") or "").strip()
         translation = old.get("translation", "")
+        # Nur neu übersetzen, wenn sich der englische Text seit der letzten Übersetzung geändert hat.
+        if description != old.get("translation_source"):
+            if not description:
+                translation = ""
+                print("  ! Keine Beschreibung auf GitHub")
+            else:
+                translation = translate_de(description)
+                print(f"  Übersetzt: {translation}")
 
         if old and old.get("name") != name:
             print(f"  ! Umbenannt von {old['name']}")
-        if old and github_description != old.get("github_description", description):
-            print("  ! GitHub-Beschreibung hat sich geändert -> 'description' und 'translation' prüfen:")
-            print(f"    {github_description}")
-        if not translation:
-            print("  ! Keine deutsche 'translation' vorhanden")
 
         projects.append({
             "id": repo["id"],
             "name": name,
             "description": description,
             "translation": translation,
-            "github_description": github_description,
+            # Englischer Text, aus dem "translation" erzeugt wurde (leer = noch nicht übersetzt)
+            "translation_source": description if translation else "",
             "url": repo["html_url"],
             "image": get_readme_image(owner, name, branch) or old.get("image"),
             "languages": api_get(f"/repos/{owner}/{name}/languages"),
