@@ -42,14 +42,20 @@
   },
   {
     "id": 903933947,
-    "name": "Minecraft-Server-GUI",
+    "name": "Minecraft-Server-Panel",
     "description": "A simple graphical interface to manage a Minecraft server. Start, stop, restart, and backup the server easily. Monitor player activity and system resources in real time. Send server commands directly from the app.",
     "translation": "Eine einfache grafische Oberfläche zur Verwaltung eines Minecraft-Servers. Starte, stoppe, starte neu und sichere den Server bequem. Überwache Spieleraktivitäten und Systemressourcen in Echtzeit. Sende Serverbefehle direkt aus der App.",
-    "github_description": "A simple graphical interface to manage a Minecraft server. Start, stop, restart, and backup the server easily. Monitor player activity and system resources in real time. Send server commands directly from the app.",
-    "url": "https://github.com/Willi-mue/Minecraft-Server-GUI",
-    "image": "https://raw.githubusercontent.com/Willi-Mue/Minecraft-Server-GUI/main/screenshots/picture1.png",
+    "github_description": "Self-hosted web panel for Minecraft Java servers (Paper & Vanilla) with live console, backups, data packs and a shareable 2D/3D live map. Runs in Docker.",
+    "url": "https://github.com/Willi-mue/Minecraft-Server-Panel",
+    "image": "https://raw.githubusercontent.com/Willi-Mue/Minecraft-Server-Panel/main/screenshots/picture1.png",
     "languages": {
-      "Python": 16888
+      "Python": 135054,
+      "Rust": 127696,
+      "JavaScript": 119541,
+      "CSS": 22484,
+      "HTML": 21093,
+      "Dockerfile": 2476,
+      "Shell": 616
     }
   },
   {
